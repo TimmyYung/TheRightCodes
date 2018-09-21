@@ -1,49 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="../TimmySite/CSS/main.css" type="text/css" rel= Stylesheet>
+  <link href="../CSS/main.css" type="text/css" rel= Stylesheet>
 <title> Timmy Yung </title>
 </head>
-
-<style>
-  ul {
-     list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 200px;
-      background-color: #40E0D0;
-        }
-        
-  li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-     text-decoration: none;
-        }
-        
-  li a.active {
-     background-color: #4CAF50;
-      color: white;
-        }
-        
-  li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
-        }
-</style>
-
 <body>
-    <article>
-        <header>
-          <center> <h1>Timmy's Beginner HTML Site</h1> </center>
-        </header>
-    </article>
+    <img class="sticky" src="../Images/Avatar.jpg" alt="Avatar" style="width:50px;float:right;"></a> 
+  </body>
+  
+  <style>
+    img {
+        border-radius: 50%;
+      }
+  
+    img.sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      width: 200px;
+  }
+  
+    ul {
+       list-style-type: none;
+        margin: -10px;
+        padding: 0;
+        width: 180px;
+        background-color: #69e052;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+     }
+          
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+       text-decoration: none;
+          }
+          
+    li a.active {
+       background-color: #4CAF50;
+        color: white;
+          }
+          
+    li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+          }
+  </style>
+  
+  <header>
+      <center> <h1>Timmy's Beginner HTML Site</h1> </center>
+    </header>
+  
+  <ul>
+      <li><a  href="../index.html">Main</a></li>
+      <li><a href="../pages/about.html">About Me</a></li>
+      <li><a class="active" href="../pages/test.html">Parallax Scrolling </a></li>
+      <li><a href="../pages/typewriter.html">Typewriter</a></li>
+      <li><a href="https://www.theglobeandmail.com/">News</a></li>
+    </ul>
+  
+    <div style="margin-left:17%;padding:1px 16px;height:1000px;">
 
-<ul>
-    <li><a href="../index.html">Main</a></li>
-    <li><a href="../pages/about.html">About Me</a></li>
-    <li><a href="https://www.theglobeandmail.com/">News</a></li>
-  </ul>
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
