@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="../TimmySite/CSS/main.css" type="text/css" rel= Stylesheet>
+    <link href="../CSS/main.css" type="text/css" rel= Stylesheet>  
 </head>
 
+<body>
+  <img class="sticky" src="../Images/Avatar.jpg" alt="Avatar" style="width:50px;float:right;"></a> 
+</body>
+
 <style>
+  img {
+      border-radius: 50%;
+    }
+
+  img.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 200px;
+}
+
   ul {
      list-style-type: none;
-      margin: 0;
+      margin: -10px;
       padding: 0;
-      width: 200px;
-      background-color: #40E0D0;
-        }
+      width: 180px;
+      background-color: #69e052;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+   }
         
   li a {
     display: block;
@@ -31,20 +49,21 @@
         }
 </style>
 
-<body>
-    <article>
-        <header>
-          <center> <h1>Timmy's Beginner HTML Site</h1> </center>
-        </header>
-    </article>
+<header>
+    <center> <h1>Timmy's Beginner HTML Site</h1> </center>
+  </header>
 
 <ul>
     <li><a href="../index.html">Main</a></li>
+    <li><a class="active" href="../pages/about.html">About Me</a></li>
     <li><a href="../pages/test.html">Parallax Scrolling </a></li>
+    <li><a href="../pages/typewriter.html">Typewriter</a></li>
     <li><a href="https://www.theglobeandmail.com/">News</a></li>
   </ul>
 
-<h1 style="color:orange;">My Tech Skills</h1>
+  <div style="margin-left:17%;padding:1px 16px;height:1000px;">
+
+<h1 style="color: aqua;">My Tech Skills</h1>
 <i>(1-beginner/rusty, 2-pretty comfortable, 3- Pro)</i>
 <u2>
   <li>Video Editing (2)</li>
@@ -52,7 +71,7 @@
   <li>Coding (1)</li>
 </u2>
 
-<h1 style="color:orange;">My Tech Interests</h1>
+<h1 style="color:aqua;">My Tech Interests</h1>
 <u2>
   <li>Artificial Intelligence</li>
   <li>Video Editing</li>
