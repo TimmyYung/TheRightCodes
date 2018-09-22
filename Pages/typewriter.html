@@ -1,14 +1,55 @@
 <head>
     <title> Timmy Yung </title>
+  </head>
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    background-color: #FC7E7E;
+    overflow: auto
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+  </style>
+
+<body>
+    <ul>
+        <li><a href="../index.html">Main</a></li>
+        <li><a href="../pages/about.html">About Me</a></li>
+        <li><a href="../pages/test.html">Parallax Scrolling </a></li>
+        <li><a class="active" href="../pages/typewriter.html">Typewriter</a></li>
+        <li><a href="https://www.theglobeandmail.com/">News</a></li>
+      </ul>
 
 <div class="typewriter">
-        <h1>Something funny</h1>
+        <h1>There is a difference between<p>
+          the novice and the master is that the master has </p><p>
+          failed more times than the novice has tried.</p>
+        </h1>
       </div>
 
 <style>
 /* GLOBAL STYLES */
       body {
-        background: #333;
+        background: #FC7E7E;
         padding-top: 5em;
         display: flex;
         justify-content: center;
@@ -20,11 +61,11 @@
         font-family: monospace;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: .15em solid orange; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
+        white-space: pre; /* Keeps the content on a single line */
         margin: 0 auto; /* Gives that scrolling effect as the typing happens */
         letter-spacing: .15em; /* Adjust as needed */
         animation: 
-          typing 3.5s steps(30, end),
+          typing 4s steps(30, end),
           blink-caret .5s step-end infinite;
       }
       
