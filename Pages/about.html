@@ -4,50 +4,38 @@
     <link href="../CSS/main.css" type="text/css" rel= Stylesheet>  
 </head>
 
-<body>
-  <img class="sticky" src="../Images/Avatar.jpg" alt="Avatar" style="width:100px;float:right;"></a> 
-</body>
-
 <style>
-  img {
-      border-radius: 50%;
-    }
-
-  img.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 200px;
-}
+  
+  .tab { margin-left: 40px; }
 
   ul {
-     list-style-type: none;
-      margin: -10px;
+      list-style-type: none;
+      margin: 0;
       padding: 0;
-      width: 180px;
+      overflow: hidden;
       background-color: #69e052;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-   }
-        
+  }
+  
+  li {
+      float: left;
+  }
+  
   li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-     text-decoration: none;
-        }
-        
-  li a.active {
-     background-color: #4CAF50;
-      color: white;
-        }
-        
+      display: block;
+      color: #000;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  
   li a:hover:not(.active) {
       background-color: #555;
-      color: white;
-        }
-</style>
+  }
+  
+  .active {
+      background-color: #4CAF50;
+  }
+  </style>
 
 <header>
     <center> <h1>Timmy's Beginner HTML Site</h1> </center>
@@ -57,43 +45,36 @@
     <li><a href="../index.html">Main</a></li>
     <li><a class="active" href="../Pages/about.html">About Me</a></li>
     <li><a href="../Pages/test.html">Parallax Scrolling </a></li>
-    <li><a href="../Pages/typewriter.html">Typewriter</a></li>
+    <li><a href="../Pages/reviews.html">reviews </a></li>
     <li><a href="https://www.theglobeandmail.com/">News</a></li>
   </ul>
 
-  <div style="margin-left:17%;padding:1px 16px;height:1000px;">
-
 <h1 style="color: aqua;">Education</h1>    
-<u2>
-  <li> Gordon Graydon Memorial Secondary School (2015 - 2018)</li>
-  <li> Thomas L Kennedy (2019 - ) </li>
-</u2>
+<p>Gordon Graydon Memorial Secondary School (2015 - 2018)</p>
+<p>Thomas L Kennedy (2018 - ) </p>
+  <p class="tab">In the International and Business Technology Program</p>
+
+
+
+<h1 style="color: aqua;">Volunteer Experience</h1> 
+<p>Italfest Volunteer </p>
+  <p class="tab">August 17<sup>th</sup> and 18<sup>th</sup>, 2018 </p>
+
+<p>Bollywood Monster Mashup Volunteer </p>
+  <p class="tab">July 20<sup>th</sup> - July 22<sup>nd</sup>, 2018 </p>
+
 
 <h1 style="color: aqua;">My Tech Skills</h1>
 <i>(1-beginner/rusty, 2-pretty comfortable, 3- Pro)</i>
-<u2>
-  <li>Video Editing (2)</li>
-  <li>Photoshop (1)</li>
-  <li>Coding (1)</li>
-</u2>
+  <ol>Video Editing (2)</ol>
+  <ol>Photoshop (1)</ol>
+  <ol>Coding (1)</ol>
 
-<h1 style="color:aqua;">My Tech Interests</h1>
-<u2>
-  <li>Artificial Intelligence</li>
-  <li>Video Editing</li>
-  <li>Coding!</li>
-</u2>
 
-<p>I'M TAKING THIS COURSE BECAUSE...
-        it would lead to more job oppoturnities in the future and I would like to learn how to code.</p>
-
-<center>
-<iframe width="560" height="315" 
-  src="https://www.youtube.com/embed/m8RMv0tkwVk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-</center>
-
-<p contenteditable="true">This is a paragraph. It is editable. Try to change this text.</p>
+<h1 style="color:aqua;">General Interests</h1>
+  <ol>Artificial Intelligence</ol>
+  <ol>Video Editing</ol>
+  <ol>Badminton</ol>
 
 <footer>
     <p>Posted by: Timmy Yung</p>
