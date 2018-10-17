@@ -4,50 +4,27 @@
     <link href="../CSS/main.css" type="text/css" rel= Stylesheet>  
 </head>
 
-<style>
-  
-  .tab { margin-left: 40px; }
-
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #69e052;
-  }
-  
-  li {
-      float: left;
-  }
-  
-  li a {
-      display: block;
-      color: #000;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-      background-color: #555;
-  }
-  
-  .active {
-      background-color: #4CAF50;
-  }
-  </style>
-
 <header>
     <center> <h1>Timmy's Beginner HTML Site</h1> </center>
-  </header>
+</header>
 
-<ul>
-    <li><a href="../index.html">Main</a></li>
-    <li><a class="active" href="../Pages/about.html">About Me</a></li>
-    <li><a href="../Pages/test.html">Parallax Scrolling </a></li>
-    <li><a href="../Pages/reviews.html">reviews </a></li>
-    <li><a href="https://www.theglobeandmail.com/">News</a></li>
-  </ul>
+<div class="navbar">
+  <a href="../index.html">Home</a>
+  <a class="active" href="../Pages/about.html">About Me</a>
+  <a href="../Pages/test.html">Parallax Scrolling </a>
+  <a href="../Pages/reviews.html">Reviews </a>
+  <a href="https://www.theglobeandmail.com/">News</a>
+    <div class="dropdown">
+        <button class="dropbtn">Tech Projects 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+  </div> 
+</div>
 
 <h1 style="color: aqua;">Education</h1>    
 <p>Gordon Graydon Memorial Secondary School (2015 - 2018)</p>

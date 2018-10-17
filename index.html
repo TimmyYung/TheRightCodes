@@ -5,47 +5,27 @@
  <title>Timmy Yung </title>
 </head>  
 
-<style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #69e052;
-    }
-    
-    li {
-        float: left;
-    }
-    
-    li a {
-        display: block;
-        color: #000;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    
-    li a:hover:not(.active) {
-        background-color: #555;
-    }
-    
-    .active {
-        background-color: #4CAF50;
-    }
-    </style>
-  
-  <header>
-      <center> <h1>Timmy's Beginner HTML Site</h1> </center>
-    </header>
-  
-  <ul>
-      <li><a class="active" href="../TimmySite/index.html">Main</a></li>
-      <li><a href="../TimmySite/Pages/about.html">About Me</a></li>
-      <li><a href="../TimmySite/Pages/test.html">Parallax Scrolling </a></li>
-      <li><a href="../TimmySite/Pages/reviews.html">Reviews</a></li>
-      <li><a href="https://www.theglobeandmail.com/">News</a></li>
-    </ul>
+<header>
+    <center> <h1>Timmy's Beginner HTML Site</h1> </center>
+</header>
+
+<div class="navbar">
+    <a href="../TimmySite/index.html">Home</a>
+    <a href="../TimmySite/Pages/about.html">About Me</a></li>
+    <a href="../TimmySite/Pages/test.html">Parallax Scrolling </a></li>
+    <a href="../TimmySite/Pages/reviews.html">Website Reviews</a></li>
+    <a href="https://www.theglobeandmail.com/">News</a>
+        <div class="dropdown">
+                <button class="dropbtn">Tech Projects 
+                    <i class="fa fa caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div> 
+</div>
 
 <p>
 <button type="button" style="margin-left:auto;margin-right:auto;display:block;" onclick = "alert (' I cannot believe you did ')">Don't click here!</button>
@@ -53,6 +33,12 @@
 
 <p><i>Portfolio: Coming Soon</i></p>
 <img src="https://image.ibb.co/j13TLU/Old_Man_Button.png" alt="Old_Man_Button" class="center" border="0"></a>
+
+<script>
+    alert("Welcome")
+    var age = prompt("How old are you?")
+    alert("You are " + age)
+</script>
 
 <footer>
     <p>Posted by: Timmy Yung</p>
