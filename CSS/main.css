@@ -98,16 +98,17 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 Buttons
 */
 
-.button {
+.button1 {
     background-color: #4CAF50; /* Green */
+    font-family: Raleway;
     border: none;
-    color: white;
-    padding: 40px 50px;
+    color: black;
+    padding: 40px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 100px;
+    font-size: 30px;
+    margin: 4px 90px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
@@ -126,3 +127,5 @@ Buttons
 }
 
 .button1 {background-color: #008CBA;} /* Blue */
+
+
