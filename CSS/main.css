@@ -1,6 +1,13 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
 body{
     background-color: #FC7E7E;
 
+}
+
+header {
+    font-family: Raleway;
 }
 
 .center {
@@ -13,8 +20,6 @@ body{
 /*
 Animated NavBar
 */
-
-@import 'https://fonts.googleapis.com/css?family=Raleway';
 
 html, body
 {
@@ -99,16 +104,17 @@ Buttons
 */
 
 .button1 {
+    font-family: Montserrat;
+    font-weight: lighter;
     background-color: #4CAF50; /* Green */
-    font-family: Raleway;
     border: none;
     color: black;
     padding: 40px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
-    margin: 4px 90px;
+    font-size: 25px;
+    margin: 4px 75px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
