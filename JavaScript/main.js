@@ -160,28 +160,28 @@ function displayPyramid (height) {
 Guess the Number
 */
 
-var rand = Math.floor((Math.random() * 1000) );
+// var rand = Math.floor((Math.random() * 1000) );
 
-console.log(rand);
-function GTN() {
-    var guess;
+// console.log(rand);
+// function GTN() {
+//     var guess;
    
-    guess = prompt("Guess the number that I am thinking of", "0")
+//     guess = prompt("Guess the number that I am thinking of", "0")
 
 
 
-    do{
-        console.log(rand);
-        if (guess == rand){
-            alert("You got it!");
-        }     
-        else if (guess < rand){
-            guess = window.prompt("Too low, try again");
-        }
-            else if (guess > rand) {
-                guess= window.prompt("Too high, try again");
-                }
-            }      
-    }
+//     do{
+//         console.log(rand);
+//         if (guess == rand){
+//             alert("You got it!");
+//         }     
+//         else if (guess < rand){
+//             guess = window.prompt("Too low, try again");
+//         }
+//             else if (guess > rand) {
+//                 guess= window.prompt("Too high, try again");
+//                 }
+//             }      
+//     }
 
-while(guess != rand)}
+// while(guess != rand)}
