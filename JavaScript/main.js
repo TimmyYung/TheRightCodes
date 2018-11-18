@@ -1,38 +1,27 @@
-function test1() {
-    var age = prompt("How old are you?");
-    var helloPerson = prompt("You don't look " + age + ". Are you sure?");
-
-    if(helloPerson == "No"){
-        console.log("hah, He thinks I don't know");
-    }
-    else if (helloPerson == "Yes"){
-        console.log("He didn't do it right");
-
-    }
-}
-
-
 /*
 Bigger Number Game
 */
 
 function max(){
     var num1, num2;
-    num1 = window.prompt("Input the First integer", "0");
-    num2 = window.prompt("Input the second integer", "0");
+    num1 = prompt("Input the First integer", "0");
+    num2 = prompt("Input the second integer", "0");
                                                            
     if(parseInt(num1) > parseInt(num2)) 
     { 
-    window.alert("The larger of "+ num1+ " and "+ num2+ " is "+ num1+ ".");
+        document.getElementById("bigger").innerHTML = ("Bigger Number");
+        document.getElementById("Answer").innerHTML = ("The larger of "+ num1+ " and "+ num2+ " is "+ num1+ ".");
         }   
     else
     if(parseInt(num2) > parseInt(num1)) 
     {
-    window.alert("The larger of "+ num1+" and "+ num2+ " is "+ num2+ ".");
+        document.getElementById("bigger").innerHTML = ("Bigger Number");
+        document.getElementById("Answer").innerHTML = ("The larger of "+ num1+" and "+ num2+ " is "+ num2+ ".");
         }                  
     else
     {
-    window.alert("The values "+ num1+ " and "+ num2+ " are equal.");
+        document.getElementById("bigger").innerHTML = ("Bigger Number");
+        document.getElementById("Answer").innerHTML = ("The values "+ num1+ " and "+ num2+ " are equal.");
         }
 }
 
@@ -43,28 +32,33 @@ Product of 3 Numbers
 
 function product(){
     var x, y, z;
-    x = window.prompt ("Input the First integer", "0")
-    y = window.prompt ("Input the Second integer", "0")
-    z = window.prompt ("Input the Third integer", "0")
+    x = prompt ("Input the First integer", "0")
+    y = prompt ("Input the Second integer", "0")
+    z = prompt ("Input the Third integer", "0")
     if (x>0 && y>0 && z>0)
     {
-        alert("The sign is +");
+        document.getElementById("product").innerHTML = ("Multiply Numbers")
+        document.getElementById("Answer").innerHTML = ("The sign is +");
     }
     else if (x<0 && y<0 && z<0)
         {
-            window.alert("The sign is -");
+            document.getElementById("product").innerHTML = ("Multiply Number");
+            document.getElementById("Answer").innerHTML = ("The sign is -");
         }
      else if (x>0 && y<0 && z<0)
         {
-            window.alert("The sign is +");
+            document.getElementById("product").innerHTML = ("Multiply Number");
+            document.getElementById("Answer").innerHTML = ("The sign is +");
         }
     else if (x<0 && y>0 && z<0)
         {
-            window.alert("The sign is +");
+            document.getElementById("product").innerHTML = ("Multiply Number");
+            document.getElementById("Answer").innerHTML = ("The sign is +");
         }
      else
         {
-            window.alert("The sign is -");
+            document.getElementById("product").innerHTML = ("Multiply Number");
+            document.getElementById("Answer").innerHTML = ("The sign is -");
         }
     }
 
@@ -82,33 +76,39 @@ function sort(){
 {
         if (b>c)
         {
-            window.alert(a + ", " + b + ", " +c);
+            document.getElementById("sort").innerHTML = ("Sort Number");
+            document.getElementById("Answer").innerHTML = (a + ", " + b + ", " +c);
         }
         else
         {
-            window.alert(a + ", " + c + ", " +b);
+            document.getElementById("sort").innerHTML = ("Sort Number");
+            document.getElementById("Answer").innerHTML = (a + ", " + c + ", " +b);
         }
 }
 else if (b>a && b >c)
 {
         if (a>c)
         {
-            window.alert(b + ", " + a + ", " +c);
+            document.getElementById("sort").innerHTML = ("Sort Number");
+            document.getElementById("Answer").innerHTML = (b + ", " + a + ", " +c);
         }
         else
         {
-            window.alert(b + ", " + c + ", " +a);
+            document.getElementById("sort").innerHTML = ("Sort Number");
+            document.getElementById("Answer").innerHTML = (b + ", " + c + ", " +a);
         }
 }
 else if (c>a && c>b)
 {
         if (a>b)
         {
-            window.alert(c + ", " + a + ", " +b);
+            document.getElementById("sort").innerHTML = ("Sort Number");
+            document.getElementById("Answer").innerHTML = (c + ", " + a + ", " +b);
         }
         else
         {
-            window.alert(c + ", " + b + ", " +a);
+            document.getElementById("sort").innerHTML = ("Sort Number");
+            document.getElementById("Answer").innerHTML = (c + ", " + b + ", " +a);
         }
 }        
 }
@@ -119,19 +119,23 @@ FizzBuzz
 
 function fizzBuzz() {  
     var i;
-    i = window.prompt ("Insert an integer", "0")
+    i = window.prompt ("Insert an integer for Fizzbuzz", "0")
 
       if ( i % 3 == 0 && i % 5 == 0 ) {
-        window.alert("FizzBuzz");
+        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("buzz").innerHTML = ("FizzBuzz");
       }
       else if ( i % 3 == 0 ) {
-        window.alert("Fizz");
+        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("buzz").innerHTML = ("Fizz");
       }
       else if ( i % 5 == 0 ) {
-        window.alert("Buzz");
+        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("buzz").innerHTML = ("Buzz");
       }
       else {
-        window.alert("None");
+        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("buzz").innerHTML = ("None");
       }
     }
 
@@ -139,6 +143,8 @@ function fizzBuzz() {
 Pyramid Pattern
 */
 function displayPyramid (height) {
+   var height;
+    height = prompt("Insert an integer. Check the console for a results","0")
     for (var i = 1; i <= height; i++) {
       var row = '';
   
@@ -149,3 +155,33 @@ function displayPyramid (height) {
       console.log(row);
     }
   }
+
+/*
+Guess the Number
+*/
+
+var rand = Math.floor((Math.random() * 1000) );
+
+console.log(rand);
+function GTN() {
+    var guess;
+   
+    guess = prompt("Guess the number that I am thinking of", "0")
+
+
+
+    do{
+        console.log(rand);
+        if (guess == rand){
+            alert("You got it!");
+        }     
+        else if (guess < rand){
+            guess = window.prompt("Too low, try again");
+        }
+            else if (guess > rand) {
+                guess= window.prompt("Too high, try again");
+                }
+            }      
+    }
+
+while(guess != rand)}

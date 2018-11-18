@@ -10,11 +10,14 @@ header {
     font-family: Raleway;
 }
 
+
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    
 }
 
 /*
@@ -107,14 +110,14 @@ Buttons
     font-family: Montserrat;
     font-weight: lighter;
     background-color: #4CAF50; /* Green */
+    width: 300px;
+    height: 100px;
     border: none;
     color: black;
-    padding: 40px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-    margin: 4px 75px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
@@ -123,15 +126,14 @@ Buttons
 .button1 {
     background-color: white; 
     color: black; 
-    border: 2px solid #008CBA;
+    border: 2px solid #FC7E7E;
 }
 
 .button1:hover {
-    background-color: #008CBA;
+    background-color: #00B233;
     color: white;
 }
 }
 
-.button1 {background-color: #008CBA;} /* Blue */
 
 
