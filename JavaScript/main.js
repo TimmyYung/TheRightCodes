@@ -157,31 +157,113 @@ function displayPyramid (height) {
   }
 
 /*
+Length of a String
+*/
+
+function strlength(){
+    var txt = window.prompt("Give me a sentence!");
+    var size = txt.length;
+    document.getElementById("Assign5").innerHTML = ("The string is " + size + " characters long.");
+}
+
+/*
+Letter Capitalize
+*/
+
+ function alternateCase() {
+    var txt = prompt("Sentence");
+    var chars = txt.toLowerCase().split("");
+    for (var i = 0; i < chars.length; i += 2) {
+      chars[i] = chars[i].toUpperCase();
+    }
+    alert(chars.join(""));  
+};
+
+/*
 Guess the Number
 */
 
-// var rand = Math.floor((Math.random() * 1000) );
 
-// console.log(rand);
-// function GTN() {
-//     var guess;
+function GTN() {
+
+    var rand = Math.floor((Math.random() * 1000) + 1 );
+    var guess;
+    var guessCount = 0;
    
-//     guess = prompt("Guess the number that I am thinking of", "0")
+    guess = prompt("Guess the number that I am thinking of. It's between 1 and 1000", "0");
+
+    do{
+        console.log(rand);
+       
+        if (guess < rand){
+            guessCount += 1;
+            guess = prompt("Too low, try again. " +guessCount + " tries. Enter in q to quit.");
+        }
+            else if (guess > rand) {
+                guessCount += 1;
+                guess = prompt("Too high, try again. " +guessCount + " tries. Enter in q to quit.");
+               }
+            else if (guess == "q"){ break;}
+            
+            else{
+                    guess = prompt ("Invalid input. Try again.");
+                }
+
+            }
+            while(guess != rand);
+
+    if (guess == rand){
+        alert("You got it in " +guessCount  +" tries!");
+}
+    }
+
+/* 
+Encryption
+*/
+
+function convertUnicode(convertUni){
+	let encrText = ""
+
+	for(var i = 0; i < convertUni.length; i+= 1){ 
+		encrText += convertUni.charCodeAt(i) 
+		encrText += " " 
+	}
+	
+	return encrText; 
+}
+
+function decodeUnicode(decodeUni){
+	let decryptText = ""
+    decodeUni.split(" ");
+	for(var i = 0; i < decodeUni.length; i+= 1){ 
+        decryptText += String.fromCharCode(decodeUni[i]);
+		decryptText += " " 
+    }
+	
+	return decryptText; 
+}
+
+function base64Encrypt() {
+    // Define the string
+    var string = prompt("Give me a sentence to encrypt.");
+
+    // Encode the String
+    var encodedString = btoa(string);
+    reverse = encodedString.split('').reverse().join('');
+    unicode = convertUnicode(reverse);
+    alert(unicode); 
+}
+
+function base64Decrypt(){
+    // Define the string
+    var stringd = prompt("What should I decrypt for you?");
+
+    // Decode the String
+    decodeUnis = decodeUnicode(stringd);
+    alert(decodeUnis);
+    reversed = decodeUnis.split('').reverse().join(''); 
+    decrypted = atob(reversed);
+    alert(decrypted); 
+}
 
 
-
-//     do{
-//         console.log(rand);
-//         if (guess == rand){
-//             alert("You got it!");
-//         }     
-//         else if (guess < rand){
-//             guess = window.prompt("Too low, try again");
-//         }
-//             else if (guess > rand) {
-//                 guess= window.prompt("Too high, try again");
-//                 }
-//             }      
-//     }
-
-// while(guess != rand)}

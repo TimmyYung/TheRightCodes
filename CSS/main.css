@@ -10,6 +10,15 @@ header {
     font-family: Raleway;
 }
 
+footer {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #808080;
+    color: white;
+    font-size: 15px;
+}
 
 
 .center {
@@ -132,7 +141,6 @@ Buttons
 .button1:hover {
     background-color: #00B233;
     color: white;
-}
 }
 
 
