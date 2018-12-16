@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../CSS/game.css" type="text/css" rel= Stylesheet>  
+    <script type="text/javascript" src="../JavaScript/visual_novel.js"></script>
+    <script type="text/javascript" src="../JavaScript/js-vine.js"></script>
+</head>
+
+<header>
+    <center> <h1 style="font-weight: bolder;">Timmy's Beginner HTML Site</h1> </center>
+</header>
+
+<!-- NavBar -->
+<div class="container purple topBotomBordersIn">
+  <a href="../index.html">HOME</a>
+  <a href="../Pages/about.html">ABOUT ME</a>
+  <a href="../Pages/test.html">PARALLAX</a>
+  <a href="../Pages/reviews.html">REVIEWS</a>
+  <a href="../Pages/techprojects.html">TECH PROJECTS</a>
+  <a href="https://www.theglobeandmail.com/">NEWS</a>
+</div>
+
+<body onload="initNovel(800, 600);">
+<div id="novelDiv">
+    <div style="position: absolute;
+        left:0; top: 0; z-index:-1">
+        <img id="background0" src="images/empty.png">
+    </div>
+
+    <div style="position: absolute;
+        left:0; top: 0; z-index:-1">
+        <img id="background1" src="images/empty.png">
+    </div>
+
+    <div id="dialogDiv" style="z-index:100">
+    </div>
+</div>
+
+<div style="text-align:center; margin-top: 0.5em;">
+   <input type="button" value="Back to Beginning"
+   onclick="initNovel(800, 450)"/>
+</div>
+
+
+</html>
