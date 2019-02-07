@@ -37,7 +37,7 @@ function product(){
     z = prompt ("Input the Third integer", "0")
     if (x>0 && y>0 && z>0)
     {
-        document.getElementById("product").innerHTML = ("Multiply Numbers")
+        document.getElementById("product").innerHTML = ("Multiply Number")
         document.getElementById("Answer").innerHTML = ("The sign is +");
     }
     else if (x<0 && y<0 && z<0)
@@ -122,19 +122,19 @@ function fizzBuzz() {
     i = window.prompt ("Insert an integer for Fizzbuzz", "0")
 
       if ( i % 3 == 0 && i % 5 == 0 ) {
-        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("fizz").innerHTML = ("A4-Loops 1");
         document.getElementById("buzz").innerHTML = ("FizzBuzz");
       }
       else if ( i % 3 == 0 ) {
-        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("fizz").innerHTML = ("A4-Loops 1");
         document.getElementById("buzz").innerHTML = ("Fizz");
       }
       else if ( i % 5 == 0 ) {
-        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("fizz").innerHTML = ("A4-Loops 1");
         document.getElementById("buzz").innerHTML = ("Buzz");
       }
       else {
-        document.getElementById("fizz").innerHTML = ("FizzBuzz");
+        document.getElementById("fizz").innerHTML = ("A4-Loops 1");
         document.getElementById("buzz").innerHTML = ("None");
       }
     }
@@ -203,7 +203,9 @@ function GTN() {
                 guessCount += 1;
                 guess = prompt("Too high, try again. " +guessCount + " tries. Enter in q to quit.");
                }
-            else if (guess == "q"){ break;}
+            else if (guess == "q"){ 
+                break;
+            }
             
             else{
                     guess = prompt ("Invalid input. Try again.");
@@ -260,7 +262,6 @@ function base64Decrypt(){
 
     // Decode the String
     decodeUnis = decodeUnicode(stringd);
-    alert(decodeUnis);
     reversed = decodeUnis.split('').reverse().join(''); 
     decrypted = atob(reversed);
     alert(decrypted); 

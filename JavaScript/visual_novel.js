@@ -84,23 +84,31 @@ function prepareNovel()
          might break something.",
         t, "Lastly, if you see text that is in italics, that means the\
          character speaking it is actually talking to themselves inside their head.",
-        t, "Alright. Hopefully you make the right decisions.",
+        t, "Alright. Hopefully, you make the right decisions.",
         t, {image: "TimmyBye.png", position: center}, 
         t, "Let's get on with the story already!",
         jump, "intro",
 
         label, "Yes",
         t, {image: "TimmyHi.png", position: center}, 
-        t, "Alright. Hopefully you make the right decisions.",
+        t, "Alright. Hopefully, you make the right decisions.",
         t, {image: "TimmyBye.png", position: center}, 
         t, "Let's get on with the story already!",
         jump, "intro",
         
+        label, "Failure",
+        scene, "empty.png",
+        t, {image: "TimmyBye.png", position: center}, 
+        t, "Well you got a bad ending. It might take you a while to get the TRUE \
+        ending but don't give up! You need to see the story until the end.",
+        t, "Anyways, back to the start of the story!",
+        jump, "intro",
+
         label, "intro",
         scene, "black.jpg",
         n, "People fade away. Everyone has had a friend that \
         they no longer talk to. This story is just one of many\
-        that have happened. It is a sad part of life that people\
+        that has happened. It is a sad part of life that people\
         have to put up with.",
         n, "We start with " + player + " and his best friend " + friend + ". Both\
         of them have known each other since they were little kids and knew exactly\
@@ -168,9 +176,9 @@ function prepareNovel()
         p, "I can't believe we're thinking the same thing.",
         f, "What do you mean?",
         p, "I know that things won't stay the same forever. But all we\
-        can hope is a happy ending, " +player+ ".",
+        can hope is a happy ending, " +friend+ ".",
         n, "...",
-        f, "Hey, " +player,
+        f, "Hey, " +player+ ".",
         p, "...",
         p, "What?",
         f, "Can you see me?",
@@ -200,8 +208,8 @@ function prepareNovel()
         p, "I hate going to school",
         scene, "MKitchen_Day.png",
         p, "I guess I should just make some toast.",
-        n, "Few minutes later.",
-        p, "Time to go to " +friend+ "'s house now. Hopefully she is feeling better today.",
+        n, "A few minutes later.",
+        p, "Time to go to " +friend+ "'s house now. Hopefully, she is feeling better today.",
         scene, "FrontBuilding_Day.png",
         p, "Oh. She's right over there.",
         f, "Hey " +friend+ ".",
@@ -246,7 +254,7 @@ function prepareNovel()
         label, "Talk",
         p, "It's no big deal.",
         p, "I'll always be here for you. We're best friends of course. I'm not leaving any \
-        time soon espcially because I doubt you would be able to live without me.",
+        time soon especially because I doubt you would be able to live without me.",
         f, "Yeah. I just wanted to say thanks, that's all.",
         p, "No matter what happens in the future, how you look right now is all that matters.\
         You're one of the most important people in my life.",
@@ -273,7 +281,7 @@ function prepareNovel()
         scene, "Classroom_Day.png",
         n, "<i>At school</i>",
         p, "Let's get right into studying! There are not too many universities in this city.\
-        I would probably have to move somewhere far to get into a good university.",
+        I would probably have to move somewhere far to get into a good one.",
         p, "<i> Sigh </i>",
         p, "Now it's not the time to be thinking of this kind of stuff. I should just focus \
         on getting a high mark on the exam for now and decide what to do with my future later.",
@@ -288,13 +296,13 @@ function prepareNovel()
         p, "What the heck?",
         f, "<i> Runs over </i>",
         p, "I thought you had a club to go to today?",
-        f, "No, club is cancelled for the rest of the month because most of the club members have\
+        f, "No, the club is cancelled for the rest of the month because most of the club members have\
          exams to study for.",
         scene, "SchoolHome1_Day.png",
         p, "It always makes me depressed to just keep on hearing about exams. Everyone is so \
         concentrated on it that it makes me tired just hearing about it. Why can't I just lay around\
          and play video games?",
-        f, "Because that's not have you can succeed in life. Very few people can actually make a \
+        f, "Because that's not how succeed in life. Very few people can actually make a \
         living by playing video games. You see all these streamer playing their favourite games and\
          somehow make millions of dollars but you don't see how many people try and fail to do that.\
          Only a few people ever get to do that job.",
@@ -356,7 +364,7 @@ function prepareNovel()
         how that happened.",
         p, "Uh... yeah! People can be really nice if you try.",
         f, "Oh shut up, I know how it happened.",
-        p, "Caught me red handed. How did you figure out that it was me?",
+        p, "Caught me red-handed. How did you figure out that it was me?",
         f, "Well those friends that you got me told me how it happened. You saw them talking\
         with each other about K-Pop and told them that I was also a  big fan of K-Pop. It's\
         not that hard to figure out.", 
@@ -398,7 +406,7 @@ function prepareNovel()
         f, "You're kidding.",
         p, "Do you want me to say it again? I'm scared of the dark. I don't know what \
         might happen to me.",
-        f, "You're house isn't even that far away. It's like a 10 minutes walk.",
+        f, "Your house isn't even that far away. It's like a 10 minutes walk.",
         p, "And that is 10 minutes that anything can happen to me. What if I get stabbed \
         or a ghost takes my soul? You're the one who is going to be held responsible for \
         me meeting my grandpa.",
@@ -419,11 +427,13 @@ function prepareNovel()
         f, "<i>Plus it would be weird for us two to sleep in the\
          same bed together. </i>",
         p, "Oh come on. Where else am I going to sleep.",
-        f, "You are going to sleep on the couch while I go and change into my sleeping clothes.",
+        f, "You are going to sleep on the couch while I go and \
+        change into my sleeping clothes.",
         p, "Fine...",
         f, "And no peeking! I know how boys are during puberty.",
         p, "Ew. Why would I try to peek at you of all people.",
-        f, "Anyways, get yourself situated. I'll go change then get you a blanket.",
+        f, "Anyways, get yourself situated. I'll go change then \
+        get you a blanket.",
         p, "Yeah ok. Thanks for letting me stay.",
 
         label, "menu6",
@@ -435,7 +445,7 @@ function prepareNovel()
 
         label, "Peek",
         p, "Maybe a little look wouldn't hurt.",
-        n, "<i> Opens the door a little bit </i>",
+        n, "<i> Opens the door </i>",
         scene, "black.jpg",
         f, "YOU PERVERT! GET OUT! NOW!",
         n, "Pervert Ending",
@@ -453,6 +463,35 @@ function prepareNovel()
         label, "TimeSkip",
         scene, "black.jpg",
         n, "Days passed, and it soon became Friday.",
+        scene, "MBedroom_Day.png",
+        p, "Another day of school, another day of torment.",
+        p, "Should I have breakfast?",
+
+        label, "menu7",
+        menu, [
+        " ",
+        "Eat", [jump, "Eat"],
+        "Skip breakfast", [jump, "Skip"],
+        ],
+
+        label, "Eat",
+        p, "I should probably eat. Don't want to go to school on an empty stomach.",
+        scene, "MLivingRoom_Day.png",
+        p, "I guess toast it fine.",
+        p, "...",
+        p, "Time to pick up " +friend,
+        jump, "PickUp",
+
+        label, "Skip",
+        p, "I should pick up " +friend+ ". Don't want to be late.",
+        jump, "PickUp",
+
+        label, "PickUp",
+        
+
+
+        
+
 
     ]
 }
