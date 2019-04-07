@@ -1,0 +1,3781 @@
+<HTML>
+
+	<HEAD>
+		
+<!--
+	This Family Echo file is Copyright (c) Familiality Ltd.
+
+	This file may be distributed only in whole and unmodified, as part of a
+	family downloaded from Family Echo. You may make this file available on the
+	World Wide Web without modification, only if used to display a family
+	downloaded from Family Echo. You may make copies of this file for personal
+	archiving purposes, only as part of a family downloaded from Family Echo.
+
+	This file may not be distributed or copied for any other purpose. You are
+	not permitted to modify, merge, publish, sublicense, rent, sell, lease,
+	loan, decompile, reverse engineer or create derivative works from this file.
+
+	This copyright and license notice must be kept in all copies of this file.
+-->
+		
+		<STYLE>
+
+body {margin:0px;}
+body,td,select {font-family:arial; font-size:12px;}
+a:link,a:active,a:visited {text-decoration:none; color:#000099;}
+a:hover {text-decoration:underline;}
+
+.lbody {background-color:#e1e1e1;}
+.rbody {background-color:#ffffff;}
+.mbody {background-color:#d6ddff; border:outset #666666 2px; padding:8px;}
+.fullsize {width:100%; height:100%;}
+
+.tm {margin-top:12px; margin-bottom:0px;}
+.td {margin-top:24px; margin-bottom:0px;}
+.pt {margin-top:12px; margin-bottom:24px; text-align:center; font-weight:bold; font-size:20px;}
+
+.hiderows {display: none;}
+.showrows {display: block; display:table-row-group;}
+
+.dline {background:#444444; position:absolute; font-size:0px; line-height:0%;}
+.ddotted {position:absolute; font-size:0px; line-height:0%; border:1px #444444 dotted;}
+.dbox {border-radius:8px; border: solid black; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.dcella {text-align:center; color:#000000; overflow:hidden;}
+.dcelld {text-align:center; color:#777777; overflow:hidden;}
+.db,.db1,.db2,.db3,.db4 {display:block; overflow:hidden; font-size:1px;}
+.db1,.db2,.db3,.db4 {height:1px;}
+.db2,.db3,.db4 {border-left:1px solid #000; border-right:1px solid #000;}
+.db1 {margin:0 5px; background:#000;}
+.db2 {margin:0 3px; border-width:0 2px;}
+.db3 {margin:0 2px;}
+.db4 {margin:0 1px;}
+.dc {display:block; border:0 solid #000; border-width:0 1px;}
+.di {position:absolute; cursor:pointer; overflow:hidden;}
+
+.sname {font-size:18px; font-weight:bold; color:#000000; text-align:center;}
+.sdefname {font-size:18px; color:#666666; text-align:center;}
+.simage {border:1px #666666 solid;}
+.snormal {padding:2px 4px 2px 4px;}
+.sleft {color:#222222; padding:2px 2px 2px 4px; text-align:right;}
+.sright {width:176px; padding:2px 6px 2px 2px;}
+.sboth {padding:2px 4px 2px 4px; text-align:center;}
+.sfield {width:176px; font-family:arial; font-size:12px;}
+.syear {width:3.5em;}
+.sselect {font-family:arial; font-size:12px;}
+.ibutton, .sbutton, .sbutton2 {font-family:arial; font-size:12px; padding:1px 0;}
+.sbutton {width:240px;}
+.sbutton2 {width:112px;}
+.spanel {border-left:solid #666666 1px; border-right:solid #666666 1px; border-bottom:solid #666666 1px;}
+.sswitch {padding-bottom:4px; border-bottom:solid #666666 1px; padding-left:5px; padding-top:5px; padding-right:5px;}
+.sswitched {padding:4px; padding-bottom:5px; border-left:solid #666666 1px; border-top:solid #666666 1px; border-right:solid #666666 1px;}
+.sswitchedlink {color:#222222;}
+.sswitchedlink:hover {text-decoration:none;}
+.slist a,.slist div {padding:2px 4px; display:block; color:#000;}
+.slist a:hover {background:#ddd; text-decoration:none;}
+
+.marginon {left:0px; top:0px; height:100%; margin-left:320px; margin-right:0px;}
+.marginoff {left:0px; top:0px; height:100%; margin-left:0px; margin-right:0px;}
+.dright {position:absolute; left:0px; width:100%}
+.dleft {position:absolute; left:0px; top:0px; width:320px; border-right:solid #666666 1px; height:100%; overflow-y:auto;}
+
+.blankpixel {background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw== );}</STYLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+		
+		<TITLE>Family Echo - My Family</TITLE>
+		
+		<META NAME="Description" CONTENT="Draw your printable family tree online. Free and easy to use, no login required. Add photos and share with your family. Import/export GEDCOM files.">
+
+		
+		<SCRIPT language="JavaScript"><!--
+		var staticMode=true;
+		var hideSidebar=false;
+		var noCentering=false;
+		var defaultZoom=1;
+		var defaultDetail=null;
+		var defaultBirthName=0;
+		var defaultMiddleName=0;
+		var defaultShowPhoto=0;
+		var defaultCousins=2;
+		var defaultChildren=8;
+		var defaultParents=5;
+		var nameColors={
+			living : '#000',
+			deceased : '#777'
+		};
+		--></SCRIPT>
+
+		<script type="text/javascript">
+function GE(e){
+return document.getElementById(e);
+};
+function SV(e,v){
+GE(e).value=v?v:"";
+};
+function GV(e){
+return GE(e).value;
+};
+function SO(e,v){
+var s=GE(e);
+var v=v?v:"";
+for(var j=0;j<s.options.length;j++){
+if(s.options[j].value==v){
+s.selectedIndex=j;
+}
+}
+};
+function GO(e){
+var v=GE(e);
+return v.options[v.selectedIndex].value;
+};
+function SS(e,s){
+GE(e).style.display=s?"inline":"none";
+};
+function GS(e){
+return GE(e).style.display!="none";
+};
+function SI(e,v){
+GE(e).style.visibility=v?"visible":"hidden";
+};
+function GI(e){
+return GE(e).style.visibility!="hidden";
+};
+function FS(e){
+GE(e).focus();
+GE(e).select();
+};
+function SR(e,s){
+GE(e).className=s?"showrows":"hiderows";
+};
+function SH(e,h){
+GE(e).innerHTML=h;
+};
+function ST(e,t){
+GE(e).innerHTML=EH(t);
+};
+function NE(s){
+return s.replace(/\r\n?/g,"\n");
+};
+function EH(v){
+return v.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+};
+function EL(v){
+return v?EH(v.replace(/\n/g,"^$")).replace(/\^\$/g,"<BR>"):"";
+};
+function DT(){
+return (new Date()).getTime();
+};
+function BR(_1,_2,_3){
+var _4=_1+"ap_"+_2+".php?";
+for(var j in _3){
+if(_3[j]!=null){
+_4+=(j+"="+escape(_3[j])+"&");
+}
+}
+return _4;
+};
+function BA(_5,_6,_7){
+return BR(_5,_6,_7)+"_="+(DT()+Math.random());
+};
+function AG(_8,_9,_a,_b){
+new Ajax.Request(BA("ap/",_8,_9),{method:"post",onComplete:function(_c){
+_a(_8,_b,((_c.status==200)&&_c.responseText)?eval("("+_c.responseText+")"):{});
+}});
+};
+function AP(_d,_e,_f,_10,_11){
+new Ajax.Request(BA("ap/",_d,_e),{method:"post",postBody:_f,onComplete:function(_12){
+_10(_d,_11,((_12.status==200)&&_12.responseText)?eval("("+_12.responseText+")"):{});
+}});
+};
+var Bw=null;
+function CE(w){
+Bw=w;
+window.onerror=SE;
+};
+function TR(){
+var s="";
+for(var a=TR;a;a=a.caller){
+s+=(a.name||a.toString().match(/function (\w*)/))+"<";
+if(a.caller==a){
+break;
+}
+}
+return s;
+};
+function SE(m,u,l,w){
+w=w||window;
+if(Bw){
+if(Bw.SE){
+Bw.SE(m,u,l,w);
+}
+}else{
+AP("log_js_error",{},m+"|"+(w?w.location:"")+"|"+u+"|"+l+"|",function(){
+},null);
+}
+};
+function RE(e){
+alert(e);
+};
+function SC(n,v){
+var d=new Date();
+d.setTime(d.getTime()+365*86400000);
+document.cookie=n+"="+v+"; expires="+d.toGMTString()+"; path=/";
+};
+function GC(n){
+var cs=document.cookie.split(";");
+for(var j=0;j<cs.length;j++){
+var c=cs[j];
+while(c.charAt(0)==" "){
+c=c.substring(1,c.length);
+}
+if(c.substring(0,n.length+1)==(n+"=")){
+return c.substring(n.length+1,c.length);
+}
+}
+return null;
+};
+function UL(l){
+var dw=self.screen.width,dh=self.screen.height;
+if(top.innerHeight){
+dw=top.innerWidth;
+dh=top.innerHeight;
+}else{
+if(top.document.documentElement&&top.document.documentElement.clientHeight){
+dw=top.document.documentElement.clientWidth;
+dh=top.document.documentElement.clientHeight;
+}else{
+if(top.document.body){
+dw=top.document.body.clientWidth;
+dh=top.document.body.clientHeight;
+}
+}
+}
+var w=window.open(l.href,"uplink","toolbar=1,location=1,status=1,menubar=1,scrollbars=1,resizable=1,"+"width="+(dw-64)+",height="+(dh-64));
+if(w){
+w.focus();
+}
+return !w;
+};
+
+</script>		<script type="text/javascript">
+var Fmn=["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var Fgn={"":"","f":"Female","m":"Male","o":"Other"};
+function FAA(a,v){
+a[a.length]=v;
+};
+function FRF(f,ap,fp){
+for(var i in f){
+var p=f[i];
+p.c=[];
+p.pc={};
+p.fg=false;
+if(p.m&&!f[p.m]){
+p.m=null;
+}
+if(p.f&&!f[p.f]){
+p.f=null;
+}
+if(p.s&&!f[p.s]){
+p.s=null;
+}
+if(p.s){
+p.pc[p.s]=true;
+}
+if(p.ep){
+for(var j in p.ep){
+if(p.ep[j]&&f[j]){
+p.pc[j]=true;
+}
+}
+}
+}
+var ai=0;
+for(var i in f){
+var p=f[i];
+var mi=p.m;
+var fi=p.f;
+p.i=i;
+p.h=null;
+p.n=null;
+p.hp=false;
+ai++;
+p.ai=ai;
+if(p.p){
+var _1=p.p.split(" ");
+for(j=0;j<_1.length;j++){
+if(_1[j].length){
+p.h=_1[j];
+var sn=p.l||p.q;
+p.n=p.h+(sn?(" "+sn):"");
+p.hp=true;
+break;
+}
+}
+}
+if(mi&&fi){
+f[mi].pc[fi]=true;
+f[fi].pc[mi]=true;
+}
+if(mi){
+FAA(f[mi].c,i);
+}
+if(fi){
+FAA(f[fi].c,i);
+}
+}
+for(var i in f){
+var p=f[i];
+var mi=p.m;
+var fi=p.f;
+if(!p.h){
+if(i==ap){
+p.h="Me";
+}else{
+if(i==fp){
+p.h="Founder";
+}else{
+var r=p["^"];
+if(r&&f[r]&&f[r].h){
+if((r==mi)||(r==fi)){
+p.h=FPT(f[r],((p.g=="f")?"Daughter":((p.g=="m")?"Son":"Child")));
+}else{
+if(f[r].m==i){
+p.h=FPT(f[r],"Mother");
+}else{
+if(f[r].f==i){
+p.h=FPT(f[r],"Father");
+}else{
+if((mi&&(f[r].m==mi))||(fi&&(f[r].f==fi))){
+p.h=FPT(f[r],(((f[r].m==mi)&&(f[r].f==fi))?"":"Half ")+((p.g=="f")?"Sister":((p.g=="m")?"Brother":"Sibling")));
+}else{
+if(r==p.s){
+p.h=FPT(f[r],"Partner");
+}else{
+if(f[r].pc[i]){
+p.h=FPT(f[r],"Ex-partner");
+}
+}
+}
+}
+}
+}
+}
+}
+}
+if(!p.h){
+p.h="Anon "+p.ai;
+}
+p.n=p.h;
+}
+p.cp=0;
+for(var pi in p.pc){
+p.cp++;
+}
+p.es=p.s||((p.cp==1)?pi:null);
+}
+if(fp){
+FSR(f,fp,"fg",true,true,true,true,true,false);
+}
+};
+function FSR(f,i,l,u,uu,d,dd,a,aa){
+if(i&&f[i]&&!f[i][l]){
+var p=f[i];
+p[l]=true;
+if(u){
+FSR(f,p.m,l,uu,uu,dd,dd,aa,aa);
+FSR(f,p.f,l,uu,uu,dd,dd,aa,aa);
+}
+if(d){
+for(var j=0;j<p.c.length;j++){
+FSR(f,p.c[j],l,false,false,dd,dd,aa,aa);
+}
+}
+if(a){
+FSR(f,p.es,l,uu,uu,dd,dd,aa,aa);
+for(var pi in p.pc){
+FSR(f,pi,l,uu,uu,dd,dd,aa,aa);
+}
+}
+}
+};
+function FDF(f,i,si,sf,st){
+for(var j in f){
+f[j].cf=false;
+}
+FCF(f,i,"cf",null,si,sf,st);
+var df=[];
+for(var j in f){
+if(!f[j].cf){
+df[df.length]=j;
+}
+}
+return df;
+};
+function FCF(f,i,l,fi,si,sf,st){
+if(i&&f[i]&&!f[i][l]&&(i!=si)&&((i!=st)||(fi!=sf))){
+var p=f[i];
+p[l]=true;
+FCF(f,p.m,l,i,si,sf,st);
+FCF(f,p.f,l,i,si,sf,st);
+for(var j=0;j<p.c.length;j++){
+FCF(f,p.c[j],l,i,si,sf,st);
+}
+for(var pi in p.pc){
+FCF(f,pi,l,i,si,sf,st);
+}
+}
+};
+function FCS(f,i){
+for(var j in f){
+f[j].sf=false;
+}
+FSR(f,i,"sf",true,true,true,true,false,true);
+FSR(f,f[i].es,"sf",false,false,true,true,false,true);
+for(var pi in f[i].pc){
+FSR(f,pi,"sf",false,false,true,true,false,true);
+}
+var sf=[];
+for(var j in f){
+if(f[j].sf){
+sf[sf.length]=j;
+}
+}
+return sf;
+};
+function FMS(f,mi,fi){
+return f[mi]&&f[fi]&&(f[mi].s==fi)&&(f[fi].s==mi);
+};
+function FGM(g){
+return (g=="f")?-1:((g=="m")?1:0);
+};
+function FCM(p1,p2){
+return (p1?FGM(p1.g):0)-(p2?FGM(p2.g):0);
+};
+function FSM(f,i,si){
+var cm=FCM(i?f[i]:null,si?f[si]:null);
+return cm?(cm<0):(si?(i<si):false);
+};
+function FIG(g){
+return (g=="m")?"f":((g=="f")?"m":null);
+};
+function FPR(f,i){
+var p=f[i];
+for(var j in f){
+f[j].rf=false;
+}
+FSR(f,i,"rf",false,false,true,true,false,false);
+f[i].rf=false;
+FSR(f,i,"rf",false,false,false,false,true,false);
+FSR(f,p.m,"rf",true,true,false,false,false,false);
+FSR(f,p.f,"rf",true,true,false,false,false,false);
+var ra=[];
+for(var j in f){
+if(!f[j].rf){
+FAA(ra,j);
+}
+}
+return ra;
+};
+function FAR(f,i,si){
+for(var j in f){
+f[j].pf=false;
+}
+for(var pi in f[i].pc){
+FSR(f,pi,"pf",true,false,false,false,false,false);
+}
+FSR(f,i,"pf",false,false,true,true,false,false);
+if(si){
+FPR(f,si);
+}
+var pa=[];
+for(var j in f){
+if((!f[j].pf)&&((!si)||f[si].pc[j]||(!f[j].rf))){
+FAA(pa,j);
+}
+}
+return pa;
+};
+function FPD(d){
+try{
+return {d:parseInt(d.substring(6,8),10),m:parseInt(d.substring(4,6),10),y:parseInt(d.substring(0,4),10)};
+}
+catch(e){
+return "";
+}
+};
+function FDT(d){
+var p=FPD(d?d.toString():"");
+return (p.m?((p.d?(p.d+" "):"")+Fmn[p.m]+" "):"")+(p.y?p.y:"");
+};
+function FDE(v,m,l){
+v=parseInt(v);
+v="0000"+((isNaN(v)||(v<0))?0:((v>m)?m:v));
+return v.substring(v.length-l,v.length);
+};
+function FDS(d,m,y){
+return FDE(y,9999,4)+FDE(m,12,2)+FDE(d,31,2);
+};
+function FPT(p,r){
+return r+" of "+p.h;
+};
+function FCC(p1,p2){
+var b1=(p1.b&&parseInt(p1.b.substring(0,4),10))?parseInt(p1.b,10):99999999;
+var b2=(p2.b&&parseInt(p2.b.substring(0,4),10))?parseInt(p2.b,10):99999999;
+if(b1<b2){
+return -1;
+}else{
+if(b2<b1){
+return 1;
+}
+}
+if(p1.ai<p2.ai){
+return -1;
+}else{
+if(p1.ai>p2.ai){
+return 1;
+}
+}
+return 0;
+};
+function FSC(f,ci){
+var cp=[];
+for(var j=0;j<ci.length;j++){
+cp[cp.length]=f[ci[j]];
+}
+cp.sort(FCC);
+ci.length=0;
+for(var j=0;j<cp.length;j++){
+ci[ci.length]=cp[j].i;
+}
+};
+function FLA(f,i){
+var ac=[];
+var c=f[i].c;
+for(var j=0;j<c.length;j++){
+var cp=f[c[j]];
+if(!(cp.m&&f[cp.m]&&cp.f&&f[cp.f])){
+FAA(ac,c[j]);
+}
+}
+FSC(f,ac);
+return ac;
+};
+function FLP(f,i,pi){
+var tc=[];
+var c=f[i].c;
+for(var j=0;j<c.length;j++){
+var cp=f[c[j]];
+if(((cp.m==i)&&(cp.f==pi))||((cp.f==i)&&(cp.m==pi))){
+FAA(tc,c[j]);
+}
+}
+FSC(f,tc);
+return tc;
+};
+function FLS(f,i){
+var bs=[];
+var mi=f[i].m;
+var fi=f[i].f;
+var cs={};
+if(mi&&f[mi]){
+var c=f[mi].c;
+for(var j=0;j<c.length;j++){
+cs[c[j]]=true;
+}
+}
+if(fi&&f[fi]){
+var c=f[fi].c;
+for(var j=0;j<c.length;j++){
+cs[c[j]]=true;
+}
+}
+for(var j in cs){
+if(j!=i){
+if(((f[j].m==mi)&&(f[j].f==fi))||((f[j].m==fi)&&(f[j].f==mi))){
+FAA(bs,j);
+}
+}
+}
+FSC(f,bs);
+return bs;
+};
+
+</script>		<script type="text/javascript">
+var Efa={};
+var Efo;
+var Ewr;
+var Ewp=null;
+var Ead;
+var Eve;
+var Ezf,Esd=null,Ebn=false,Emn=false,Esp=false;
+var Eeq=[];
+var Esc=false;
+var Ess="",Eis="";
+var Eec=null;
+var Epc=null;
+var staticModeAfterRead;
+var lastHash,currentHash;
+var Elb=null;
+var Ebi;
+var Esb;
+var Elh=null;
+function PL(){
+if(!staticMode){
+CE();
+}
+if(hideSidebar){
+ESI(false);
+}
+if(staticMode||((typeof (Ajax)!="undefined")&&Ajax.getTransport())){
+window.onbeforeunload=EPU;
+var c=GC("zoomfactor");
+var zf=parseFloat((c===null)?defaultZoom:c);
+Ezf=((zf>=0.25)&&(zf<=2))?zf:1.25;
+var c=GC("showbirthname");
+Ebn=parseInt((c===null)?defaultBirthName:c)?true:false;
+var c=GC("showmiddlename");
+Emn=parseInt((c===null)?defaultMiddleName:c)?true:false;
+var c=GC("showphoto");
+Esp=parseInt((c===null)?defaultShowPhoto:c)?true:false;
+var c=GC("showdetail");
+Esd=(c===null)?defaultDetail:c;
+NSD(Esd);
+var c=GC("showcousins");
+NSC((c===null)?defaultCousins:c);
+var c=GC("showchildren");
+NSH((c===null)?defaultChildren:c);
+var c=GC("showparents");
+NSA((c===null)?defaultParents:c);
+Ebi=(document.all&&(navigator.userAgent.toLowerCase().indexOf("msie")>=0));
+Esb=(navigator.userAgent.toLowerCase().indexOf("safari")>=0);
+TIS(GE("treemargin"));
+if(staticMode){
+Ewr=false;
+Efo=GV("founderid");
+var h=new String(window.location.hash);
+if(h.length&&(h.charAt(0)=="#")){
+h=h.substring(1);
+}
+var a=h.split(":");
+var m=a[0];
+var i=a[1];
+if(i){
+SV("viewpersonid",i);
+}
+if(m){
+SV("viewmode",m);
+}
+SS("printbutton",false);
+ERP(false);
+}else{
+Ewr=true;
+Ead=true;
+Efo=GV("personid");
+var fi=GV("familyid");
+var ic=GV("importcacheid");
+if(fi||ic){
+AG("family_read",{f:fi,i:ic,p:GV("personid"),c:GV("checksum"),s:GV("sessionid")},EFR,fi&&(ic||GV("newscript").length));
+}else{
+ERP(false);
+}
+}
+}else{
+SS("treebg",false);
+SS("noajax",true);
+}
+};
+function page_resized(){
+nav_position_find();
+};
+function ESB(l){
+if(!Esb){
+if(Ebi){
+Elh=l;
+setTimeout("GE('backframe').src='back.htm?"+l+"';",100);
+}else{
+window.location.hash=l;
+}
+}
+};
+function EBI(l){
+var h=new String(l.search);
+var p=h.lastIndexOf("?");
+if(p>=0){
+h=h.substring(p+1);
+}
+if(Elh&&(Elh!=h)){
+return;
+}
+Elh=null;
+window.location.hash=h;
+};
+function EBT(){
+if(!Esb){
+var h=new String(window.location.hash);
+if(h.length&&(h.charAt(0)=="#")){
+h=h.substring(1);
+}
+if(Elh&&(Elh!=h)){
+return;
+}
+var a=h.split(":");
+var m=a[0];
+var i=a[1];
+lastHash=currentHash;
+currentHash=m;
+if((i&&(i!=GV("viewpersonid")))||(m&&(m!=GV("viewmode")))){
+if((Eec!==null)&&(i==Epc)&&(m==="view")){
+EFE(false);
+}else{
+if(i&&Efa[i]){
+SV("viewpersonid",i);
+}
+if(m){
+SV("viewmode",m);
+}
+EUS(false,null,null,true,true);
+}
+}
+}
+};
+function EPU(e){
+if((!Esc)&&(!staticMode)){
+if(GV("newscript").length||GV("importcacheid")){
+e=e||window.event;
+var m="If you leave this page before saving, your changes to this family will be lost.";
+e.returnValue=m;
+return m;
+}
+}
+};
+function ESC(){
+Esc=true;
+};
+function EFR(_1,_2,_3){
+if(_3.ok){
+Efa={};
+if(_3.f){
+if(_3.ar){
+ERS(_3.t);
+Ess=_3.t;
+Eve=_3.v;
+Ewr=_3.aw;
+Ewp=_3.pw?GV("personid"):null;
+Ead=_3.aa;
+Efo=_3.fp;
+}else{
+RE("You do not have permission to view this family");
+}
+}
+if(_3.m){
+ERS(_3.m);
+Eis=_3.m;
+if(_3.ro){
+staticMode=true;
+staticModeAfterRead=true;
+Ewr=false;
+Ewp=false;
+SS("do_signin",false);
+SH("lfooterlinks","Family displayed via the <A HREF=\"http://www.familyecho.com/\" TARGET=\"_blank\">Family Echo</A> API.");
+}
+if(_3.lo){
+SH("lfamilyname",_3.lo);
+}
+}
+}else{
+RE("This family could not currently be located. This may be due to occasional system maintenance, so please try again in a few hours.");
+}
+ERP(_2);
+};
+function ERP(_4){
+ERS(GV("newscript"));
+if(Esd===null){
+Esd="";
+for(var j in Efa){
+if(Efa[j].r){
+Esp=true;
+}
+}
+NSD(Esd);
+}
+EUS(true,null,GV("viewmode"),true,false);
+if(_4){
+ESS();
+}else{
+EUL(false);
+}
+setInterval(EBT,250);
+};
+function EUS(r,i,m,d,s,_5){
+var pi=Evp=GV("viewpersonid");
+var pm=viewMode=GV("viewmode");
+if(r){
+var ap=GV("personid");
+if(Efo&&!Efa[Efo]){
+Efa[Efo]={};
+}
+FRF(Efa,ap,Efo);
+if(ap&&Efa[ap]){
+NSP(ap);
+SV("name",Efa[ap].n);
+SV("email",Efa[ap].e);
+}else{
+NSP(Efo);
+}
+var fc=0;
+for(var j in Efa){
+fc++;
+}
+NCP(fc);
+if((staticMode||GV("familyid"))&&Efo&&Efa[Efo]){
+if(!staticMode){
+var _6=GE("lfamilyinfo"),_7="Founded by "+Efa[Efo].n,_8="<a href=\"\" onclick=\"ESM('history'); return false\">View history...</a>";
+_6.innerHTML=EH(_7)+" - "+_8;
+}else{
+ST("lfamilyinfo",(Efo&&Efa[Efo])?("Founded by "+Efa[Efo].n):"");
+}
+}else{
+ST("lfamilyinfo","");
+}
+}
+if(i){
+Evp=i;
+}
+if(m){
+viewMode=m;
+}
+if((!Evp)||(!Efa[Evp])){
+if(Efo&&Efa[Efo]){
+Evp=Efo;
+}else{
+for(Evp in Efa){
+break;
+}
+}
+}
+SV("viewpersonid",Evp);
+SV("viewmode",viewMode);
+if(viewMode=="history"){
+ESI(true);
+if((!Esb&&lastHash!=viewMode)||(Esb&&m)){
+GE("extraframe").src="history.php?f="+escape(GV("familyid"))+"&p="+escape(GV("personid"))+"&c="+escape(GV("checksum"))+"&s="+escape(GV("sessionid"));
+}
+SI("extradiv",true);
+}else{
+if(viewMode=="share"){
+ESI(true);
+GE("extraframe").src="share.php?f="+escape(GV("familyid"))+"&p="+escape(GV("personid"))+"&c="+escape(GV("checksum"))+"&i="+escape(Evp)+"&s="+escape(GV("sessionid"))+"&z="+((Efa[Evp].z!="1")?0:1)+(_5!==undefined?"&return="+_5:"");
+SI("extradiv",true);
+}else{
+if(viewMode=="download"){
+ESI(true);
+GE("extraframe").src="download.php?f="+escape(GV("familyid"))+"&p="+escape(GV("personid"))+"&c="+escape(GV("checksum"))+"&s="+escape(GV("sessionid"));
+SI("extradiv",true);
+}else{
+if(viewMode=="print"){
+ESI(true);
+if(m){
+GE("extraframe").src="print.php?f="+escape(GV("familyid"))+"&p="+escape(GV("personid"))+"&c="+escape(GV("checksum"))+"&s="+escape(GV("sessionid"));
+}
+SI("extradiv",true);
+}else{
+if(viewMode=="import"){
+ESI(true);
+GE("extraframe").src="import.php?p="+escape(GV("personid"));
+SI("extradiv",true);
+}else{
+if(viewMode=="importfinish"){
+}else{
+if(GI("extradiv")){
+GE("extraframe").src="";
+SI("extradiv",false);
+}
+}
+}
+}
+}
+}
+}
+if(navigator.userAgent.match(/(iPod|iPhone|iPad)/)&&navigator.userAgent.match(/AppleWebKit/)){
+SS("extradiv",GI("extradiv"));
+}
+SSE(Evp,viewMode);
+var uf=(viewMode=="website")?"w":((viewMode=="blog")?"B":((viewMode=="photos")?"P":null));
+if(uf){
+GE("externalurl").src=Efa[Evp][uf];
+SS("externaldiv",true);
+SSU(true);
+}else{
+if(GS("externaldiv")){
+SS("externaldiv",false);
+GE("externalurl").src="";
+SSU(false);
+}
+}
+if(i||m){
+ESB(viewMode+":"+Evp);
+}
+if(d||(Evp!=pi)){
+TRT(Efa,Evp,GV("personid"),Esd,Ebn,Emn,Esp,NGH(),NGA(),NGC(),pi,Ezf,s);
+NRT();
+}
+if(r||(Evp!=pi)){
+if(parent&&parent.postMessage){
+parent.postMessage("focus="+Evp,"*");
+}
+}
+};
+function EUF(){
+EUS(true,null,null,true,false);
+};
+function ERF(){
+EUS(false,null,null,true,true);
+};
+function ESP(i,s){
+EHW();
+for(var j=0;j<(Eeq.length-1);j++){
+if(Eeq[j]==i){
+Eeq.splice(j,1);
+EUS(false,i,"edit",false,s);
+return;
+}
+}
+var vm=GV("viewmode");
+Eeq=[];
+EUS(false,i,((vm=="share")||(vm=="print")||(vm=="history"))?null:"view",false,s);
+};
+function ESM(m,_9){
+EUS(false,null,m,false,false,_9);
+};
+function ECS(){
+Eec=GV("newscript").length;
+Epc=GV("viewpersonid");
+};
+function ESE(r,i,b){
+Eeq=[];
+for(var j=1;j<i.length;j++){
+Eeq[Eeq.length]=i[j];
+}
+Eeq[Eeq.length]=b;
+EHW();
+EUS(r,i[0],"edit",r,true);
+};
+function EFE(a){
+if(a){
+if(Eeq.length<=1){
+ESS();
+EHW();
+EUS(false,Eeq.length?Eeq[0]:null,"view",false,true);
+Eec=null;
+}else{
+EUS(false,Eeq.shift(),"edit",false,true);
+}
+}else{
+if(Eec!==null){
+ESM("view");
+Efa={};
+ERS(Ess);
+ERS(Eis);
+var ks=GV("newscript");
+ks=ks.substring(0,Eec);
+SV("newscript",ks);
+ERS(ks);
+Eec=null;
+EUS(true,Epc,"view",true,true);
+}else{
+EUS(true,null,"view",true,true);
+}
+EUL(false);
+}
+};
+function EFV(i,p,v){
+if(i){
+Efa[i]=Efa[i]||{};
+if((p=="x")||(p=="s")){
+if(Efa[i].s&&Efa[Efa[i].s]){
+Efa[Efa[i].s].s=null;
+}
+}
+if(p=="x"){
+delete Efa[i];
+}else{
+if((p=="s")&&v){
+Efa[v]=Efa[v]||{};
+if(Efa[v].s&&Efa[Efa[v].s]){
+Efa[Efa[v].s].s=null;
+}
+Efa[v].s=i;
+}
+Efa[i][p]=v?v:null;
+}
+}
+};
+function EPV(i1,i2,p,v){
+if(i1&&i2){
+Efa[i1]=Efa[i1]||{};
+Efa[i2]=Efa[i2]||{};
+var fn=p+"p";
+Efa[i1][fn]=Efa[i1][fn]||{};
+Efa[i2][fn]=Efa[i2][fn]||{};
+Efa[i1][fn][i2]=v.length?v:null;
+Efa[i2][fn][i1]=v.length?v:null;
+}
+};
+function ERS(s){
+var c=ECL(s);
+for(var j=0;j<c.length;j++){
+var e=c[j];
+var i=e.t.substring(1,e.t.length);
+var v=e.v.replace(/\\t/g,"\t").replace(/\\n/g,"\n").replace(/\\\\/g,"\\");
+if(e.t.charAt(0)=="i"){
+EFV(i,e.p,v);
+}else{
+if(e.t.charAt(0)=="p"){
+var ii=i.split(" ");
+EPV(ii[0],ii[1],e.p,v);
+}
+}
+}
+};
+function ECL(s){
+var l=NE(s).split("\n");
+var c=[];
+for(var j=0;j<l.length;j++){
+var e=l[j].split("\t");
+for(var k=1;k<e.length;k++){
+c[c.length]={t:e[0],p:e[k].charAt(0),v:e[k].substring(1,e[k].length)};
+}
+}
+return c;
+};
+function EOS(s){
+var c=ECL(s);
+var os="";
+var pi=null;
+var pc=[];
+for(var j=0;j<c.length;j++){
+var e=c[j];
+if(e.t!=pi){
+if(pi){
+os+=pi+"\t"+pc.join("\t")+"\n";
+}
+pi=e.t;
+pc=[];
+}
+var pl=pc.length;
+pc[((pl>0)&&(pc[pl-1].charAt(0)==e.p))?(pl-1):pl]=e.p+e.v;
+}
+if(pi){
+os+=pi+"\t"+pc.join("\t")+"\n";
+}
+return os;
+};
+function EFC(i,c){
+for(var p in c){
+var v=c[p]?NE(new String(c[p])):"";
+EFV(i,p,v);
+GE("newscript").value+="\ni"+i+"\t"+p.charAt(0)+v.replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/\t/g,"\\t");
+}
+EUL(false);
+};
+function EPC(i1,i2,c){
+for(var p in c){
+var v=c[p]?NE(new String(c[p])):"";
+EPV(i1,i2,p,v);
+GE("newscript").value+="\np"+i1+" "+i2+"\t"+p.charAt(0)+v.replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/\t/g,"\\t");
+}
+EUL(false);
+};
+function EFI(){
+var c="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+for(var j=0;j<1000;j++){
+var i="";
+for(k=0;k<5;k++){
+i+=c.charAt(Math.floor(Math.random()*(k?36:26)));
+}
+if(!Efa[i]){
+break;
+}
+}
+return i;
+};
+var Edf=false;
+function ESS(){
+if(!staticMode){
+var fi=GV("familyid");
+var ic=GV("importcacheid");
+if(fi&&!Edf){
+var _a=GV("newscript").length;
+if(_a||ic){
+Edf=true;
+AP("family_append",{f:fi,i:ic,p:GV("personid"),c:GV("checksum"),v:Eve},EOS(GV("newscript")),ESR,_a);
+EUL(false);
+}else{
+Edf=true;
+EUL(false);
+Edf=false;
+setTimeout("EUL(true);",500);
+}
+}
+}
+};
+function ESR(_b,_c,_d){
+Edf=false;
+if(_d.ok){
+Eve=_d.v;
+Ess+="\n"+Eis;
+Eis="";
+SV("importcacheid","");
+var ns=GV("newscript");
+Ess+=ns.substring(0,_c);
+SV("newscript",ns.substring(_c,ns.length));
+if(_d.t){
+Efa={};
+ERS(_d.t);
+Ess=_d.t;
+ERS(GV("newscript"));
+EUS(true,null,null,true,false);
+}
+}else{
+RE("The family could not be saved - please try again");
+}
+EUL(true);
+};
+function EUL(js){
+if(!staticMode){
+var _e=GV("newscript").length;
+var ic=GV("importcacheid");
+if(Edf){
+p="lsaving";
+}else{
+if(_e||ic){
+p="lsave";
+}else{
+if(!Ewr){
+p=Ewp?"lwriteone":"lreadonly";
+}else{
+p=js?"lsaved":"linitial";
+}
+}
+}
+var es=["linitial","lreadonly","lwriteone","lsave","lsaving","lsaved"];
+for(j=0;j<es.length;j++){
+SS(es[j],p==es[j]);
+}
+var fi=GV("familyid");
+var si=GV("sessionid");
+SS("savefamily",(Ewr||_e||ic)&&fi);
+SS("sharefamily",Ewr&&si&&fi);
+SSF();
+}
+};
+function EAS(){
+AP("userfamily_add",{s:GV("sessionid"),f:GV("familyid"),p:GV("personid"),c:GV("checksum")},"",EAR,null);
+};
+function EAR(_f,_10,_11){
+if(_11.ok){
+ST("lfamilyname",_11.n);
+SS("addfamily",false);
+}else{
+RE(_11.er||"The family could not be added");
+}
+};
+function EBS(){
+var ap=GV("personid");
+ESP((ap&&Efa[ap])?ap:Efo,true);
+};
+function ECZ(zi){
+if(zi&&(Ezf<2)){
+Ezf+=0.25;
+}else{
+if((!zi)&&(Ezf>0.5)){
+Ezf-=0.25;
+}
+}
+SC("zoomfactor",Ezf);
+ERF();
+};
+function ECD(d,bn,mn,sp){
+if(d!==null){
+SC("showdetail",d);
+Esd=d;
+}
+if(bn!==null){
+SC("showbirthname",bn?1:0);
+Ebn=bn;
+}
+if(mn!==null){
+SC("showmiddlename",mn?1:0);
+Emn=mn;
+}
+if(sp!==null){
+SC("showphoto",sp?1:0);
+Esp=sp;
+}
+NSD(Esd);
+ERF();
+};
+function ECO(){
+SC("showcousins",NGC());
+ERF();
+};
+function ECH(){
+SC("showchildren",NGH());
+ERF();
+};
+function ECP(){
+SC("showparents",NGH());
+ERF();
+};
+function ETK(){
+var ns=!GS("keydiv");
+if(ns){
+KDK(GE("keycontent"));
+}
+SS("keydiv",ns);
+NKS(ns);
+};
+function ETI(){
+var w=GE("leftdiv").offsetWidth;
+var s=TGS();
+var v=GI("leftdiv");
+ESI(!v);
+hide_find_list();
+direct_scroll_to(s.left+(v?-w:w),s.top);
+TCD(GE("treebg"),Evp,250);
+};
+function ESI(s){
+var c=s?"marginon":"marginoff";
+GE("treemargin").className=c;
+GE("externalmargin").className=c;
+GE("navmargin").className=c;
+GE("welcomemargin").className=c;
+GE("keymargin").className=c;
+SI("leftdiv",s);
+NSS(s);
+};
+function EFB(i){
+var sf=FCS(Efa,i);
+SV("do_startbranch",sf.join("\t"));
+document.topform.submit();
+};
+function EIU(r){
+if(staticMode){
+var e=GE("image-"+r);
+return e?e.src:"image-"+r+".jpg";
+}else{
+return BR("ap/","image_read",{f:GV("familyid"),p:GV("personid"),c:GV("checksum"),r:r});
+}
+};
+function EHW(){
+SS("welcomediv",false);
+};
+function KDK(o){
+var d=TND();
+TAE(d,"m",{g:"m",h:"Blue is male"},0,0,false);
+TAE(d,"f",{g:"f",h:"Pink is female"},1,0,false);
+TAE(d,"w",{h:"Thick\nlines..."},0,1,false);
+TAE(d,"h",{h:"...show partners"},1,1,false);
+TAL(d,0,1,1,1,true);
+TAE(d,"b",{g:"f",h:"Mother"},2.5,0,false);
+TAE(d,"g",{g:"m",h:"Father"},3.5,0,false);
+TAL(d,2.5,0,3.5,0,false);
+TAE(d,"d",{g:"f",h:"Daughter"},2.5,1,false);
+TAE(d,"s",{g:"m",h:"Son"},3.5,1,false);
+TAL(d,3,0,3,0.5,false);
+TAL(d,2.5,0.5,3.5,0.5,false);
+TAL(d,2.5,0.5,2.5,1,false);
+TAL(d,3.5,0.5,3.5,1,false);
+TAE(d,"z",{h:"Deceased are faded",z:1},5,0,false);
+TAE(d,"o",{h:"Dotted lines lead to more"},5,1,false);
+TAL(d,5,1,5,0.6,null);
+TAL(d,5,1,4.55,1,null);
+TRD(d,"",false,false,false,o,null,false,false,1,null);
+};
+function ESL(){
+return {s:Ess.length,i:Eis.length,n:GV("newscript").length};
+};
+function ECI(c,s){
+EHW();
+SV("importcacheid",c);
+SV("newscript","");
+Efa={};
+Eis=s;
+ERS(s);
+EUS(true,null,"view",true,false);
+EUL(false);
+};
+function ESA(){
+SV("importcacheid","");
+SV("newscript","");
+Efa={};
+Eis="";
+EUS(true,null,"edit",true,false);
+EUL(false);
+SS("welcomediv",true);
+};
+
+</script>		<script type="text/javascript">
+var Btc={pd:4};
+function BCG(f,ci,h){
+var ds=[];
+var tw=0;
+for(var j=0;j<ci.length;j++){
+var i=ci[j];
+var d=BDD(f,i,h);
+ds[ds.length]=d;
+tw+=d.w;
+}
+var fl=ds[0].l;
+var lr=ds[ds.length-1].r;
+return {ds:ds,tw:tw,fl:fl,lr:lr,aw:(tw+fl-lr)};
+};
+function BCD(d,ds,aw,cx,cy,vx,vy){
+var al=cx-aw/2;
+var ar=cx+aw/2;
+if((vx<al)||(vx>ar)){
+TAL(d,vx,vy,vx,cy-0.75,false);
+TAL(d,vx,cy-0.75,cx,cy-0.75,false);
+TAL(d,cx,cy-0.75,cx,cy-0.5,false);
+}else{
+TAL(d,vx,vy,vx,cy-0.5,false);
+}
+TAL(d,al,cy-0.5,ar,cy-0.5,false);
+var x=cx-aw/2+ds[0].l;
+for(var j=0;j<ds.length;j++){
+var cd=ds[j];
+TAL(cd,0,0,0,-0.5,false);
+TAD(d,cd,x-cd.l,cy);
+x+=cd.w;
+}
+};
+function BAE(d,f,i,si,x,y,dp,sr,da){
+TAE(d,i,f[i],x,y);
+if(dp&&(f[i].m||f[i].f)){
+TAL(d,x,y,x,y-0.4,null);
+}
+if((sr!==null)&&(f[i].cp>((si&&f[i].pc[si])?1:0))){
+TAL(d,x,y,x+(sr?0.45:-0.45),y,null);
+}
+if(da){
+var ac=FLA(f,i);
+if(ac.length){
+TAL(d,x,y,x,y+0.35,null);
+}
+}
+};
+function BDA(d,f,i,si,h,dr,fx,cy){
+var p=f[i];
+var yt=0;
+for(var pi in p.pc){
+if(pi!=si){
+yt++;
+}
+}
+var ot=Math.min(0.1*(yt-1),0.15);
+var ly=cy+ot/2;
+var yo=(yt>1)?(ot/(yt-1)):0;
+var yi=0;
+for(var pi in p.pc){
+if(pi!=si){
+BDH(d,f,i,pi,FLP(f,i,pi),h,dr,fx,cy,ly);
+ly-=yo;
+}
+}
+};
+function BDH(d,f,i,pi,ci,h,dr,fx,cy,ly){
+if(ci.length){
+var ds=BCG(f,ci,h);
+var cx=dr?(d.r-ds.fl+ds.aw/2):(d.l-ds.lr-ds.aw/2);
+var px=cx+(dr?0.5:-0.5);
+BCD(d,ds.ds,ds.aw,cx,cy+1,(pi&&f[pi])?cx:fx,ly);
+}else{
+var cx=dr?d.r:(d.l-1);
+var px=cx;
+}
+if(pi&&f[pi]){
+BAE(d,f,pi,i,px,cy,true,dr,true);
+TAL(d,fx,ly,(pi&&f[pi])?px:cx,ly,FMS(f,i,pi));
+}
+};
+function BSS(d,f,p,si,h,cy){
+var li=[],ri=[];
+for(var j=0;j<si.length;j++){
+if(FCC(p,f[si[j]])<0){
+ri[ri.length]=si[j];
+}else{
+li[li.length]=si[j];
+}
+}
+al=BDS(d,f,li,h,false,cy);
+ar=BDS(d,f,ri,h,true,cy);
+return {al:al,ar:ar,ll:li.length,rl:ri.length};
+};
+function BDS(d,f,si,h,dr,cy){
+var al=0;
+for(var j=0;j<si.length;j++){
+var sd=BDD(f,si[dr?j:(si.length-j-1)],h);
+var x=dr?(d.r-sd.l):(d.l-sd.r);
+TAD(d,sd,x,cy);
+TAL(d,x,cy,x,cy-0.5);
+al=x;
+}
+return al;
+};
+function BPS(d,f,pi,oi,ph,h,dr,fx){
+var p=f[pi];
+if(p.m||p.f){
+var px=fx;
+if(ph<=1){
+TAL(d,fx,-1,fx,-1.4,null);
+}else{
+if(h>0){
+var bs=FLS(f,pi);
+if(bs.length){
+if(oi&&f[oi]&&(f[oi].f||f[oi].m)){
+var al=BDS(d,f,bs,h-1,dr,-1);
+var ar=fx;
+}else{
+var aa=BSS(d,f,p,bs,h-1,-1);
+var al=aa.ll?aa.al:fx;
+var ar=aa.rl?aa.ar:fx;
+var px=(al+ar)/2;
+if(Math.abs(px-fx)>Btc.pd){
+px=fx+0.5*(aa.rl-aa.ll);
+}
+if(p.m&&p.f){
+px+=(dr?-0.5:0.5);
+}
+}
+TAL(d,al,-1.5,ar,-1.5);
+}
+}
+TAL(d,fx,-1,fx,-1.5);
+TAD(d,BAD(f,pi,ph-1,dr,h>0),px,-1);
+}
+}
+};
+function BAD(f,i,h,dr,dc){
+var d=TND();
+var p=f[i];
+if(h>0){
+var ox=0;
+if(p.m||p.f){
+if(p.m&&p.f){
+var i1=dr?p.m:p.f;
+var i2=dr?p.f:p.m;
+TAD(d,BAD(f,i1,h-1,dr,false),0,-1);
+BAE(d,f,i1,i2,0,-1,false,!dr,true);
+ox=dr?d.r:(d.l-1);
+TAD(d,BAD(f,i2,h-1,dr,false),ox,-1);
+BAE(d,f,i2,i1,ox,-1,false,dr,true);
+TAL(d,0,-1,ox,-1,FMS(f,i1,i2));
+}else{
+var pi=p.m||p.f;
+TAD(d,BAD(f,pi,h-1,dr,false),0,-1);
+BAE(d,f,pi,null,0,-1,false,f[pi].g!="m",false);
+}
+TAL(d,ox/2,-0.5,ox/2,-1,false);
+TAL(d,ox/2,-0.5,0,-0.5,false);
+if(!dc){
+TAL(d,0,-0.5,0,0,false);
+var bs=FLS(f,i);
+if(bs.length){
+TAL(d,ox/2,-0.5,ox/2+(dr?0.1:-0.1),-0.5,null);
+}
+}
+}
+}else{
+if(p.m||p.f){
+TAL(d,0,-0.4,0,0,null);
+}
+}
+return d;
+};
+function BDD(f,i,h){
+var p=f[i];
+var d=TND();
+var sr=FSM(f,i,p.es);
+var sx=sr?1:-1;
+if(h>0){
+TAE(d,i,p,0,0);
+var ac=FLA(f,i);
+if(ac.length){
+var ds=BCG(f,ac,h-1);
+BCD(d,ds.ds,ds.aw,0,1,0,0);
+}
+if(p.es){
+var tc=FLP(f,i,p.es);
+if(tc.length){
+var ds=BCG(f,tc,h-1);
+if(ac.length){
+sx=sr?(d.r+(ds.tw-ds.fl-ds.lr)/2+0.5):(d.l-(ds.tw+ds.lr+ds.fl)/2-0.5);
+}
+var cx=sr?(sx-0.5):(sx+0.5);
+BCD(d,ds.ds,ds.aw,cx,1,cx,0);
+}
+TAL(d,0,0,sx,0,FMS(f,i,p.es));
+BAE(d,f,p.es,i,sx,0,true,null,false);
+var _1=FLA(f,p.es);
+if(_1.length){
+var ds=BCG(f,_1,h-1);
+BCD(d,ds.ds,ds.aw,sr?(d.r+(ds.tw-ds.fl-ds.lr)/2):(d.l-(ds.tw+ds.lr+ds.fl)/2),1,sx,0);
+}
+BDA(d,f,p.es,i,h-1,sr,sx,0);
+}
+BDA(d,f,i,p.es,h-1,!sr,0,0);
+}else{
+BAE(d,f,i,null,0,0,false,sr,true);
+}
+return d;
+};
+function BGH(f,i){
+var p=f[i];
+var hc=p.es;
+var ac=FLA(f,i);
+if(hc&&(!p.m)&&(!p.f)&&p.pc[hc]&&(p.cp==1)&&(ac.length==0)){
+return hc;
+}
+return null;
+};
+function BFT(f,i,m,ch,ph,co){
+var p=f[i];
+var hc=BGH(f,i);
+if(hc&&!BGH(f,hc)){
+var d=TND();
+var od=BFT(f,hc,m,ch,ph,co);
+TAD(d,od,-od.e[i].x,-od.e[i].y);
+d.e[hc].k=false;
+}else{
+var d=BDD(f,i,ch);
+if(ph>0){
+var al=0,ar=0,px=0;
+var bs=FLS(f,i);
+if(bs.length){
+var aa=BSS(d,f,p,bs,co,0);
+al=aa.al;
+ar=aa.ar;
+px=(al+ar)/2;
+if(Math.abs(px)>Btc.pd){
+px=0.5*(aa.rl-aa.ll);
+}
+TAL(d,al,-0.5,ar,-0.5,false);
+}
+if(p.m||p.f){
+TAL(d,0,0,0,-0.5,false);
+TAL(d,px,-0.5,px,-1,false);
+if(p.m&&p.f){
+var mx=px-0.5,fx=px+0.5;
+TAL(d,mx,-1,fx,-1,FMS(f,p.m,p.f));
+}else{
+var mx=px,fx=px;
+}
+if(p.m){
+var pm=f[p.m];
+TAE(d,p.m,pm,mx,-1);
+}
+if(p.f){
+var pf=f[p.f];
+TAE(d,p.f,pf,fx,-1);
+}
+if(p.m){
+var ac=FLA(f,p.m);
+if(ac.length&&p.f){
+BDH(d,f,p.m,null,ac,co,false,mx,-1,-1);
+}
+BDA(d,f,p.m,p.f,co,false,mx,-1);
+}
+if(p.f){
+var ac=FLA(f,p.f);
+if(ac.length&&p.m){
+BDH(d,f,p.f,null,ac,co,true,fx,-1,-1);
+}
+BDA(d,f,p.f,p.m,co,true,fx,-1);
+}
+if(p.m){
+BPS(d,f,p.m,p.f,ph,co,false,mx);
+}
+if(p.f){
+BPS(d,f,p.f,p.m,ph,co,true,fx);
+}
+}
+}else{
+if(p.f||p.m){
+TAL(d,0,0,0,-0.4,null);
+}
+}
+}
+d.e[i].k=true;
+if(m&&d.e[m]){
+d.e[m].m=true;
+}
+return d;
+};
+
+</script>		<script type="text/javascript">
+function NSS(s){
+SH("sidelinktext",s?"Hide":"Show");
+};
+function NKS(s){
+SH("keylinktext",s?"Hide":"Show");
+};
+function NSD(d){
+SO("showdetail",d);
+};
+function NSC(c){
+SO("showcousins",c);
+};
+function NSH(c){
+SO("showchildren",c);
+};
+function NSA(c){
+SO("showparents",c);
+};
+function NGC(){
+return parseInt(GO("showcousins"));
+};
+function NGH(){
+return parseInt(GO("showchildren"));
+};
+function NGA(){
+return parseInt(GO("showparents"));
+};
+function NCD(){
+var d=GO("showdetail");
+ECD((d.charAt(0)=="_")?null:d,(d=="_pq")?true:((d=="_pl")?false:null),(d=="_m1")?true:((d=="_m0")?false:null),(d=="_r1")?true:((d=="_r0")?false:null));
+};
+function NSP(i){
+ST("backtotext",(i==GV("personid"))?"me":(Efa[i]?Efa[i].h:"start"));
+};
+function NRT(){
+};
+function nav_position_find(){
+var r=GE("findfield").getBoundingClientRect();
+GE("findlist").style.left=r.left+"px";
+};
+function NCP(i){
+GE("findfield").placeholder=i+((i==1)?" person":" people");
+};
+function focus_find_box(){
+nav_position_find();
+update_find_box(null);
+SS("findlist",true);
+};
+function hide_find_list(){
+SS("findlist",false);
+};
+function input_find_box(){
+SS("findlist",true);
+setTimeout("update_find_box("+GV("findfield").length+");",100);
+};
+function update_find_box(vl){
+var ev=GV("findfield");
+if((vl!==null)&&(vl!=ev.length)){
+return;
+}
+var ss=ev.trim().toLowerCase().split(" ");
+var jn=[];
+for(var j in Efa){
+var p=Efa[j];
+var m=((p.l||"")+" "+(p.q||"")+" "+(p.p||"")).toLowerCase();
+var i=true;
+for(k=0;k<ss.length;k++){
+if(m.indexOf(ss[k])<0){
+i=false;
+break;
+}
+}
+if(i){
+var _1=Ebn?(p.q||p.l):(p.l||p.q);
+var _2=_1?(Ebn?p.l:p.q):null;
+if(_1==_2){
+_2=null;
+}
+var n=(p.p||"")+(_1?(" "+_1+(_2?("/"+_2):"")):"");
+var bs=FPD(p.b||"").y;
+var ds=(p.z=="1")?FPD(p.d||"").y:null;
+var ey=(bs||ds)?(" ("+(bs||"")+"-"+(ds||"")+")"):"";
+jn[jn.length]={i:j,l:_1,p:_2,n:(n+ey).trim()};
+}
+}
+jn.sort(sort_by_name);
+var _3=/[-\/\\^$*+?.()|[\]{}]/g;
+var _4="";
+for(k=0;k<ss.length;k++){
+if(ss[k].length){
+_4+=EH(ss[k]).replace(_3,"\\$&")+"|";
+}
+}
+if(_4.length){
+var _5=new RegExp(_4.slice(0,-1),"ig");
+}else{
+var _5=null;
+}
+var h="";
+for(j=0;j<jn.length;j++){
+if(jn[j].n.length){
+var hn=EH(jn[j].n);
+if(_5){
+hn=hn.replace(_5,"<u>$&</u>");
+}
+h+="<a href=\"#\" onClick=\"ESP('"+jn[j].i+"', true); return false;\">"+hn+"</a>";
+}
+}
+if(!h){
+h="<div>No matches found</div>";
+}
+var v=GE("findlist");
+v.innerHTML=h;
+};
+function sort_by_name(a,b){
+if(a.l<b.l){
+return -1;
+}else{
+if(b.l<a.l){
+return 1;
+}
+}
+if(a.p<b.p){
+return -1;
+}else{
+if(b.p<a.p){
+return 1;
+}
+}
+if(a.n<b.n){
+return -1;
+}else{
+if(b.n<a.n){
+return 1;
+}
+}
+return 0;
+};
+
+</script>		<script type="text/javascript">
+var ios=navigator.userAgent.match(/(iPod|iPhone|iPad)/)&&navigator.userAgent.match(/AppleWebKit/);
+function TND(){
+return {l:0,r:0,w:0,t:0,b:0,h:0,e:{},n:[]};
+};
+function TAE(d,i,p,x,y,k){
+var di=d.e[i];
+if(di){
+i+=Math.random(0,999999);
+}
+d.e[i]={p:p,x:x,y:y,k:k,d:di};
+d.l=Math.min(d.l,x);
+d.r=Math.max(d.r,1+x);
+d.w=d.r-d.l;
+d.t=Math.min(d.t,y);
+d.b=Math.max(d.b,1+y);
+d.h=d.b-d.t;
+};
+function TAL(d,x1,y1,x2,y2,k){
+d.n[d.n.length]={x1:x1,y1:y1,x2:x2,y2:y2,k:k};
+};
+function TAD(od,d,dx,dy){
+for(var j=0;j<d.n.length;j++){
+var n=d.n[j];
+TAL(od,n.x1+dx,n.y1+dy,n.x2+dx,n.y2+dy,n.k);
+}
+for(var i in d.e){
+var e=d.e[i];
+TAE(od,e.p.i,e.p,e.x+dx,e.y+dy,e.k);
+}
+};
+function TDS(zf,y,mn,sp){
+return {Tew:parseInt(((y||sp||mn)?100:80)*zf),Teh:parseInt((40+(y?40:0)+(sp?100:0))*zf),Tph:parseInt(100*zf),Tdh:parseInt(40*zf),Tmh:parseInt(40*zf),Ths:parseInt(20*zf),Tvs:parseInt((y?40:60)*zf),Tfs:parseInt(12*zf),Tds:parseInt(10*zf)};
+};
+function TRD(d,y,bn,mn,sp,o,oi,wp,pr,zf,_1){
+var _2=wp?(ios?1920:19200):0;
+var _3=wp?(ios?1200:12000):0;
+var sz=TDS(zf,y,mn,sp);
+var tw=(sz.Tew+sz.Ths)*d.w-sz.Ths;
+var th=(sz.Teh+sz.Tvs)*d.h-sz.Tvs;
+if(!wp){
+ox=sz.Tew/2-d.l*(sz.Tew+sz.Ths);
+oy=sz.Teh/2-d.t*(sz.Teh+sz.Tvs);
+}else{
+if(ios){
+if(!(o.ios_width&&o.ios_height)){
+o.ios_width=GE("treebg").offsetWidth;
+o.ios_height=GE("treebg").offsetHeight;
+}
+ox=o.ios_width/2+_2/2;
+oy=o.ios_height/2+_3/2;
+o.style.left=(-_2/2)+"px";
+o.style.top=(-_3/2)+"px";
+}else{
+if(oi&&o.ps[oi]&&d.e[oi]){
+ox=o.ps[oi].x-d.e[oi].x*(sz.Tew+sz.Ths);
+oy=o.ps[oi].y-d.e[oi].y*(sz.Teh+sz.Tvs);
+}else{
+ox=_2-d.l*(sz.Tew+sz.Ths);
+oy=_3-d.t*(sz.Teh+sz.Tvs);
+}
+}
+}
+o.innerHTML="";
+o.ps={};
+o.es={l:(ox+(d.l-0.5)*(sz.Tew+sz.Ths)),t:(oy+(d.t-0.5)*(sz.Teh+sz.Tvs)),r:(ox+(d.r-0.5)*(sz.Tew+sz.Ths)),b:(oy+(d.b-0.5)*(sz.Teh+sz.Tvs))};
+var s=o.style;
+if(!wp){
+s.width=(tw+_2*2)+"px";
+s.height=(th+_3*2)+"px";
+}
+for(var j=0;j<d.n.length;j++){
+var n=d.n[j];
+var l=Math.min(n.x1,n.x2);
+var r=Math.max(n.x1,n.x2);
+var t=Math.min(n.y1,n.y2);
+var b=Math.max(n.y1,n.y2);
+if(pr){
+var k=n.k?2:1;
+var ko=k;
+var v=document.createElement("img");
+v.src=(n.k===null)?((r==l)?"grayvcheck.gif":"grayhcheck.gif"):"graypixel.gif";
+v.style.position="absolute";
+}else{
+var k=n.k?4:((n.k===null)?0:2);
+var ko=n.k?4:2;
+var v=document.createElement("div");
+v.className=(n.k===null)?"ddotted":"dline";
+}
+var s=v.style;
+s.width=((r==l)?k:(r-l)*(sz.Tew+sz.Ths)+k)+"px";
+s.height=((b==t)?k:(b-t)*(sz.Teh+sz.Tvs)+k)+"px";
+s.left=ox+(l*(sz.Tew+sz.Ths)-ko/2)+"px";
+s.top=oy+(t*(sz.Teh+sz.Tvs)-ko/2)+"px";
+o.appendChild(v);
+}
+for(var i in d.e){
+var e=d.e[i];
+var rs="";
+var sn=bn?(e.p.q||e.p.l):(e.p.l||e.p.q);
+var fn=e.p.hp?(e.p.p+(sn?(" "+sn):"")):e.p.h;
+var cc=((e.p.z=="1")&&!pr)?"dcelld":"dcella";
+var _4=((e.p.z=="1")&&!pr)?window.nameColors.deceased:window.nameColors.living;
+var sh=sz.Tmh;
+if(sp&&e.p.r){
+var ey=e.p.r.split(" ");
+var uf=EIU||(opener&&opener.top&&opener.top.EIU);
+if(uf){
+var u=uf(ey[0]);
+var ew=sz.Tew-4;
+var eh=sz.Tew-4;
+if(ey[1]&&ey[2]){
+if(parseInt(ey[1])>parseInt(ey[2])){
+eh=Math.floor(ew*ey[2]/ey[1]);
+}else{
+ew=Math.floor(eh*ey[1]/ey[2]);
+}
+if((Math.abs(ey[1]-ew)<=3)&&(Math.abs(ey[2]-eh)<=3)){
+ew=ey[1];
+eh=ey[2];
+}
+}
+rs+="<TR><TD CLASS=\""+cc+"\" style=\"color:"+_4+"\"><IMG SRC=\""+u+"\" WIDTH=\""+ew+"\" HEIGHT=\""+eh+"\" TITLE=\""+EH(fn)+"\"></TD></TR>";
+sh+=sz.Tph;
+}
+}
+if(y){
+var ey=TGL(y,e.p);
+if(ey&&ey.length){
+rs+="<TR><TD CLASS=\""+cc+"\" STYLE=\"font-size:"+sz.Tds+"px;color:"+_4+"\" TITLE=\""+EH(ey.replace(/\n/g,", "))+"\">"+EL(ey)+"</TD></TR>";
+sh+=sz.Tdh;
+}
+}
+var sx=ox+(e.x)*(sz.Tew+sz.Ths);
+var sy=oy+(e.y)*(sz.Teh+sz.Tvs);
+if(pr){
+v=document.createElement("img");
+v.src=((e.p.g=="f")?"female":((e.p.g=="m")?"male":"neuter"))+"pixel.gif";
+var s=v.style;
+s.position="absolute";
+s.width=sz.Tew+"px";
+s.height=sh+"px";
+s.left=(sx-(sz.Tew/2))+"px";
+s.top=(sy-(sh/2))+"px";
+o.appendChild(v);
+}else{
+TRB(o,sx-(sz.Tew/2),sy-(sh/2),sz.Tew,sh,e.k?3:1,(e.p.g=="f")?"FFD6EE":((e.p.g=="m")?"D6DDFF":"FFFFFF"),null);
+}
+var v=document.createElement("div");
+v.className="di";
+var s=v.style;
+s.width=sz.Tew+"px";
+s.height=sh+"px";
+s.left=(sx-(sz.Tew/2))+"px";
+s.top=(sy-(sh/2))+"px";
+if(wp){
+v.onmousedown=TCT;
+v.id=i;
+v.pid=e.p.i;
+o.ps[i]={x:sx,y:sy};
+}
+var tn=e.p.hp?(mn?fn:(e.p.h+(sn?(" "+sn):""))):e.p.h;
+v.innerHTML="<TABLE WIDTH=\"100%\" HEIGHT=\"100%\" STYLE=\"table-layout:fixed;\">"+"<TR><TD CLASS=\""+cc+"\" STYLE=\"font-size:"+(e.d?sz.Tds:sz.Tfs)+"px;color:"+_4+"\""+" TITLE=\""+(e.d?"Duplicate: ":"")+EH(fn)+"\">"+(e.d?"<I>Duplicate:</I><BR>":"")+(e.m?"<B>":"")+EL(tn)+(e.m?"</B>":"")+"</TD></TR>"+rs+"</TABLE>";
+o.appendChild(v);
+}
+};
+function TGL(y,p){
+var ey="";
+if(y=="tku"){
+ey=p.t?("\n"+p.t+" (h)"):"";
+ey+=p.k?("\n"+p.k+" (w)"):"";
+ey+=p.u?("\n"+p.u+" (m)"):"";
+if(ey){
+ey=ey.substring(1);
+}
+}else{
+if(y=="bds"){
+var bs=FDT(p.b);
+var ds=FDT(p.d);
+ey=(bs?("Born "+bs):"")+((bs&&ds)?"\n":"")+(ds&&p.z==="1"?("Died "+ds):"");
+}else{
+if(y=="bd"){
+var bs=FPD(p.b||"").y;
+var ds=FPD(p.z==="1"?p.d:"").y;
+ey=(bs&&ds)?(bs+"-"+ds):(bs?("Born "+bs):(ds?("Died "+ds):""));
+}else{
+if(y=="bv"){
+var bs=FDT(p.b);
+ey=((bs||p.v)?"Born ":"")+(bs||"")+((bs&&p.v)?", ":"")+(p.v||"");
+}else{
+if(y=="dy"&&p.z==="1"){
+var ds=FDT(p.d);
+ey=((ds||p.y)?"Died ":"")+(ds||"")+((ds&&p.y)?", ":"")+(p.y||"");
+}else{
+if(y=="e"){
+ey=p.e?p.e.replace(/@/g,"@ "):"";
+}else{
+if(y!="r"){
+ey=p[y];
+}
+}
+}
+}
+}
+}
+}
+return ey;
+};
+function TCD(o,i,t){
+if(i&&o.ps[i]){
+var dw,dh;
+dw=o.offsetWidth;
+dh=o.offsetHeight;
+if((dw<64)||(dw>4096)){
+dw=self.outerWidth;
+}
+if((dh<64)||(dh>4096)){
+dh=self.outerHeight;
+}
+var sx=o.ps[i].x-dw/2;
+var sy=o.ps[i].y-dh/2;
+if(o.es){
+var as={l:sx+64,t:sy+32,r:sx+dw-32,b:sy+dh-64};
+sx+=0.9*(Math.min(0,Math.max(o.es.l-as.l,o.es.r-as.r))+Math.max(0,Math.min(o.es.l-as.l,o.es.r-as.r)));
+sy+=0.9*(Math.min(0,Math.max(o.es.t-as.t,o.es.b-as.b))+Math.max(0,Math.min(o.es.t-as.t,o.es.b-as.b)));
+}
+var _5=DT();
+TSS(sx,sy,_5,_5+t,"_sel");
+}
+};
+function TRB(o,l,t,w,h,k,b,_6){
+v=document.createElement("div");
+v.className="dbox";
+var s=v.style;
+if(_6){
+s.visibility="hidden";
+v.id=_6;
+}
+s.position="absolute";
+s.width=(w)+"px";
+s.height=(h)+"px";
+s.left=(l-k)+"px";
+s.top=(t-k)+"px";
+s.background="#"+b;
+s.borderWidth=k+"px";
+o.appendChild(v);
+};
+var Tpd=false;
+var Tdx,Tdy,moveobject;
+function TGS(){
+var e=GE("treebg");
+if(self.pageYOffset){
+scrolltop=self.pageYOffset;
+scrollleft=self.pageXOffset;
+}else{
+if(document.documentElement&&document.documentElement.scrollTop){
+scrolltop=document.documentElement.scrollTop;
+scrollleft=document.documentElement.scrollLeft;
+}else{
+if(document.body){
+scrolltop=document.body.scrollTop;
+scrollleft=document.body.scrollLeft;
+}
+}
+}
+return {top:-(e.offsetTop-e.parentNode.offsetTop),left:-(e.offsetLeft-e.parentNode.offsetLeft)};
+};
+function TIS(o){
+moveobject=o;
+o.onmousedown=function(_7){
+hide_find_list();
+_7=_7?_7:window.event;
+Tpd=true;
+scrollpos=TGS();
+Tdx=scrollpos.left+_7.screenX;
+Tdy=scrollpos.top+_7.screenY;
+};
+document.onmouseup=function(_8){
+Tpd=false;
+};
+document.onmousemove=function(_9){
+_9=_9?_9:window.event;
+if(Tpd){
+TSS(Tdx-_9.screenX,Tdy-_9.screenY,0,0,null);
+}
+};
+document.body.onselectstart=function(_a){
+if(Tpd){
+return false;
+}
+};
+o.ontouchstart=function(_b){
+if((_b.target==moveobject)&&(_b.touches.length==1)){
+hide_find_list();
+Tpd=true;
+scrollpos=TGS();
+Tdx=scrollpos.left+_b.touches[0].screenX;
+Tdy=scrollpos.top+_b.touches[0].screenY;
+_b.preventDefault();
+}
+};
+o.ontouchend=function(_c){
+if(Tpd){
+Tpd=false;
+_c.preventDefault();
+}
+};
+document.ontouchmove=function(_d){
+if(Tpd){
+TSS(Tdx-_d.touches[0].screenX,Tdy-_d.touches[0].screenY,0,0,null);
+_d.preventDefault();
+}
+};
+};
+var Tst=null,Tsf,Tsd,Tss,Tse,Tsv;
+function TSS(x,y,_e,_f,scv){
+if(Tst){
+clearTimeout(Tst);
+Tst=null;
+}
+Tsf=TGS();
+Tsd={top:y,left:x};
+Tss=_e;
+Tse=_f;
+Tsv=scv;
+if(DT()>=_f){
+TST();
+}else{
+Tst=setTimeout("TST()",10);
+}
+};
+function TST(){
+var n=DT();
+if(n>=Tse){
+direct_scroll_to(Tsd.left,Tsd.top);
+if(Tsv&&GE(Tsv)){
+SI(Tsv,true);
+}
+}else{
+var p=(n-Tss)/(Tse-Tss);
+p=1-Math.pow(0.5,p/0.2);
+direct_scroll_to(Tsf.left+p*(Tsd.left-Tsf.left),Tsf.top+p*(Tsd.top-Tsf.top));
+Tst=setTimeout("TST()",10);
+}
+};
+function direct_scroll_to(x,y){
+if(true){
+GE("treebg").style.left=-x;
+GE("treebg").style.top=-y;
+}
+};
+function TCT(){
+if(parent&&parent.postMessage){
+parent.postMessage("click="+this.pid,"*");
+}
+ESP(this.pid,true);
+};
+function TFE(o,i){
+return (o.ps&&i)?o.ps[i]:null;
+};
+function TRT(f,i,m,y,bn,mn,sp,ch,ph,co,pi,zf,s){
+var o=GE("treebg");
+var _10=null;
+if(TFE(o,i)){
+var oi=i;
+var sd=0;
+if(i!=pi){
+_10="_sel";
+if(GE(_10)){
+SI(_10,false);
+}
+}
+}else{
+var oi=TFE(o,pi)?pi:null;
+var sd=oi?250:0;
+}
+TRD(BFT(f,i,m,ch,ph,co),y,bn,mn,sp,o,oi,true,false,zf,_10);
+if(s&&noCentering){
+if(_10&&GE(_10)){
+SI(_10,true);
+}
+}else{
+setTimeout("TCD(GE('treebg'), '"+i+"', "+(s?250:0)+")",sd);
+}
+};
+
+</script>		<script type="text/javascript">
+var Sen=[{p:"personalname",l:"familyname",q:"familybirth"},{e:"c_email",w:"website",B:"blog",P:"photosite",t:"hometel",k:"worktel",u:"mobile",S:"skype",a:"address",C:"othercontact"},{v:"birthplace",y:"deathplace",U:"burialplace",j:"profession",E:"employer",I:"interests",A:"activities",o:"bionotes"}];
+var Sv1={e:"Email",w:"Website",B:"Blog",P:"Photo site",t:"Home tel",k:"Work tel",u:"Mobile",S:"Skype",a:"Address",C:"Other"};
+var Sv2={v:"Birth place",y:"Death place",U:"Burial place",F:"Burial date",j:"Profession",E:"Company",I:"Interests",A:"Activities",o:"Bio notes"};
+var Spt={m:"Married",e:"Engaged",r:"Relationship",s:"Separated",d:"Divorced",a:"Annulled"};
+var Sur={w:"website",B:"blog",P:"photos"};
+var excludeCapitals=",de,del,la,von,van,den,der,of,the,and,y,da,dos,das,by,in,las,";
+var Spe;
+var Spa=0;
+var Sed=false;
+var Srl;
+function side_page_loaded(){
+CE(parent);
+};
+function SCR(i){
+ESP(i,false);
+};
+function SPW(i){
+return Ewr||(i&&(Ewp==i));
+};
+function SSE(i,e){
+var pi=Spe;
+Spe=i;
+var p=Efa[i];
+var md=(Spe==GV("personid"));
+if((!p)||(!p.n)){
+var js="";
+for(var j in Efa){
+js+=j+" ";
+}
+var ks="";
+for(var k in p){
+ks+=k+" ";
+}
+SE("NoPerson: "+i+"|"+js+"|"+ks+"|"+Ess.length+"|"+TR());
+}
+var v=GE("nametitle");
+v.innerHTML=EH(p.n);
+v.className=(p.p||p.l)?"sname":"sdefname";
+SV("shareperson","Invite "+p.h+" to share family");
+SS("hideurl",false);
+GE("switchpanel3").style.display=p.cp?"block":"none";
+var uf=p.w?"w":(p.B?"B":(p.P?"P":null));
+SS("showurl",uf?true:false);
+if(uf){
+SV("urlmode",Sur[uf]);
+GE("urllink").href=p[uf];
+SV("showurl","Show "+(false?"my":(p.h+"'s"))+" "+Sv1[uf].toLowerCase());
+}
+SSA((((Spa==3)&&!p.cp)||((pi!=i)&&((e=="edit")||Sed)))?0:Spa,(e=="edit")?((Sed&&(pi==i))?null:true):false);
+SIU(false);
+};
+function SSA(_1,_2){
+if(Sed&&((_1!=Spa)||(_2===false))){
+try{
+GE("switchlink"+_1).focus();
+}
+catch(e){
+}
+}
+Spa=_1;
+if(_2!==null){
+Sed=_2;
+}
+var f=Efa;
+var p=f[Spe];
+var md=(Spe==GV("personid"));
+var pw=SPW(Spe);
+if(!pw){
+Sed=false;
+}
+for(var j=0;j<=3;j++){
+GE("switchpanel"+j).className=((_1==j)?"sswitched":"sswitch");
+GE("switchlink"+j).className=((_1==j)?"sswitchedlink":"");
+}
+SR("personalview",(Spa==0)&&!Sed);
+SR("personaledit",(Spa==0)&&Sed);
+SR("personaleditdeath",(Spa==0)&&(p.z==1)&&Sed);
+SR("partnersviewedit",(Spa==3));
+SR("contactview",(Spa==1)&&!Sed);
+SR("contactedit",(Spa==1)&&Sed);
+SR("bioview",(Spa==2)&&!Sed);
+SR("bioedit1",(Spa==2)&&Sed);
+SR("bioeditdeath",(Spa==2)&&(p.z==1)&&Sed);
+SR("bioedit2",(Spa==2)&&Sed);
+SR("viewfooter",pw&&(!Sed));
+SR("editfooter",Sed);
+SR("readonlyfooter",(!staticMode)&&(!Ewr)&&(!Ewp));
+SR("writemefooter",(!Ewr)&&pw);
+SR("writenotfooter",Ewp&&!pw);
+SV("editbutton",(Spa==3)?"Edit partnership details":("Edit "+(md?"my":(p.h+"'s"))+" details"));
+SS("nonrelations",true);
+SS("shareperson",(!staticMode)&&GV("sessionid")&&(p.z!="1")&&!md);
+SS("nonediting",!Sed);
+SR("relactions",Ewr&&!Sed);
+if(Sed){
+var df=(_2===true);
+for(var j in Sen[Spa]){
+SV(Sen[Spa][j],p[j]);
+if(df&&(j!="y")&&!GV(Sen[Spa][j])){
+FS(Sen[Spa][j]);
+df=false;
+}
+}
+}else{
+if(Ewr){
+SRP(false);
+}
+}
+if(_1==1){
+SP1();
+}else{
+if(_1==2){
+SP2();
+}else{
+if(_1==3){
+SP3();
+}else{
+SP0();
+}
+}
+}
+SSF();
+};
+function SSF(){
+var om=!staticMode;
+var sl=ESL();
+SR("importfooter",om&&(!sl.n)&&(!sl.s)&&(!sl.i));
+SR("downloadfooter",om&&GV("sessionid")&&GV("familyid")&&sl.s&&(!sl.n)&&!sl.i);
+SR("clearfooter",om&&(sl.n||sl.i)&&!sl.s);
+};
+function SWA(p){
+SSA(p,Sed);
+};
+function SED(){
+ECS();
+ESE(false,[Spe],Spe);
+};
+function SAS(){
+EFE(true);
+};
+function SCS(){
+EFE(false);
+};
+function SRR(e){
+var v=GE(e);
+while(v.firstChild){
+v.removeChild(v.firstChild);
+}
+};
+function SJR(e,v,h,s){
+var r=document.createElement("TR");
+var a=document.createElement("TD");
+a.className="sboth";
+a.innerHTML=h?v:EL(v);
+a.colSpan=s;
+r.appendChild(a);
+GE(e).appendChild(r);
+};
+function SSR(e,t,v,h,a){
+var r=document.createElement("TR");
+r.vAlign=a||"top";
+var a=document.createElement("TD");
+a.className="sleft";
+if(t){
+a.innerHTML=EH(t+":");
+}
+var b=document.createElement("TD");
+b.className="sright";
+b.innerHTML=h?v:EL(v);
+r.appendChild(a);
+r.appendChild(b);
+GE(e).appendChild(r);
+return r;
+};
+function SUR(e,t,i,v,s){
+SJR(e,"<INPUT TYPE=\"submit\" VALUE=\""+EH(t)+"\" ID=\""+EH(i+v)+"\" CLASS=\"sbutton\" onClick=\"SCB('"+EH(i)+"','"+EH(v)+"'); return false;\">",true,s);
+};
+function SPP(i,ra,s){
+var f=Efa;
+var rn=[];
+for(j=0;j<ra.length;j++){
+var pi=f[ra[j]];
+var l=pi.l||pi.q;
+var y=(FPD(pi.b||"").y||"")+"-"+(FPD(pi.d||"").y||"");
+rn[rn.length]={i:ra[j],l:l?l.toLowerCase():"zzz",p:pi.p?pi.p.toLowerCase():"zzz",n:pi.n+((y.length>1)?(" ("+y+")"):"")};
+}
+rn.sort(NSN);
+var v=GE(i);
+v.options.length=0;
+v.options[v.options.length]=new Option("","");
+for(j=0;j<rn.length;j++){
+var l=v.options.length;
+v.options[l]=new Option(rn[j].n,rn[j].i);
+if(rn[j].i==s){
+v.selectedIndex=l;
+}
+}
+};
+function SLR(e,s){
+SJR(e,"<IMG CLASS=\"blankpixel\" WIDTH=\"1\" HEIGHT=\"4\">",true,s);
+};
+function SRW(t,i){
+if(i){
+SSR("personalview",t,"<A HREF=\"#\" onClick=\"javascript:SCR('"+i+"'); return false;\">"+EH(Efa[i].n)+"</A>",true);
+}
+};
+function SRB(t,i,v){
+SUR("relactions",t,i,v,1);
+};
+function SPR(e){
+SRR("relactions");
+if(e){
+SS("nonrelations",false);
+}
+};
+function SRP(e){
+SPR(e);
+var f=Efa;
+var p=f[Spe];
+if(e){
+var fd=false;
+var ns=false;
+SRB("Change parents","changeparent","");
+if(p.cp){
+SRB(((p.cp>1)||!p.s)?"Change partners":"Change partner","changespouse","");
+}
+if(Spe==Efo){
+fd=true;
+}else{
+var cf=FDF(f,Efo,null,null,null);
+var df=FDF(f,Efo,Spe,null,null);
+if((df.length-cf.length)<=1){
+SRB("Delete "+p.n,"delete",Spe);
+}else{
+ns=true;
+}
+}
+SRB("Cancel","cancel","");
+if(ns){
+SJR("relactions","<BR>This person cannot be deleted because this would split the tree into separate pieces.",true,1);
+}
+if(fd){
+SJR("relactions","<BR>This person started the tree and cannot be deleted.",true,1);
+}
+}else{
+var md=(GV("personid")==Spe);
+var ap=p.fg||Ead||(GV("personid")==Efo);
+SJR("relactions",md?"Click to add your relatives:":("Click to add relatives of "+p.h+":"),false,1);
+if(ap){
+if(p.f&&p.m){
+}else{
+if(p.f){
+SRB("Add mother","choosemother","");
+}else{
+if(p.m){
+SRB("Add father","choosefather","");
+}else{
+SRB("Add parents","addparents","");
+}
+}
+}
+}
+if(p.s||p.cp){
+SRB("Add partner/ex","choosespouse","");
+}else{
+SRB("Add partner/ex","choosespouse","");
+}
+var sc=p.g||(p.s&&f[p.s].g);
+if(ap){
+SRB("Add brother/sister","addsibling","");
+}
+if(sc){
+SRB("Add child","addchild","");
+}
+var cf=0;
+for(var j in f){
+cf++;
+if(cf>1){
+SRB("Change or delete","morelactions","");
+break;
+}
+}
+if(!sc){
+SJR("relactions","<BR>To add children, set this person's gender first.",true,1);
+}
+if(!ap){
+var si=GV("sessionid");
+if(md){
+SJR("relactions","<BR>To add your parents, brothers or sisters, "+"please "+(si?"":"sign in then ")+"create a new family branch.",true,1);
+if(si){
+SRB("Create new family for me","startbranch","");
+}
+}else{
+SJR("relactions","<BR>To add "+p.h+"'s parents, brothers or sisters, "+"a new family branch can be created"+(si?"":" after signing in")+".",true,1);
+if(si){
+SRB("Create new family for "+p.h,"startbranch","");
+}
+}
+}
+var ad=GE("advertisement");
+if(ad){
+SLR("relactions",1);
+SLR("relactions",1);
+SJR("relactions",ad.innerHTML,true,1);
+}
+}
+};
+function SP0(){
+var f=Efa;
+var p=f[Spe];
+if(Sed){
+GE("gender_f").checked=(p.g=="f");
+GE("gender_m").checked=(p.g=="m");
+GE("gender_o").checked=(p.g=="o");
+GE("alive").checked=(p.z!="1");
+SSD("birthdom","birthmonth","birthyear",p.b);
+SSD("deathdom","deathmonth","deathyear",p.d);
+}else{
+SRR("personalview");
+SSR("personalview","Full name",(p.p||"")+" "+(p.l||p.q||""),false);
+if(p.q&&p.l&&(p.q!=p.l)){
+SSR("personalview","Surname at birth",p.q,false);
+}
+SSR("personalview","Gender",(p.g&&Fgn[p.g])?Fgn[p.g]:Fgn[""],false);
+SSR("personalview","Birth date",FDT(p.b),false);
+if(p.z==1){
+SSR("personalview","Death date",FDT(p.d),false);
+}
+}
+};
+function SP1(){
+var f=Efa;
+var p=f[Spe];
+if(!Sed){
+SRR("contactview");
+for(var j in Sv1){
+if(p[j]||((!staticMode)&&((j=="e")||(j=="w")||(j=="t")||(j=="a")))){
+if(j=="e"){
+SSR("contactview",Sv1[j],p[j]?("<A HREF=\"mailto:"+EH(p[j])+"\">"+EH(p[j])+"</A>"):"",true);
+}else{
+if(j=="S"){
+SSR("contactview",Sv1[j],p[j]?("<A HREF=\"callto:"+EH(p[j])+"\">"+EH(p[j])+"</A>"):"",true);
+}else{
+if((j=="w")||(j=="B")||(j=="P")){
+SSR("contactview",Sv1[j],p[j]?("<A HREF=\""+EH(p[j])+"\" TARGET=\"_new\" onClick=\"return UL(this);\">"+EH(p[j])+"</A>"):"",true);
+}else{
+SSR("contactview",Sv1[j],p[j],false);
+}
+}
+}
+}
+}
+if(staticMode&&!staticModeAfterRead){
+SJR("contactview","&nbsp;<BR>To protect your privacy, phone numbers, addresses and emails have been removed.",true,2);
+}
+}
+};
+function SP2(){
+var f=Efa;
+var p=f[Spe];
+if(Sed){
+SSD("burialdom","burialmonth","burialyear",p.F);
+}else{
+SRR("bioview");
+for(var j in Sv2){
+if(p[j]||(j=="v")||(j=="y")||(j=="j")){
+if(((j!="y")&&(j!="U")&&(j!="F"))||(p.z==1)){
+SSR("bioview",Sv2[j],(j=="F")?FDT(p[j]):p[j],false);
+}
+}
+}
+}
+};
+function S3R(f,p,pi,rc){
+if(rc&&GE("partnersviewedit").firstChild){
+SLR("partnersviewedit",2);
+}
+var cp=(p.s==pi)||(p.z==1);
+var pl=(p.z!=1)&&(f[pi].z==1);
+var _3=new String(p.gp?p.gp[pi]:"");
+if(rc){
+var cm=FCM(p,f[pi]);
+if(((_3=="m")&&(cp||pl))||(_3=="s")){
+if(pl){
+var s=cm?((cm>0)?"Late wife":"Late husband"):"Late spouse";
+}else{
+var s=cm?((cm>0)?"Wife":"Husband"):"Spouse";
+}
+if(_3=="s"){
+s+=" (separated)";
+}
+}else{
+if((_3=="m")||(_3=="d")||(_3=="a")){
+var s=cm?((cm>0)?"Ex-wife":"Ex-husband"):"Ex-spouse";
+}else{
+if((_3=="e")&&(cp||pl)){
+if(pl){
+var s=(cm>0)?"Late fiancée":"Late fiancé";
+}else{
+var s=(cm>0)?"Fiancée":"Fiancé";
+}
+}else{
+if(_3=="e"){
+var s=(cm>0)?"Ex-fiancée":"Ex-fiancé";
+}else{
+var s=pl?"Late partner":(cp?"Partner":"Ex-partner");
+}
+}
+}
+}
+SSR("partnersviewedit",s,f[pi].n,false);
+}
+if(_3=="m"){
+var t={m:"Wedding date",w:"Location",z:((cp||pl)?"":"End date")};
+}else{
+if(_3=="e"){
+var t={r:"Engagement date",z:((cp||pl)?"":"End date")};
+}else{
+if(_3=="r"){
+var t={b:"Start date",z:((p.s==pi)?"":"End date")};
+}else{
+if(_3=="s"){
+var t={m:"Wedding date",w:"Location",s:"Separation date"};
+}else{
+if(_3=="d"){
+var t={m:"Wedding date",w:"Location",d:"Divorce date"};
+}else{
+if(_3=="a"){
+var t={m:"Wedding date",w:"Location",a:"Annulment date"};
+}else{
+var t={};
+}
+}
+}
+}
+}
+}
+if(Sed){
+var e="partner"+pi+"g";
+if(rc){
+SSR("partnersviewedit","Type","<SELECT ID=\""+EH(e)+"\" CLASS=\"sselect\" onChange=\"SCP('g', '"+EH(pi)+"')\"></SELECT>",true,"middle");
+var v=GE(e);
+v.options.length=0;
+v.options[v.options.length]=new Option("","");
+for(var j in Spt){
+v.options[v.options.length]=new Option(Spt[j],j);
+}
+}
+SO(e,_3);
+for(var ti in t){
+if(t[ti]){
+var _4=p[ti+"p"]?p[ti+"p"][pi]:"";
+if(ti=="w"){
+var e="partner"+pi+ti;
+if(rc){
+SSR("partnersviewedit",t[ti],"<INPUT ID=\""+EH(e)+"\" CLASS=\"sfield\" onChange=\"SCP('"+ti+"', '"+EH(pi)+"');\">",true,"middle");
+}
+SV(e,_4);
+}else{
+S3D(pi,t[ti],ti,_4,rc);
+}
+}
+}
+}else{
+if(rc){
+for(var ti in t){
+if(t[ti]){
+var _4=p[ti+"p"]?p[ti+"p"][pi]:"";
+SSR("partnersviewedit",t[ti],(ti=="w")?_4:FDT(_4),false);
+}
+}
+}
+}
+};
+function S3D(pi,t,ti,d,rc){
+if(rc){
+var s=EH(pi+ti);
+var o=" onChange=\"SCP('"+EH(ti)+"', '"+EH(pi)+"');\"";
+SSR("partnersviewedit",t,"<SELECT ID=\"partner"+s+"month\" CLASS=\"sselect\""+o+"></SELECT>&nbsp; <SELECT ID=\"partner"+s+"dom\" CLASS=\"sselect\""+o+"></SELECT>&nbsp; <INPUT ID=\"partner"+s+"year\" CLASS=\"syear\""+o+" MAXLENGTH=4>",true,"middle");
+}
+SSD("partner"+pi+ti+"dom","partner"+pi+ti+"month","partner"+pi+ti+"year",d);
+};
+function SP3(){
+var f=Efa;
+var p=f[Spe];
+var rr={};
+if(p.s){
+rr[p.s]=true;
+}
+for(var pi in p.pc){
+if(pi!=p.s){
+rr[pi]=true;
+}
+}
+if(Sed){
+var rl=Spe;
+for(var pi in rr){
+rl+=" "+(p.gp?p.gp[pi]:"")+pi+(p.ep?p.ep[pi]:"");
+}
+var rc=(rl!=Srl);
+Srl=rl;
+}else{
+Srl=null;
+var rc=true;
+}
+if(rc){
+SRR("partnersviewedit");
+}
+for(var pi in rr){
+S3R(f,p,pi,rc);
+}
+};
+function SSG(v){
+EFC(Spe,{g:v});
+EUF();
+};
+function SCV(i){
+if(i=="birth"){
+EFC(Spe,{b:FDS(GO("birthdom"),GO("birthmonth"),GV("birthyear"))});
+}else{
+if(i=="death"){
+EFC(Spe,{d:FDS(GO("deathdom"),GO("deathmonth"),GV("deathyear"))});
+}else{
+if(i=="burial"){
+EFC(Spe,{F:FDS(GO("burialdom"),GO("burialmonth"),GV("burialyear"))});
+}else{
+if(i=="alive"){
+EFC(Spe,{z:(GE(i).checked?"0":"1")});
+}else{
+for(k=0;k<Sen.length;k++){
+for(var j in Sen[k]){
+if(i==Sen[k][j]){
+var c={};
+var v=new String(GV(i));
+v=v.replace(/^\s+|\s+$/g,"");
+if((j=="p")||(j=="l")||(j=="q")){
+var s=v.split(" ");
+for(w=0;w<s.length;w++){
+if((s[w].length)&&(excludeCapitals.indexOf(s[w])<0)&&(s[w].indexOf("'")<0)){
+s[w]=s[w].charAt(0).toUpperCase()+s[w].substring(1);
+}
+}
+v=s.join(" ");
+}
+if((j=="w")||(j=="B")||(j=="P")){
+if(v.length&&(v.indexOf("://")<0)){
+v="http://"+v;
+}
+}
+c[j]=v;
+EFC(Spe,c);
+}
+}
+}
+}
+}
+}
+}
+EUF();
+};
+function SCP(ti,pi){
+var e="partner"+pi+ti;
+var c={};
+if(ti=="g"){
+c[ti]=GO(e);
+}else{
+if(ti=="w"){
+c[ti]=GV(e);
+}else{
+c[ti]=FDS(GO(e+"dom"),GO(e+"month"),GV(e+"year"));
+}
+}
+EPC(Spe,pi,c);
+EUF();
+};
+function SCM(){
+var f=Efa;
+var tm=GO("treemother");
+var tf=GO("treefather");
+SPP("treefather",FAR(f,Spe,tm),tm?f[tm].es:tf);
+if(!GO("treefather")){
+SO("treefather",f[Spe].f);
+}
+};
+function SFV(i){
+if(!GV(i)){
+if(i=="familybirth"){
+var sn=GV("familyname");
+if(sn){
+EFC(Spe,{q:sn});
+SV(i,sn);
+if(GV(i)){
+GE(i).blur();
+setTimeout("FS('"+i+"')",0);
+}
+}
+}
+}
+};
+function SAP(f,ti,oi,_5,_6,_7,_8){
+if(oi){
+var op=f[oi];
+}
+if(oi&&(op.es||op.cp)){
+if((op.es)&&(op.es!=ti)){
+SRB(_5+f[op.es].n,_6,op.es);
+}
+for(var pi in op.pc){
+if((pi!=op.es)&&(pi!=ti)){
+SRB(_5+f[pi].n,_6,pi);
+}
+}
+if(_8){
+SRB(_7,_8,"");
+}
+}else{
+if(_8){
+SCB(_8,"");
+}
+}
+};
+function SPX(f,i1,i2,ap){
+if(i1&&i2&&f[i1]&&f[i2]&&(ap||!FMS(f,i1,i2))){
+if(!(f[i1].ep&&f[i1].ep[i2]&&f[i2].ep&&f[i2].ep[i1])){
+EPC(i1,i2,{e:1});
+}
+}
+};
+function SCB(i,v){
+var f=Efa;
+var p=f[Spe];
+if((i=="addparents")||(i=="addparentsstop")){
+if(i=="addparents"){
+ECS();
+}
+var pd=(p.z==1)&&(p.c.length>0);
+for(var j=0;j<p.c.length;j++){
+if(f[p.c[j]].z!=1){
+pd=false;
+}
+}
+var fi=EFI();
+var fo={"^":Spe,g:"m",l:p.q};
+if(pd){
+fo.z=1;
+}
+EFC(fi,fo);
+var mi=EFI();
+var mo={"^":Spe,g:"f",s:fi,l:p.q};
+if(pd){
+mo.z=1;
+}
+EFC(mi,mo);
+EFC(Spe,{m:mi,f:fi});
+if(i=="addparents"){
+ESE(true,[mi,fi],Spe);
+}
+}else{
+if(i=="choosemother"){
+SPR(true);
+SAP(f,p.m,p.f,"Set mother to ","setmother","Add new mother","addmother");
+SRB("Cancel","cancel","");
+}else{
+if(i=="choosefather"){
+SPR(true);
+SAP(f,p.f,p.m,"Set father to ","setfather","Add new father","addfather");
+SRB("Cancel","cancel","");
+}else{
+if(i=="changeparent"){
+SPR(true);
+if((!p.f)&&(!p.m)){
+SRB("Add new parents","addparents","");
+}
+if(!p.f){
+SRB("Add new father","addfather","");
+}else{
+SAP(f,p.m,p.f,"Set mother to ","setmother",null,null);
+}
+if(!p.m){
+SRB("Add new mother","addmother","");
+}else{
+SAP(f,p.f,p.m,"Set father to ","setfather",null,null);
+}
+var ra=FAR(f,Spe,null);
+if(ra.length){
+SRB("Choose new parents from tree","treeparents","");
+}
+SRB("Cancel","cancel","");
+}else{
+if((i=="choosespouse")||(i=="changespouse")){
+SPR(true);
+if((i=="changespouse")||!p.s){
+for(var pi in p.pc){
+if(pi!=p.s){
+SRB("Set partner to "+f[pi].n,"setspouse",pi);
+}
+}
+}
+if(i=="choosespouse"){
+SRB("Add new partner","addspouse","");
+SRB("Add new ex-partner","addexspouse","");
+var ra=FPR(f,Spe);
+if(ra.length){
+SRB("Partner with person already on tree","treespouse","");
+}
+}
+if(i=="changespouse"){
+if(p.s){
+SRB("Set no current partner","setspouse","");
+}
+var cf=FDF(f,Spe,null,null,null);
+for(var pi in p.pc){
+if((pi!=p.s)&&!FLP(f,Spe,pi).length){
+var df=FDF(f,Spe,null,Spe,pi);
+if(df.length<=cf.length){
+SRB("Remove ex-partner "+f[pi].n,"notexspouse",pi);
+}
+}
+}
+}
+SRB("Cancel","cancel","");
+}else{
+if(i=="addchild"){
+SPR(true);
+if(p.es){
+SRB("Add child with "+f[p.es].n,"addchildwith",p.es);
+}
+for(var pi in p.pc){
+if(pi!=p.es){
+SRB("Add child with "+f[pi].n,"addchildwith",pi);
+}
+}
+SRB((p.g=="m")?"Add child with new mother":"Add child with new father","addchildwithnew","");
+SRB((p.g=="m")?"Add child without mother":"Add child without father","addchildwithout","");
+SRB("Cancel","cancel","");
+}else{
+if(i=="addchildwith"){
+ECS();
+var ci=EFI();
+var mi=FSM(f,Spe,v)?Spe:v;
+var fi=FSM(f,Spe,v)?v:Spe;
+var c={"^":Spe,m:mi,f:fi};
+if(FMS(f,mi,fi)){
+c.l=p.l;
+c.q=p.l;
+}
+EFC(ci,c);
+ESE(true,[ci],ci);
+}else{
+if(i=="addchildwithnew"){
+ECS();
+var ci=EFI();
+var c={"^":Spe};
+if(p.g=="m"){
+c.f=Spe;
+}else{
+c.m=Spe;
+}
+EFC(ci,c);
+var pi=EFI();
+EFC(pi,{"^":ci,g:(p.g=="m")?"f":"m"});
+EFC(ci,(p.g=="m")?{m:pi}:{f:pi});
+ESE(true,[ci,pi],ci);
+}else{
+if(i=="addchildwithout"){
+ECS();
+var ci=EFI();
+EFC(ci,(p.g=="m")?{"^":Spe,f:Spe,l:p.l,q:p.l}:{"^":Spe,m:Spe,l:p.l,q:p.l});
+ESE(true,[ci],ci);
+}else{
+if(i=="addsibling"){
+ECS();
+var ap=!(p.m||p.f);
+if(ap){
+SCB("addparentsstop","");
+}
+var si=EFI();
+EFC(si,{"^":Spe,m:p.m,f:p.f,l:p.q,q:p.q});
+ESE(true,ap?[si,p.m,p.f]:[si],si);
+}else{
+if(i=="addmother"){
+ECS();
+SPX(f,p.f,p.m,false);
+var mi=EFI();
+EFC(Spe,{m:mi});
+EFC(mi,{"^":Spe,g:"f"});
+ESE(true,[mi],Spe);
+}else{
+if(i=="addfather"){
+ECS();
+SPX(f,p.f,p.m,false);
+var fi=EFI();
+EFC(Spe,{f:fi});
+EFC(fi,{"^":Spe,g:"m"});
+ESE(true,[fi],Spe);
+}else{
+if(i=="addspouse"){
+ECS();
+SPX(f,Spe,p.s,true);
+var si=EFI();
+EFC(si,{"^":Spe,g:FIG(p.g),s:Spe,l:p.l});
+ESE(true,[si],Spe);
+}else{
+if(i=="addexspouse"){
+ECS();
+var si=EFI();
+EFC(si,{"^":Spe,g:FIG(p.g)});
+EPC(Spe,si,{e:1});
+ESE(true,[si],Spe);
+}else{
+if(i=="notexspouse"){
+EPC(Spe,v,{e:""});
+ESS();
+EUF();
+}else{
+if(i=="treespouse"){
+SPR(true);
+SJR("relactions","Choose the person to partner with:",false,1);
+SJR("relactions","<SELECT ID=\"treepartner\" CLASS=\"sselect\"></SELECT>",true,1);
+SLR("relactions",1);
+SRB("Add as current partner","treeaddspouse","");
+SRB("Add as ex-partner","treeaddexspouse","");
+SRB("Cancel","cancel","");
+SPP("treepartner",FPR(f,Spe),null);
+}else{
+if(i=="treeaddspouse"){
+SCB("setspouse",GO("treepartner"));
+}else{
+if(i=="treeaddexspouse"){
+ECS();
+EPC(Spe,GO("treepartner"),{e:1});
+ESS();
+EUF();
+}else{
+if(i=="setmother"){
+SPX(f,p.f,p.m,false);
+EFC(Spe,{m:v});
+ESS();
+EUF();
+}else{
+if(i=="setfather"){
+SPX(f,p.f,p.m,false);
+EFC(Spe,{f:v});
+ESS();
+EUF();
+}else{
+if(i=="setspouse"){
+SPX(f,Spe,p.s,true);
+if(v){
+SPX(f,v,f[v].s,true);
+}
+EFC(Spe,{s:v});
+ESS();
+EUF();
+}else{
+if(i=="treeparents"){
+SPR(true);
+SJR("relactions","Choose the new mother:",false,1);
+SJR("relactions","<SELECT ID=\"treemother\" CLASS=\"sselect\" onChange=\"SCM()\"></SELECT>",true,1);
+SLR("relactions",1);
+SJR("relactions","Choose the new father:",false,1);
+SJR("relactions","<SELECT ID=\"treefather\" CLASS=\"sselect\"></SELECT>",true,1);
+SLR("relactions",1);
+SRB("Set new parents","treesetparents","");
+SRB("Cancel","cancel","");
+SPP("treemother",FAR(f,Spe,null),p.m);
+SPP("treefather",FAR(f,Spe,p.m),p.f);
+}else{
+if(i=="treesetparents"){
+var nm=GO("treemother");
+var nf=GO("treefather");
+var om=p.m;
+var of=p.f;
+var cf=FDF(f,Spe,null,null,null);
+SPX(f,p.f,p.m,false);
+EFC(Spe,{m:nm,f:nf});
+EUS(true,null,null,false,false);
+var df=FDF(f,Spe,null,null,null);
+if(df.length>cf.length){
+RE("This choice of parents is not allowed because it would split the tree into separate pieces.");
+EFC(Spe,{m:om,f:of});
+}
+ESS();
+EUF();
+}else{
+if(i=="delete"){
+var p=Efa[v];
+if(confirm("Are you sure you want to permanently delete "+p.n+"?")){
+var ni=p["^"];
+if((!ni)||(!f[ni])){
+ni=p["^"]||p.es||p.f||p.m||p.c[0];
+}
+ECS();
+SPX(f,p.f,p.m,false);
+ESP(ni,true);
+EFC(v,{x:""});
+EUF();
+}
+}else{
+if(i=="cancel"){
+SSA(Spa,false);
+}else{
+if(i=="morelactions"){
+SRP(true);
+}else{
+if(i=="startbranch"){
+var md=(GV("personid")==Spe);
+if(confirm("This will create a new family for "+(md?"your":(p.h+"'s"))+" relatives. Are you sure you want to proceed?")){
+GE("startbranch").value="Please wait a few moments...";
+EFB(Spe);
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+};
+function NSN(a,b){
+if(a.l<b.l){
+return -1;
+}else{
+if(b.l<a.l){
+return 1;
+}
+}
+if(a.p<b.p){
+return -1;
+}else{
+if(b.p<a.p){
+return 1;
+}
+}
+return 0;
+};
+function SSD(ed,em,ey,d){
+var p=FPD(d?d.toString():"");
+var v=GE(ed);
+v.options.length=0;
+v.options[v.options.length]=new Option("",0);
+for(var j=1;j<=31;j++){
+v.options[v.options.length]=new Option(j,j);
+}
+var v=GE(em);
+v.options.length=0;
+v.options[v.options.length]=new Option("",0);
+for(var j=1;j<=12;j++){
+v.options[v.options.length]=new Option(Fmn[j],j);
+}
+SO(ed,p.d);
+SO(em,p.m);
+SV(ey,p.y);
+};
+function SSU(s){
+SS("showurl",!s);
+SS("hideurl",s);
+};
+function SIU(u){
+var p=Efa[Spe];
+var r=p?p.r:null;
+var pw=(!Sed)&&SPW(Spe)&&GV("familyid");
+u=u&&pw;
+if(u){
+var v=GE("uploadiframe");
+v.src="imageupload.php?f="+escape(GV("familyid"))+"&p="+escape(GV("personid"))+"&c="+escape(GV("checksum"))+"&i="+escape(Spe)+(r?"&r="+escape(r):"");
+}else{
+if(r){
+var e=r.split(" ");
+var v=GE("personimage");
+var s=EIU(e[0]);
+if(v.src!=s){
+if(e[1]&&e[2]){
+v.style.width=e[1]+"px";
+v.style.height=e[2]+"px";
+}else{
+v.style.width="";
+v.style.height="";
+v.className="blankpixel";
+}
+v.src=s;
+}
+v.title=pw?"Click to change photo":"";
+}
+}
+SV("uploadbutton",(Spe==GV("personid"))?"Add my photo":("Add photo for "+p.h));
+SS("uploadbutton",pw&&(!r)&&(!u));
+SS("uploadiframe",u);
+SS("personimage",r&&(!u));
+};
+function SIC(){
+if(SPW(Spe)&&!Sed){
+SIU(true);
+}
+};
+function SIF(f,i,r,w,h){
+EFC(i,{r:(r?(r+" "+w+" "+h):r)});
+ESS();
+EUF();
+SIU(false);
+};
+function SIA(){
+SIU(false);
+};
+function SCC(){
+if(confirm("Are you sure you want to clear this entire family and start again? "+"None of your work will be saved!")){
+ESA();
+}
+};
+
+</script>	</HEAD>
+	
+	<BODY STYLE="overflow:hidden;" onLoad="PL();" onResize="page_resized();">
+		<TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING=0 CELLPADDING=0>
+	
+			<TR HEIGHT="8">
+				<FORM NAME="topform" ACTION="./" METHOD="POST">
+					<TD STYLE="border-bottom:solid #666666 1px; padding:8px;" VALIGN="middle">
+						<TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING=0 CELLPADDING=0><TR VALIGN="middle">
+							<TD NOWRAP><FONT STYLE="font-size:28px;">		<SPAN ID="lfamilyname"><FONT COLOR="#7F2020">My Family</FONT></SPAN>&nbsp;<SPAN ID="lfamilyinfo" STYLE="font-size:12px;"></SPAN>
+		
+		<IFRAME ID="backframe" WIDTH="1" HEIGHT="1" FRAMEBORDER="0" SCROLLING="no"></IFRAME>
+</FONT></TD>
+							<TD ALIGN="right">
+
+		<INPUT TYPE="hidden" ID="newscript" NAME="newscript" VALUE="
+
+# Start of FamilyScript...
+
+iSTART	z0	mGP9P7	fRFB0Y	pTimothy	lYung	qYung	gm
+iRFB0Y	^START	gm	sGP9P7	pDean	lYung	mBDKI6	fDMXC4
+iGP9P7	^START	gf	sRFB0Y	pLeann	lTran	mQAKJ3	fGBEO5	qTran
+iGBEO5	^GP9P7	gm	sQAKJ3	lTran	pHien
+iQAKJ3	^GP9P7	gf	sGBEO5	pMuoi	lTruong	z0
+iNPDEA	^GP9P7	mQAKJ3	fGBEO5	pHuy	lTran	qTran	gm	sDWHJA
+iAEK6U	^GP9P7	mQAKJ3	fGBEO5	lTran	qTran	pThuong	gf	sK56DY
+iCFAV4	^GP9P7	mQAKJ3	fGBEO5	lTran	qTran	pChung	gm	sTUR5W
+iYTL0S	^GP9P7	mQAKJ3	fGBEO5	lTran	qTran	pCuong	gm	sVLRHU
+iYY2JQ	^GP9P7	mQAKJ3	fGBEO5	lTran	qTran	pHon	gm	sKSEYC
+iS70FX	^GP9P7	mQAKJ3	fGBEO5	lTran	qTran	pKy	gm	sV15MV
+iFLSU8	^NPDEA	fNPDEA	lTran	qTran	pAnna	gf	mDWHJA
+iWGMAQ	^NPDEA	fNPDEA	lTran	qTran	pLynn	gf	mDWHJA
+iDWHJA	^NPDEA	gf	sNPDEA	lTran	pKim
+iK56DY	^AEK6U	gm	sAEK6U	lTran	pDung
+iQMUXI	^AEK6U	mAEK6U	fK56DY	lTran	qTran	pPin	gf
+iLFNJ7	^AEK6U	mAEK6U	fK56DY	lTran	qTran	pQuan	gm
+iU1SAP	^AEK6U	mAEK6U	fK56DY	lTran	qTran	pDiana	gf
+iTUR5W	^CFAV4	gf	sCFAV4	lTran	pJanet	qTran
+iHXTJD	^CFAV4	mTUR5W	fCFAV4	lTran	qTran	pKayla	gf
+iG0GTI	^CFAV4	mTUR5W	fCFAV4	lTran	qTran	pGina	gf
+iS3NHS	^CFAV4	mTUR5W	fCFAV4	lTran	qTran	pAustin	gm
+iVLRHU	^YTL0S	gf	sYTL0S	lTran	pLy
+iKSEYC	^YY2JQ	gf	sYY2JQ	lTran	pGloria
+iLG6YE	^YY2JQ	mKSEYC	fYY2JQ	lTran	qTran	pAndy	gm
+iFPGQ6	^YY2JQ	mKSEYC	fYY2JQ	lTran	qTran	pTony	gm
+iV15MV	^S70FX	gf	sS70FX	lTran	pLinh
+iR6EDC	^S70FX	mV15MV	fS70FX	lTran	qTran	pKen	gm
+iREHMX	^S70FX	mV15MV	fS70FX	lTran	qTran	pKien	gm
+iMSG2V	^S70FX	mV15MV	fS70FX	lTran	qTran	pSalina	gf
+iDGUNA	^S70FX	mV15MV	fS70FX	lTran	qTran	pHenry	gm
+iDMXC4	^RFB0Y	gm	sBDKI6	pLap	lYung
+iBDKI6	^RFB0Y	gf	sDMXC4	pMui	lChau	mYCLZA	fOR4V2
+iIX1UN	^RFB0Y	mBDKI6	fDMXC4	pStanley	lYung	gm	sUHGN9
+iUHGN9	^IX1UN	gf	sIX1UN	lWan	pCathy
+iOYYWP	^IX1UN	mUHGN9	fIX1UN	lYung	qYung	pJasmine	gf
+iN3UF5	^IX1UN	mUHGN9	fIX1UN	lYung	qYung	pAshley	gf
+iOR4V2	^BDKI6	gm	pOn	lChau
+iYCLZA	^BDKI6	gf	pHao	lDang
+
+# ...end of FamilyScript
+
+">
+		<INPUT TYPE="hidden" ID="personid" NAME="personid" VALUE="">
+		<INPUT TYPE="hidden" ID="viewpersonid" NAME="viewpersonid" VALUE="START">
+		<INPUT TYPE="hidden" ID="viewmode" NAME="viewstate" VALUE="view">
+		<INPUT TYPE="hidden" ID="name" NAME="name" VALUE="">
+		<INPUT TYPE="hidden" ID="email" NAME="email" VALUE="">
+		
+
+		<INPUT TYPE="hidden" ID="founderid" VALUE="START">
+					
+							</TD>
+						</TR></TABLE>
+					</TD>
+				</FORM>
+			</TR>
+		
+		<TR HEIGHT="*"><TD STYLE="position:relative;">
+			
+			<SCRIPT TYPE="text/javascript"><!--
+				document.write('<DIV ID="noajax"'+(document.getElementById ? ' STYLE="display:none;"' : '')+'><TABLE HEIGHT="100%" WIDTH="100%"><TR><TD ALIGN="center"><FONT COLOR="red"><B>Sorry. This site requires a modern web browser such as Firefox, Internet Explorer 6+ or Safari.</B></FONT></TD></TR></TABLE></DIV>');
+			--></SCRIPT>
+			
+			<NOSCRIPT>
+				<TABLE HEIGHT="100%" WIDTH="100%"><TR><TD ALIGN="center">
+					<FONT COLOR="red"><B>
+					Sorry - this site requires JavaScript in order to display your family.
+					<P>
+					If a security warning has appeared at the top of the browser window,
+					please click it to allow blocked content.
+					<P>
+					Otherwise, please switch on JavaScript in the Options... window of your browser.
+					</B></FONT>
+				</TD></TR></TABLE>
+			</NOSCRIPT>
+			
+			<DIV CLASS="fullsize" STYLE="position:relative;">
+
+				<DIV ID="treediv" CLASS="dright" STYLE="top:0px; height:100%; overflow:hidden;"><DIV ID="treemargin" CLASS="marginon" STYLE="cursor:move;"><DIV ID="treebg" CLASS="fullsize rbody" STYLE="position:relative;"></DIV></DIV></DIV>
+				
+				<DIV ID="navdiv" CLASS="dright" STYLE="bottom:0px; height:64px; overflow:hidden; "><DIV ID="navmargin" CLASS="marginon"><DIV ID="navbg" CLASS="rbody" STYLE="height:100%;"><TABLE WIDTH="100%" HEIGHT="100%">
+				
+					<TR VALIGN="middle"><TD ALIGN="center">
+						<SPAN ID="printbutton">
+							<A HREF="#" onClick="parent.ESM('print'); return false;"><IMG SRC="data:;base64,R0lGODlhFgAWAPf/AMDAwP////7+/vz8/Pn5+fj4+Pf39/b29vT09PPz8/Ly8vHx8fDw8O/v7+7u7u3t7evr6+rq6unp6ejo6Ofn5+bm5uTk5OPj4+Li4uHh4eDg4N/f397e3t3d3dzc3Nvb29ra2tnZ2djY2NfX19bW1tXV1dTU1NPT09LS0tHR0dDQ0M/Pz87Ozs3NzczMzMvLy8rKysnJycjIyMfHx8XFxcPDw8LCwsHBwcDAwL+/v76+vr29vbq6urm5ubi4uLe3t7a2trW1tbS0tLOzs7KysrGxsbCwsK+vr66urq2traysrKurq6qqqqioqKenp6ampqWlpaSkpKOjo6KioqGhoaCgoJ+fn52dnZycnJubm5qampmZmZeXl5aWlpWVlZOTk5KSkpGRkY+Pj46Ojo2NjYyMjIqKiomJiYiIiIeHh4WFhYSEhIODg4KCgn9/f3x8fHt7e3p6enl5eXZ2dnV1dXR0dHJycm5ubmxsbGtra2pqamhoaGdnZ2ZmZmRkZGJiYmFhYWBgYF5eXl1dXVxcXFpaWlZWVlVVVVNTU1JSUk5OTk1NTUhISDk5OQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAWABYAQAj/AAEIhAGjB48aLEi0oCGwocOHM3SQeAHDBQoVJTRkOTMExEMRUwIMiOACBxQyXqYQ4SEkSpc3aBSVeRiiBgQKOCs4MKLmoUMYQxxwMJECggoRHl60UBHCAwkXOv7MfAgDT6AwexolyjNkCCBEWDL4jHCFwQEEaAtgUFPBp1scJESIGFGiBAs6MtwKLCGkio8aSn706MGCA4UFDkjsCBNFgUATYJRIWaHBxIYLLoI0wSImjZcvXQ6ZaUiiDp8UAhKQSFJkECNBdsa8qEDDTaENDaPQCMC7t5Iheh8aQcHggfEHC7QwCd4wwQ0MHDZIx+DijgXmAqfgoEFjBowUI2x0oGnBnEiJAzmSqE/CBIkQE0DEPHGYgkqGDic0rBhhgEACCh6wEIMLI3zQBxQCqSBGChNsgEIJEKAAwn0o0PDDFGGsYQgZezERwAlYLFESFlycwcYZVwxRwxJDDLKGQArAYYUCAzDQQApOHMFEGHHcMYcYSNDgQx0YNGfEH1xEQAEQUbwhxxo7bEAEIYu0gYJbCwyhRyJp2IBFHn5sIcFDAQEAOw==" WIDTH="22" HEIGHT="22" ALIGN="ABSMIDDLE" TITLE="Print version" BORDER="0" STYLE="margin-right:4px;">Print</A>
+							&nbsp;&ndash;&nbsp;
+						</SPAN>
+						<A HREF="#" onClick="parent.ETI(); return false;"><SPAN ID="sidelinktext">Hide</SPAN> sidebar</A>
+						&nbsp;&ndash;&nbsp;
+						<A HREF="#" onClick="parent.ETK(); return false;"><SPAN ID="keylinktext">Show</SPAN> key</A>
+						&nbsp;&ndash;&nbsp;
+						<A HREF="#" onClick="parent.EBS(); return false;">Back to <SPAN ID="backtotext">start</SPAN></A>
+						&nbsp;&ndash;&nbsp;
+						Find:
+						<INPUT ID="findfield" STYLE="width:8em;" onFocus="focus_find_box();" onInput="input_find_box();" onClick="input_find_box();">
+						&nbsp;&ndash;&nbsp;
+						<IMG SRC="data:;base64,R0lGODlhFgAWAPcAAP////////////////////////////////f39/f39/f39/f39/f39/f398DAwO/v7+/v7+/v7+/v7+/v7+/v7+/v7+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn597e3t7e3t7e3t7e3t7e3t7e3tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1s7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsbGxsbGxsbGxsbGxsbGxr29vb29vb29vb29vb29vb29vb29vbW1tbW1tbW1ta2tra2traWlpaWlpaWlpZycnJycnJycnJycnJycnJSUlJSUlHt7e3t7e3t7e3Nzc3Nzc3Nzc3Nzc2tra2tra2NjY2NjY2NjY2NjY1paWlpaWlpaWlpaWlpaWlJSUlJSUlJSUkpKSkpKSkpKSkJCQkJCQkJCQkJCQkJCQkJCQjk5OTk5OTk5OTk5OTExMTExMTExMSkpKSkpKSkpKSkpKSkpKSkpKSEhISEhISEhISEhISEhIRgYGBgYGBAQEBAQEBAQEBAQEBAQEAgICAgICAgICAgICAgICAgICAgICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAA4ALAAAAAAWABYAAAj/AB0IHPjETB08aagMXMhQoJY5VY4EEYIEix8xDRne2RIkBosVLWTgKEImUEaBeqbEQAHCwoMFDTCk2NFlUEYwX16QwJCgAIECBxIg4HAjTZmGf3yUsGCAgAABAwgcYCAhw5BDDK1YScGhp4AAAaAaSADhAogwWhbGITICAgIDA8AKkKqg7IckeRYKsuHhQQI0aM4IRpNGTQQMIHIsWliohgYJDNIABlx4DYUOJHowWmjHCAcLERooQIAgwYIHVUGoaLJnYRYuIjhcmADhwQMIESpkAHEiBhkvDBcFGfFhA4YLFyxo8BDiBIwjjRqigfMixYkQILCPMLFihg46bTIyZBpzgwaMFy5gwJhx48eZ6CcbyVnCQ8eO+0Cc3Gl0CBGTk2w0skYUSighxRuNhOeHIYn4cZIDXvTRSCN9ADfQHXgwgtWDJxFyBRyIbMZhRolA4UYiioyYUSNX8JGiig0B0ggAAQEAOw==" WIDTH="22" HEIGHT="22" ALIGN="ABSMIDDLE" TITLE="Zoom out" onClick="parent.ECZ(false);" STYLE="cursor:pointer;">
+						&nbsp;
+						<IMG SRC="data:;base64,R0lGODlhFgAWAPcAAP////////////////////////////////f39/f39/f39/f39/f39/f398DAwO/v7+/v7+/v7+/v7+/v7+/v7+/v7+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn597e3t7e3t7e3t7e3t7e3t7e3tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1s7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsbGxsbGxsbGxsbGxsbGxr29vb29vb29vb29vb29vb29vb29vbW1tbW1tbW1ta2tra2traWlpaWlpaWlpZycnJycnJycnJycnJycnJSUlJSUlHt7e3t7e3t7e3Nzc3Nzc3Nzc3Nzc2tra2tra2NjY2NjY2NjY2NjY1paWlpaWlpaWlpaWlpaWlJSUlJSUlJSUkpKSkpKSkpKSkJCQkJCQkJCQkJCQkJCQkJCQjk5OTk5OTk5OTk5OTExMTExMTExMSkpKSkpKSkpKSkpKSkpKSkpKSEhISEhISEhISEhISEhIRgYGBgYGBAQEBAQEBAQEBAQEBAQEAgICAgICAgICAgICAgICAgICAgICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAA4ALAAAAAAWABYAAAj/AB0IHPjETB08aagMXMhQoJY5VY4EEYIEix8xDRne2RIkBosVLWTgKEImUEaBeqbEQAHCwoMFDTCk2NFlUEYwX16QwJCgAIECBxIg4HAjTZmGf3yUsGCAgIAzZwgcYCAhw5BDDK1YScGhp4AAUAcYSADhAogwWhbGITICAgIDA8BGPaCg7IckeRYKsuHhQQI0aKCeQZNGTQQMIHIsWliohgYJDNIABlx4DYUOJHowWmjHCAcLERooQAB1wYOqIFQ02bMwCxcRHC5MgPAAaoQKGUCciEHGC8NFQUZ82IDhAlQNHkKcgHGkUUM0cF6kOBECRPURJlbM0EGnTUZGY27QYIDxwgUMGDNu/Djj/GQjOUt46NhBH4iTO40OIWJykk2jNVEooYQUbzTinR+GJOLHSQ540UcjjfTh20B34MEIVgyeRMgVcCCyWYYZJQKFG4koAmJGjVzBh4knNgRIIwAEBAA7" WIDTH="22" HEIGHT="22" ALIGN="ABSMIDDLE" TITLE="Zoom in" onClick="parent.ECZ(true);" STYLE="cursor:pointer;">
+					</TD></TR>
+					<TR VALIGN="middle"><TD ALIGN="center">
+						Show:
+						<SELECT ID="showdetail" onChange="NCD();" TITLE="Information to show on tree">
+							<OPTION VALUE="">Name only</OPTION>
+							<OPTION VALUE="bds">Life dates</OPTION>
+							<OPTION VALUE="bd">Life years</OPTION>
+							<OPTION VALUE="bv">Birth</OPTION>
+							<OPTION VALUE="dy">Death</OPTION>
+							<OPTION VALUE="e">Email</OPTION>
+							<OPTION VALUE="a">Address</OPTION>
+							<OPTION VALUE="tku">Telephone</OPTION>
+							<OPTION VALUE="j">Profession</OPTION>
+							<OPTION VALUE="E">Company</OPTION>
+							<OPTION VALUE="I">Interests</OPTION>
+							<OPTION VALUE="A">Activities</OPTION>
+							<OPTION VALUE="_"></OPTION>
+							<OPTION VALUE="_r0">No photos</OPTION>
+							<OPTION VALUE="_r1">Show photos</OPTION>
+							<OPTION VALUE="_m0">No middle names</OPTION>
+							<OPTION VALUE="_m1">Middle names</OPTION>
+							<OPTION VALUE="_pl">Surname now</OPTION>
+							<OPTION VALUE="_pq">Surname at birth</OPTION>
+						</SELECT>
+						&nbsp;
+						Parents:
+						<SELECT ID="showparents" onChange="parent.ECP();" TITLE="Generations of ancestors to display">
+							<OPTION VALUE="1">1 gen</OPTION>
+							<OPTION VALUE="2">2 gen</OPTION>
+							<OPTION VALUE="3">3 gen</OPTION>
+							<OPTION VALUE="4">4 gen</OPTION>
+							<OPTION VALUE="5">5 gen</OPTION>
+							<OPTION VALUE="6">6 gen</OPTION>
+							<OPTION VALUE="8">8 gen</OPTION>
+							<OPTION VALUE="10">10 gen</OPTION>
+							<OPTION VALUE="12">12 gen</OPTION>
+							<OPTION VALUE="15">15 gen</OPTION>
+						</SELECT>
+						&nbsp;
+						Children:
+						<SELECT ID="showchildren" onChange="parent.ECH();" TITLE="Generations of descendants to display">
+							<OPTION VALUE="1">1 gen</OPTION>
+							<OPTION VALUE="2">2 gen</OPTION>
+							<OPTION VALUE="3">3 gen</OPTION>
+							<OPTION VALUE="4">4 gen</OPTION>
+							<OPTION VALUE="5">5 gen</OPTION>
+							<OPTION VALUE="6">6 gen</OPTION>
+							<OPTION VALUE="8">8 gen</OPTION>
+							<OPTION VALUE="10">10 gen</OPTION>
+							<OPTION VALUE="12">12 gen</OPTION>
+							<OPTION VALUE="15">15 gen</OPTION>
+						</SELECT>
+						&nbsp;
+						Others:
+						<SELECT ID="showcousins" onChange="parent.ECO();" TITLE="Generations of aunts, uncles, cousins, nephews and nieces">
+							<OPTION VALUE="0">None</OPTION>
+							<OPTION VALUE="1">1 gen</OPTION>
+							<OPTION VALUE="2">2 gen</OPTION>
+							<OPTION VALUE="3">3 gen</OPTION>
+							<OPTION VALUE="4">4 gen</OPTION>
+							<OPTION VALUE="5">5 gen</OPTION>
+							<OPTION VALUE="6">6 gen</OPTION>
+							<OPTION VALUE="8">8 gen</OPTION>
+							<OPTION VALUE="10">10 gen</OPTION>
+							<OPTION VALUE="12">12 gen</OPTION>
+							<OPTION VALUE="15">15 gen</OPTION>
+						</SELECT>
+					</TD></TR>
+	
+				</TABLE></DIV></DIV></DIV>
+				
+				<DIV ID="keydiv" CLASS="dright rbody" STYLE="bottom:64px; display:none; border-top:solid #666666 1px; padding:24px 0px 32px 0px; text-align:center;"><DIV ID="keymargin" CLASS="marginon"><DIV STYLE="font-size:14px; font-weight:bold; margin-bottom:24px;">Key to family tree diagram:</DIV><DIV STYLE="position:relative; margin:0 auto;" ID="keycontent"></DIV></DIV></DIV>
+
+				<DIV ID="findlist" CLASS="slist" STYLE="position:absolute; bottom:64px; height:20em; width:16em; padding:2px 0; background:#fff; border:1px solid black; display:none; overflow-x:hidden; overflow-y:auto;"></DIV>
+				
+				<DIV ID="externaldiv" CLASS="dright" STYLE="top:0px; height:100%; display:none;"><DIV ID="externalmargin" CLASS="marginon" STYLE="background-color:white;"><IFRAME ID="externalurl" CLASS="fullsize" FRAMEBORDER="0" SCROLLING="auto"></IFRAME></DIV></DIV>
+
+				<DIV ID="welcomediv" STYLE="position:absolute; width:100%; top:16px;"><DIV ID="welcomemargin" CLASS="marginon"><CENTER>
+
+				</CENTER></DIV></DIV>
+				
+				<DIV ID="leftdiv" CLASS="dleft lbody" STYLE="">
+
+					<TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING=0 CELLPADDING=6><FORM onSubmit="return false;">
+
+					<TR VALIGN="top"><TD ALIGN="center">
+			
+						<SPAN ID="nametitle" CLASS="sdefname">Loading...</SPAN><BR>
+						<INPUT TYPE="image" CLASS="blankpixel" WIDTH="1" HEIGHT="6"><BR>
+			
+						<IMG ID="personimage" CLASS="simage" STYLE="display:none; margin-bottom:6px;" onClick="SIC(); return false;">
+
+						<DIV ID="nonrelations" STYLE="display:none; margin-top:6px;">
+			
+						<DIV ID="nonediting">
+							<IFRAME ID="uploadiframe" SRC="imageupload.php" CLASS="simage" STYLE="display:none; margin-top:6px;" SCROLLING="no" WIDTH="200" HEIGHT="120" FRAMEBORDER="0"></IFRAME>
+							<INPUT ID="uploadbutton" TYPE="submit" VALUE="Upload photo" CLASS="sbutton" STYLE="display:none; margin-top:6px;" onClick="SIC(); return false;">
+	
+							<INPUT ID="hideurl" TYPE="submit" VALUE="Back to family tree" CLASS="sbutton" STYLE="display:none; margin-top:6px;" onClick="parent.ESM('view'); return false;">
+							<INPUT ID="showurl" TYPE="submit" CLASS="sbutton" STYLE="display:none; margin-top:6px;" onClick="return UL(GE('urllink'));"><INPUT ID="urlmode" TYPE="hidden" VALUE=""><A HREF="#" ID="urllink" STYLE="display:none;"></A>
+							<INPUT ID="shareperson" TYPE="submit" VALUE="Share family" CLASS="sbutton" STYLE="display:none; margin-top:6px;" onClick="parent.ESM('share'); return false;">
+						</DIV>
+		
+						<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 STYLE="margin-top:12px;">
+							<TR>
+								<TD ALIGN="center" ID="switchpanel0" CLASS="sswitched">
+									<A HREF="#" onMouseDown="SWA(0); return false;" ID="switchlink0" CLASS="sswitchedlink">Personal</A>
+								</TD>
+								<TD ALIGN="center" ID="switchpanel3" CLASS="sswitch">
+									<A HREF="#" onMouseDown="SWA(3); return false;" ID="switchlink3">Partners</A>
+								</TD>
+								<TD ALIGN="center" ID="switchpanel1" CLASS="sswitch">
+									<A HREF="#" onMouseDown="SWA(1); return false;" ID="switchlink1">Contact</A>
+								</TD>
+								<TD ALIGN="center" ID="switchpanel2" CLASS="sswitch">
+									<A HREF="#" onMouseDown="SWA(2); return false;" ID="switchlink2">Biographical</A>
+								</TD>
+							</TR>
+						</TABLE>
+			
+						<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 CLASS="spanel">
+							<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="6"></TD></TR>
+				
+							<TBODY ID="personalview" CLASS="hiderows">
+							</TBODY>
+				
+							<TBODY ID="personaledit" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sleft">
+										First names:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="personalname" CLASS="sfield" onChange="SCV('personalname');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Surname now:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="familyname" CLASS="sfield" onChange="SCV('familyname');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Surname at birth:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="familybirth" CLASS="sfield" onChange="SCV('familybirth');" onFocus="SFV('familybirth');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Gender:
+									</TD>
+									<TD CLASS="sright">
+										<DIV STYLE="margin:2px 0px;">
+											<INPUT TYPE="radio" NAME="gender" ID="gender_f" onClick="SSG('f');" STYLE="margin-right:4px;">Female&nbsp;
+											<INPUT TYPE="radio" NAME="gender" ID="gender_m" onClick="SSG('m');" STYLE="margin-right:4px;">Male&nbsp;
+											<INPUT TYPE="radio" NAME="gender" ID="gender_o" onClick="SSG('o');" STYLE="margin-right:4px;">Other
+										</DIV>
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Birth date:
+									</TD>
+									<TD CLASS="sright">
+										<SELECT ID="birthmonth" CLASS="sselect" TITLE="Month" onChange="SCV('birth');"></SELECT>&nbsp;
+										<SELECT ID="birthdom" CLASS="sselect" TITLE="Day" onChange="SCV('birth');"></SELECT>&nbsp;
+										<INPUT ID="birthyear" CLASS="syear" TITLE="Year" onChange="SCV('birth');" MAXLENGTH=4>
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+									</TD>
+									<TD CLASS="sright">
+										<DIV STYLE="margin:2px 0px;">
+											<INPUT TYPE="checkbox" ID="alive" onClick="SCV('alive');">
+											This person is living
+										</DIV>
+									</TD>
+								</TR>
+							</TBODY>
+							<TBODY ID="personaleditdeath" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sleft">
+										Death date:
+									</TD>
+									<TD CLASS="sright">
+										<SELECT ID="deathmonth" CLASS="sselect" TITLE="Month" onChange="SCV('death');"></SELECT>&nbsp;
+										<SELECT ID="deathdom" CLASS="sselect" TITLE="Day" onChange="SCV('death');"></SELECT>&nbsp;
+										<INPUT ID="deathyear" CLASS="syear" TITLE="Year" onChange="SCV('death');" MAXLENGTH=4>
+									</TD>
+								</TR>
+							</TBODY>
+				
+							<TBODY ID="partnersviewedit" CLASS="hiderows">
+							</TBODY>
+				
+							<TBODY ID="contactview" CLASS="hiderows">
+							</TBODY>
+
+							<TBODY ID="contactedit" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sleft">
+										Email:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="c_email" CLASS="sfield" onChange="SCV('c_email');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Website:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="website" CLASS="sfield" onChange="SCV('website');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Blog:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="blog" CLASS="sfield" onChange="SCV('blog');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Photo site:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="photosite" CLASS="sfield" onChange="SCV('photosite');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Home tel:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="hometel" CLASS="sfield" onChange="SCV('hometel');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Work tel:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="worktel" CLASS="sfield" onChange="SCV('worktel');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Mobile:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="mobile" CLASS="sfield" onChange="SCV('mobile');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Skype:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="skype" CLASS="sfield" onChange="SCV('skype');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft" STYLE="vertical-align:top;">
+										Address:
+									</TD>
+									<TD CLASS="sright">
+										<TEXTAREA ID="address" CLASS="sfield" ROWS=3 onChange="SCV('address');"></TEXTAREA>
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Other:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="othercontact" CLASS="sfield" onChange="SCV('othercontact');">
+									</TD>
+								</TR>
+							</TBODY>
+
+							<TBODY ID="bioview" CLASS="hiderows">
+							</TBODY>
+
+							<TBODY ID="bioedit1" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sleft">
+										Birth place:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="birthplace" CLASS="sfield" onChange="SCV('birthplace');">
+									</TD>
+								</TR>
+							</TBODY>
+
+							<TBODY ID="bioeditdeath" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sleft">
+										Death place:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="deathplace" CLASS="sfield" onChange="SCV('deathplace');">
+									</TD>
+								</TR>
+
+								<TR>
+									<TD CLASS="sleft">
+										Burial place:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="burialplace" CLASS="sfield" onChange="SCV('burialplace');">
+									</TD>
+								</TR>
+
+								<TR>
+									<TD CLASS="sleft">
+										Burial date:
+									</TD>
+									<TD CLASS="sright">
+										<SELECT ID="burialmonth" CLASS="sselect" TITLE="Month" onChange="SCV('burial');"></SELECT>&nbsp;
+										<SELECT ID="burialdom" CLASS="sselect" TITLE="Day" onChange="SCV('burial');"></SELECT>&nbsp;
+										<INPUT ID="burialyear" CLASS="syear" TITLE="Year" onChange="SCV('burial');" MAXLENGTH=4>
+									</TD>
+								</TR>
+							</TBODY>
+
+							<TBODY ID="bioedit2" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sleft">
+										Profession:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="profession" CLASS="sfield" onChange="SCV('profession');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Company:
+									</TD>
+									<TD CLASS="sright">
+										<INPUT ID="employer" CLASS="sfield" onChange="SCV('employer');">
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Interests:
+									</TD>
+									<TD CLASS="sright">
+										<TEXTAREA ID="interests" CLASS="sfield" ROWS=3 onChange="SCV('interests');"></TEXTAREA>
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Activities:
+									</TD>
+									<TD CLASS="sright">
+										<TEXTAREA ID="activities" CLASS="sfield" ROWS=3 onChange="SCV('activities');"></TEXTAREA>
+									</TD>
+								</TR>
+								<TR>
+									<TD CLASS="sleft">
+										Bio notes:
+									</TD>
+									<TD CLASS="sright">
+										<TEXTAREA ID="bionotes" CLASS="sfield" ROWS=4 onChange="SCV('bionotes');"></TEXTAREA>
+									</TD>
+								</TR>
+							</TBODY>
+
+							<TBODY ID="viewfooter" CLASS="hiderows">
+								<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="6"></TD></TR>
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										<INPUT TYPE="submit" ID="editbutton" VALUE="Edit details" CLASS="sbutton" onClick="SED(); return false;">
+									</TD>
+								</TR>
+							</TBODY>
+				
+							<TBODY ID="editfooter" CLASS="hiderows">
+								<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="12"></TD></TR>
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										You can also add or change details later.
+									</TD>
+								</TR>
+								<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="6"></TD></TR>
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										<INPUT TYPE="submit" VALUE="OK" CLASS="sbutton2" onClick="SAS(); return false;">
+										&nbsp;
+										<INPUT TYPE="submit" VALUE="Cancel" CLASS="sbutton2" onClick="SCS(); return false;">
+									</TD>
+								</TR>
+							</TBODY>
+				
+							<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="6"></TD></TR>
+						</TABLE>
+			
+						</DIV>
+
+						<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0>
+							<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="12"></TD></TR>
+			
+							<TBODY ID="readonlyfooter" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										You are not currently permitted to edit this family.
+									</TD>
+								</TR>
+								<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="12"></TD></TR>
+							</TBODY>
+
+							<TBODY ID="writemefooter" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										<A HREF="#" onClick="parent.GE('do_signin').click(); return false;">Sign in</A>
+										to add more people to this family.
+									</TD>
+								</TR>
+								<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="12"></TD></TR>
+							</TBODY>
+
+							<TBODY ID="writenotfooter" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										<A HREF="#" onClick="parent.GE('do_signin').click(); return false;">Sign in</A>
+										to edit these details or add new people.
+									</TD>
+								</TR>
+								<TR><TD><IMG CLASS="blankpixel" WIDTH="1" HEIGHT="12"></TD></TR>
+							</TBODY>
+				
+							<TBODY ID="relactions" CLASS="hiderows">
+							</TBODY>
+						</TABLE>
+			
+					</TD></TR>
+			
+					<TR VALIGN="bottom"><TD ALIGN="center">
+						<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0>
+							<TBODY ID="importfooter" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										<INPUT TYPE="submit" VALUE="Import GEDCOM or FamilyScript..." CLASS="sbutton" onClick="parent.ESM('import'); return false;">
+									</TD>
+								</TR>
+							</TBODY>
+							<TBODY ID="clearfooter" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										<INPUT TYPE="submit" VALUE="Clear family and start over..." CLASS="sbutton" onClick="SCC(); return false;">
+									</TD>
+								</TR>
+							</TBODY>
+							<TBODY ID="downloadfooter" CLASS="hiderows">
+								<TR>
+									<TD CLASS="sboth" COLSPAN="2">
+										<INPUT TYPE="submit" VALUE="Download / export this family..." CLASS="sbutton" onClick="parent.ESM('download'); return false;">
+									</TD>
+								</TR>
+							</TBODY>
+						</TABLE>
+					</TD></TR>
+		
+					</FORM></TABLE>
+
+				</DIV>
+
+				<DIV ID="extradiv" CLASS="dleft lbody" STYLE="visibility:hidden;"><IFRAME ID="extraframe" CLASS="fullsize" FRAMEBORDER="0" SCROLLING="auto"></IFRAME></DIV>
+				
+			</DIV>
+
+		</TD></TR>
+
+			<TR HEIGHT="8">
+				<TD STYLE="border-top:solid #666666 1px; padding:8px;" VALIGN="middle">
+					<DIV STYLE="float:left;">
+Read-only HTML downloaded by Timothy Yung on 7 Apr 2019.					</DIV>
+					<DIV STYLE="float:right;">
+<A HREF="http://www.familyecho.com/" TITLE="Family Echo - Free Online Family Tree Maker"><IMG SRC="data:;base64,R0lGODlhUAAQAPcAAIwyM6llZqZub6Z3eLeam9q7vNy+v8evsObP0Mq3uOza2+vb3NbLzPTr7N3b3Pz7/c7N1fHw+Ojn89DP3cXE0a2syayrw7W0ywsKdg8OeRAPeBIReRgXfRsafyAffiQjgy8uhDAvhDg3jT8+j0ZFl0pJlE9OmVNSlGpprWtqrXFwrHZ1sn9+uIKBuY6NtaCfy5eWv6inzR8fgSMjgCwsiSoqgysrhCwshDExhkVFmFRVn0xMj15epGJip11dnWlprG5ur29vsGNjnWlppH19tHJypIaGvIeHvIuLvYCAq4mJtpWVxI+PuZ6eyJSUu5mZvpmZuJ6evaKiwLS01KenwsLC3sfH4MrK4sbG3c7O5dHR5tTU57u7ytra6bq6xuTk8eHh7tLS3uvr9ebm7+3t8+rq8Onp7/X1+eXl6d3d4fn5/Pj4+/Hx8+Li5G1uqaChys7P4O3u9Pj+/uTq6vb7+/D09Ojs7P3///T29u7w8Pr7+/X5+Pn7+vb28/Dw7fv7+e3t6////v38+vv49/Xs6+vc27GLinYLC3oPD3kQEHcREXwSEn0VFXoVFXwXF4EaGoEcHIMdHYEeHoIfH4QhIYIjI4YmJYImJowuLo4xMY81NYk2NZI9PY07O40+Pos9PZNEQ5pKSpFIR5JISKJXV6RZWaNZWZ5YWJZVVaVfX5lZWaBfX5pdXZteXq5sa5xhYaRnZ6NrarF2dqp1dLqCgqVzc7J9fal5eax9fKp9fKyBgb2OjraKia2CgrOIiMOVlb6RkbSNja+JibmUlMqjo8+srNSysti3t9a1tcGjo9m6uta5ucWrq9q/v+LJyd7Fxcexsd/Hx823t+TOztjDw+LNzdnGxtG/v827u97Ly+TT0+va2ubV1dTFxefX1+DR0ezd3erd3fHl5e7i4tHHx/Xr6/Lo6Ozk5NzV1fbv7+rj4+fg4Pjy8vbx8e3o6Pn19ejk5Pv4+Pr39/37+/j29tfV1f79/fDv7+Df3/////7+/vz8/Pn5+ezs7Ovr6+bm5iwAAAAAUAAQAAAI/wDzCRxIsKDBgwgTKlzIsKHDhxAjHrTnDUFFZ84MONMnUeA8gYWIAdOj8IwVK1qyXLFSpctBCVNWlGloL9qpR6MMBRPQaV3HBaGUBSKGCBUehWumjOjgw4USHybYGMRCo0aah8gQDZBz586vbh2fOdJ1RxAmVnsYtsBAJVCgP0quGvwBos3DAotuDWx3r2O+bPjyDdLEig7DIxosDCQj1WCKug+V5c1nb9e5fPGmPWMnUNACb+aOicuXTtk0gubA5ZOnqdU9cenE2TM3zlwggkYyUMknBslRgRGuXHmQDwWONFm0FPxiZUtBZY86yUp1yQG4UMMEcNJm75elVbxAaf8qBkzVpF364u2y5EuwplfuUlHChUcbJ198CB7JUEIFiRH9CDSFElSIwAM/QNjggg8yrECSPUswcYEOPZAxkDKMtEJON7AwYAAqc8gTySz5cAOJKna4A8AmDuARQCXw2NMMI7pgRtgd0SyCC2Wz1MPRQPslAQEXQlylhQgU5BODEH4E8QEF7RCxQZJNiBAYGB+4sY9AkuUiUDjo5LOHN8hQEssd6VBSyx35kPKJP/n80ggD+YAzSS/uFZZPKpWoo8AwhuGWmEBwoJEPCyH8k48+fdiDQgh2VcFBFIHkcEIfAq0wg6H5SHYLm/ncYY4rsWCj5h2EnJqPKW/G6Qg5+Wz/Iwmeg6GVTzSM2EIMWAUhpthAYqQwg10DoQAZFh1AEYgIJWCazxIeOCBQAYgIQBAtitRDTyRephNJLQKV8kkecc5ZJyR4zpMJK3IIFAAis9Rh0FpSDPQCEzBg4ARw+aRgg6JWcABFPkBwEIZALewAiGC2JLLJMu8IRMshugLgSTbPSCKKN+mAcok08sjSyDDyGOMIKuNMU8km1NiTTzWSEADqQGCQsIEJTRyhww1ekGFCBysgAUMXJHhQgRpvbDAEGWCMYEIXWwzBxW3lJGN1Mj7l08AuwqDzTTAMaIPNAdeMIw00zJxjDTbMqFNNAsx0o00CB0iD6TywhFnQFlJYPiCFE0kkwQWmcTxRBBT/jHHB4mZgYQEVE+RDBgwuVJDGHwfNHCpDM2tOEEfHBBMoRG41VLpffr0zC6yoRxQQADs=" WIDTH="80" HEIGHT="16" BORDER="0" ALT="Family Echo" ALIGN="ABSBOTTOM"></A> &copy; Familiality 2019 - All rights reserved					</DIV>
+				</TD>
+			</TR>
+		</TABLE>
+
+	</BODY>
+
+</HTML>
