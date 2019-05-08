@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="../CSS/main.css" type="text/css" rel= Stylesheet>
+  <link href="../CSS/navbar.css" type="text/css" rel= Stylesheet>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<title> Timmy Yung </title>
+</head>
+
+<header>
+  <center> <h1 style="font-weight: bolder;">Timmy's Beginner HTML Site</h1> </center>
+</header>
+
+<div class="container purple topBotomBordersIn">
+    <a href="../index.html">HOME</a>
+    <a href="../Pages/about.html">ABOUT ME</a>
+    <a href="../Pages/test.html">PARALLAX</a>
+    <a href="../Pages/reviews.html">REVIEWS</a>
+    <a href="../Pages/techprojects.html">TECH PROJECTS</a>
+    <a href="https://www.theglobeandmail.com/" target="blank">NEWS</a>
+  </div>
+
+<script>
+$(document).ready(function(){
+
+  $("button").click(function(){
+    $("a").hide();
+  });
+ 
+  $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(0)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+
+});
+</script>
+
+<button>DON'T CLICK ME!</button>
+<br>
+<br>
+<center>
+  <div id="slideshow">
+    <div><img src="../Images/Website/1.jpg" width="500"></div>
+    <div><img src="../Images/Website/2.jpg" width="500"></div>
+    <div><img src="../Images/Website/3.jpg" width="500"></div>
+  </div>
+</center>
+
+  <footer>
+    <p>Posted by: Timmy</p>
+    <p>Contact information: <a href="mailto:fakeemail@pdsb.net">fakeEmail@pdsb.net</a>.</p>
+    <br>
+  </footer>
+</html>
