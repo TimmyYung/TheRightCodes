@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="../CSS/main.css" type="text/css" rel= Stylesheet>
+  <link href="../CSS/navbar.css" type="text/css" rel= Stylesheet>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+<title> Timmy Yung </title>
+</head>
+
+<header>
+  <center> <h1 style="font-weight: bolder;">Timmy's Beginner HTML Site</h1> </center>
+</header>
+
+<div class="container purple topBotomBordersIn">
+    <a href="../index.html">HOME</a>
+    <a href="../Pages/about.html">ABOUT ME</a>
+    <a href="../Pages/test.html">PARALLAX</a>
+    <a href="../Pages/reviews.html">REVIEWS</a>
+    <a href="../Pages/techprojects.html">TECH PROJECTS</a>
+    <a href="https://www.theglobeandmail.com/" target="_blank">NEWS</a>
+  </div>
+
+<canvas id="canvasInAPerfectWorld" background-color="white" width="490" height="220"></canvas>
+<div id="canvasDiv"></div>
+
+<script>
+
+//Declares avaliable colours
+var colorPurple = "#cb3594";
+var colorGreen = "#659b41";
+var colorYellow = "#ffcf33";
+var colorBrown = "#986928";
+
+//Stores current color
+var curColor = colorPurple;
+//Array to match the chosen color when user clicks canvas
+var clickColor = new Array();
+
+var clickSize = new Array();
+var curSize = "normal";
+
+var clickTool = new Array();
+var curTool ="crayon"
+
+var outlineImage = new Image();
+
+//Prepares the Canvas (Not compatible with IE)
+context = document.getElementById('canvasInAPerfectWorld').getContext("2d");
+
+$("#canvas").mousedown(function(e){
+    var mouseX = e.pageX - this.offsetLeft;
+    var mouseY = e.pageY - this.offsetTop;
+
+    paint = true;
+    //Records the position in an array
+    addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+    //Updates canvas
+    redraw();
+});
+
+//Draws on Canvas when user is pressing down
+$("#canvas").mousemove(function(e){
+    //Sees if virtual markeris pressing down
+    if(paint){
+        //If paint is true, records value, then redraws
+        addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+        redraw();
+    }
+})
+
+//If marker is off the paper, paint is set to false
+$("canvas").mouseup(function(e){
+    paint=false;
+})
+
+//If marker is off the paper, paint is set to false
+$("canvas").mouseleave(function(e){
+    paint=false;
+})
+
+var clickX = new Array();
+var clickY = new Array();
+var clickDrag = new Array();
+var paint;
+
+//Records chosen size when user clicks
+function addClick(x, y, dragging){
+    clickX.push(x);
+    clickY.push(y);
+    clickDrag.push(dragging);
+    //Update to record chosen tool when user clicks
+    if (curTool =="eraser"){
+        clickColor.push("white");
+    }
+    else{
+        clickColor.push(curColor);
+    }
+    clickSize.push(curSize);
+}
+
+function redraw(){
+    // Clears the canvas
+    context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
+    context.lineJoin = "round";
+    context.save();
+    context.beingPath();
+    context.rect(drawingAreaX, drawingAreaY, drawingAreaWidth, drawingAreaHeight);
+    context.clip();
+    var radius;
+    var i = 0;
+    //Everytime the person draws, we draw a line
+    for(var i=0; i < clickX.length; i++){
+        context.beginPath();
+        if(clickDrag[i] && i){
+            context.moveTo(clickX[i-1], clickY[i-1]);
+        }
+        else{
+            context.moveTo(clickX[i]-1, clickY[i]);
+        }
+        context.lineTo(clickX[i], clickY[i]);
+        context.closePath();
+        //Assigns colour in the arry clickColor
+        context.strokeStyle = clickColor[i];
+        //Can handle new sizes
+        context.lineWidth = radius;
+        context.stroke();
+    }
+    context.restore();
+    //Can handle new tools
+    if(curTool == "crayon"){
+        context.globalAlpha =0.4;
+        context.drawImage(crayonTextureImage, 0, 0, canvasWdth, canvasHeight);
+    }
+    context.globalAlpha = 1;
+}
+</script>
+
+<footer>
+    <p>Posted by: Timmy</p>
+    <p>Contact information: <a href="mailto:fakeemail@pdsb.net">fakeEmail@pdsb.net</a>.</p>
+    <br>
+    </footer>
+</html>
