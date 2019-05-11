@@ -1,0 +1,40 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url("https://wallpaperaccess.com/full/87205.jpg");
+}
+
+.intro{
+    display: flex;
+    height: 100vh;
+    float: left;
+    color:whitesmoke;
+}
+
+.typing{
+    position: relative;
+    margin-left:8px;
+    color:white;
+}
+
+/* Adds additional things after */
+.typing::after{
+    content: "";
+    position: absolute;
+    right: -5px;
+    width: 1px;
+    height: 5%;
+    border-right: 2px solid white;
+    animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

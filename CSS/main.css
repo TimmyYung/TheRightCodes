@@ -1,8 +1,18 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
 
+*{
+    color:white;
+    margin-left:auto;
+    margin-right: auto;
+}
+
 body{
-    background-color: #FC7E7E;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://wallpaperaccess.com/full/87205.jpg");
 }
 
 header {
@@ -14,41 +24,25 @@ header h1
     color: rgb(133, 252, 108);
     font-size: 40px;
     font-weight: lighter;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
-footer {
-    position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #808080;
-    color: white;
-    font-size: 15px;
-}
-
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
 /*
 Buttons
 */
+.movePlease{
+    margin-right: 4px;
+}
 
 .button1 {
+    margin-top: 2px;
     font-family: Montserrat;
     font-weight: lighter;
-    background-color: #4CAF50; /* Green */
     width: 300px;
     height: 100px;
-    border: none;
     color: black;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 25px;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -66,6 +60,3 @@ Buttons
     background-color: #00B233;
     color: white;
 }
-
-
-
