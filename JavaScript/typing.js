@@ -1,4 +1,4 @@
-const texts = ["HTML", "CSS", "Javascript", "Python"];
+const texts = ["HTML", "CSS", "JavaScript", "Python"];
 let count = 0;
 let index = 0;
 let currentText = "";
