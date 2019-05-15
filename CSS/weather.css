@@ -23,7 +23,7 @@ body{
 
 .degree-section{
     display: flex;
-    align-items: center;
+    align-items: center:
     cursor: pointer;
 }
 
