@@ -79,8 +79,8 @@ ul .collapsible {
   content: "\002B";
   color: black;
   font-weight: bolder;
-  float: right;
-  margin-left: 5px;
+  float: left;
+  margin-right: 10px;
 }
 
 .active:after {
