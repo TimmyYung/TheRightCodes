@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="../CSS/main.css" type="text/css" rel="Stylesheet" />
-    <link href="../CSS/navbar.css" type="text/css" rel="Stylesheet" />
-    <link href="../CSS/todo.css" type="text/css" rel="Stylesheet" />
-    <title>Timmy Yung</title>
-  </head>
 
-  <header>
-    <center>
-      <h1 style="font-weight: bolder;">Timmy's Beginner HTML Site</h1>
-    </center>
-  </header>
+<head>
+  <link href="../CSS/main.css" type="text/css" rel="Stylesheet" />
+  <link href="../CSS/navbar.css" type="text/css" rel="Stylesheet" />
+  <link href="../CSS/todo.css" type="text/css" rel="Stylesheet" />
+  <title>Timmy Yung</title>
+</head>
 
-  <div class="container purple topBotomBordersIn">
-    <a href="../index.html">HOME</a>
-    <a href="../Pages/about.html">ABOUT ME</a>
-    <a href="../Pages/reviews.html">REVIEWS</a>
-    <a href="../Pages/todo.html">TO-DO LIST</a>
-    <a href="../Pages/techprojects.html">TECH PROJECTS</a>
-    <a href="https://www.theglobeandmail.com/" target="_blank">NEWS</a>
+<header>
+  <center>
+    <h1 style="font-weight: bolder;">Timmy's Beginner HTML Site</h1>
+  </center>
+</header>
+
+<div class="container purple topBotomBordersIn">
+  <a href="../index.html">HOME</a>
+  <a href="../Pages/about.html">ABOUT ME</a>
+  <a href="../Pages/reviews.html">REVIEWS</a>
+  <a href="../Pages/todo.html">TO-DO LIST</a>
+  <a href="../Pages/techprojects.html">TECH PROJECTS</a>
+  <a href="https://www.theglobeandmail.com/" target="_blank">NEWS</a>
+</div>
+
+<div id="myDIV" class="header">
+  <h2>STUFF TO DO ON THE WEBSITE</h2>
+</div>
+
+<!-- When making it collapsible, remember to change to button and add div "content" -->
+<ul id="myUL">
+  <li class="checked">[Project] To-Do List</li>
+  <li class="checked">[Quality] Fix Background image</li>
+  <li class="checked">[Project] Weather App</li>
+  <li class="checked">[Project] Make To-Do List have expandable sections</li>
+  <li class="project">[Project] Filterable List</li>
+  <li class="quality">[Quality] Work on "About Me" Page</li>
+
+  <button class="quality collapsible">[Quality] Work on "Home" Page</button>
+  <div class="content">Make it two sided.<br>
+    Split into Video and Coding. </div>
+
+  <li class="project">[Project] Pong game with Phone Controller</li>
+  <li class="project">[Project] Visual Novel Game</li>
+  <li class="quality">[Quality] Put "Review" Page somewhere else</li>
+  <li class="project">[Project] Build a Platformer Game</li>
+  <li class="project">[Project] Music/Video Player</li>
+
+  <button class="quality collapsible">[Quality] Make the entire site repsonsive</button>
+  <div class="content">Would have to change all sizes to vh.<br>
+    Use a converter or estimate.
   </div>
+  <!-- https://www.youtube.com/watch?v=HV7DtH3J2PU -->
+  <li class="project">[Project] Login Page</li>
+</ul>
+<script src="../JavaScript/todo.js"></script>
+<br />
 
-  <div id="myDIV" class="header">
-    <h2>STUFF TO DO ON THE WEBSITE</h2>
-  </div>
-
-  <ul id="myUL">
-    <li class="checked">[Project] To-Do List</li>
-    <li class="checked">[Quality] Fix Background image</li>
-    <li class="checked">[Project] Weather App</li>
-    <li class="project">[Project] Filterable List</li>
-    <li class="quality">[Quality] Work on "About Me" Page</li>
-    <li class="quality">[Quality] Work on "Home" Page</li>
-    <li class="project">[Project] Pong game with Phone Controller</li>
-    <li class="project">[Project] Visual Novel Game</li>
-    <li class="quality">[Quality] Put "Review" Page somewhere else</li>
-    <li class="project">[Project] Build a Platformer Game</li>
-    <li class="project">[Project] Music/Video Player</li>
-    <li class="project">[Project] Make To-Do List has expandable sections</li>
-    <!-- https://www.youtube.com/watch?v=HV7DtH3J2PU -->
-    <li class="project">[Project] Login Page</li>
-  </ul>
-  <br />
 </html>

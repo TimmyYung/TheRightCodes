@@ -1,48 +1,48 @@
 /* Remove margins and padding from the list */
 ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Style the list items */
-  ul li {
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
-    color:black;
-    border-bottom: 0.1px solid black
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  ul li.quality{
-    background-color: #CAF9FD;
-  }
+/* Style the list items */
+ul li {
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 3vh;
+  transition: 0.2s;
+  color: black;
+  border-bottom: 0.1px solid black;
+}
 
-  ul li.project{
-    background-color: #3FEEE7;
-  }
+ul li.quality {
+  background-color: #caf9fd;
+}
+
+ul li.project {
+  background-color: #3feee7;
+}
 
 /* Style the header */
 .header {
-    font-family: Montserrat;
-    font-weight: bolder;
-    background-color: #f44336;
-    padding: 20px 30px;
-    color: white;
-    text-align: center;
-  }
+  font-family: Montserrat;
+  font-weight: bolder;
+  background-color: #f44336;
+  padding: 20px 30px;
+  color: white;
+  text-align: center;
+}
 
-/* When clicked on, add a background color and strike out text */
+/* Add a background color and strike out text */
 ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
-/* Add a "checked" mark when clicked on */
+/* Add a "checked" mark */
 ul li.checked::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #fff;
   border-style: solid;
@@ -52,4 +52,56 @@ ul li.checked::before {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
+}
+
+/* For dropdown menu */
+ul .collapsible {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 3vh;
+  transition: 0.2s;
+  color: black;
+  width: 100%;
+  text-align: left;
+  border-bottom: 0.1px solid black;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+/* For Plus and Minus sign */
+.collapsible:after {
+  content: "\002B";
+  color: black;
+  font-weight: bolder;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* For text inside */
+.content {
+  padding: 0 0 0 50px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: black;
+  background-color: whitesmoke;
+  font-size: 3vh;
+}
+
+ul button.quality {
+  background-color: #caf9fd;
+}
+
+ul button.project {
+  background-color: #3feee7;
 }
