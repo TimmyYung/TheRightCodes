@@ -23,6 +23,10 @@ ul li.project {
   background-color: #3feee7;
 }
 
+ul li.learn {
+  background-color: rgb(157, 203, 250);
+}
+
 /* Style the header */
 .header {
   font-family: Montserrat;
