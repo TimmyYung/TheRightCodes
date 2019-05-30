@@ -291,8 +291,8 @@ document.addEventListener('keydown', event =>{
         playerDrop();
     }
 
-    // Rotate counter-clockwise when you press the down arrow key
-    else if(event.keyCode === 40) {
+    // Rotate counter-clockwise when you press the Q key
+    else if(event.keyCode === 81) {
         playerRotate(-1);
     }
 
