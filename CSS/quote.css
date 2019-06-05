@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+html, body{
+    overflow:hidden;
+}
+
+p, h2{
+    color: black;
+}
+
+h3{
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+
+.quote{
+    width: 1200px;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.quote .box{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    grid-row-end: 400px;
+    background: #fff;
+    overflow:hidden;
+    transition: .5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0,0,0,.2);
+    color: black;
+}
+
+/* When hovering, double the shadow size */
+.quote .box:hover{
+    box-shadow: -20px 50px 100px rgba(0,0,0,.5);
+}
+
+.quote .box p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.quote .box:hover p{
+    color: #fff;
+}
+
+.quote .box h2{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.quote .box:hover h2{
+    color: #fff;
+}
+
+.quote .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+.quote .box.box1:hover ~ .bg,
+.quote .box.box1:hover
+{
+    opacity: 1;
+    background:linear-gradient(#03A9F4, #E91E63);
+}
+
+.quote .box.box2:hover ~ .bg,
+.quote .box.box2:hover
+{
+    opacity: 1;
+    background:linear-gradient(#FFC107, #19fd36);
+}
+
+.quote .box.box3:hover ~ .bg,
+.quote .box.box3:hover
+{
+    opacity: 1;
+    background:linear-gradient(#FFC107, #E91E63);
+}
+
+.quote .box:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .2);
+    pointer-events: none;
+}
+
+.quote .box:after{
+    content: url(../Images/Website/quote.png);
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    opacity: .1;
+    background: rgba(255, 255, 255, .2);
+    pointer-events: none;
+}
