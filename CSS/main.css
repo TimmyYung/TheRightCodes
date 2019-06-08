@@ -37,30 +37,26 @@ header h1
 /*
 Buttons
 */
-.movePlease{
-    margin-right: 4px;
-}
 
 .button1 {
     margin-top: 2px;
     font-family: Montserrat;
     font-weight: lighter;
-    width: 300px;
-    height: 100px;
+    width: 25vw;
+    height: 18vh;
     color: black;
     text-align: center;
     display: inline-block;
-    font-size: 25px;
+    font-size: 4vh;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-}
-
-.button1 {
     background-color: white; 
     color: black; 
     border: 2px solid #FC7E7E;
 }
+
+
 
 .button1:hover {
     background-color: #00B233;
