@@ -1,6 +1,6 @@
 body{
     display: flex;
-    justify-content:space-around;
+    
     align-items: center;
     flex-direction:column;
     font-family: sans-serif;
@@ -9,8 +9,12 @@ body{
 .form{
     width: 50%;
     position: relative;
-    height: 50px;
+    height: 9vh;
     overflow: hidden;
+}
+
+.form input[type="text"]{
+    margin-top: 2vh;
 }
 
 .form input{
@@ -58,7 +62,7 @@ body{
 /* Every content below the input */
 /* When valid text keep the animation  */
 .form input:focus + .label-name .content-name,
-.form-input:valid + .label-name .content-name{
+.form input:valid + .label-name .content-name{
     transform: translateY(-150%);
     font-size: 14px;
     color: #5fa8d3;
