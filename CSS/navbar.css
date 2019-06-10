@@ -4,25 +4,6 @@
 Animated NavBar
 */
 
-html, body
-{
-    margin: 0px;
-}
-
-header h1
-{
-    color: rgb(133, 252, 108);
-    font-size: 40px;
-    font-weight: lighter;
-    margin-bottom: 5px;
-}
-
-header span
-{
-    color: #222;
-}
-
-
 div.container
 {
     font-family: Raleway;
@@ -35,9 +16,9 @@ div.container a
 {
     color: #FFF;
     text-decoration: none;
-    font: 20px Raleway;
-    margin: 0px 10px;
-    padding: 10px 10px;
+    font: 3.4vh Raleway;
+    margin: 0vh 1.7vh;
+    padding: 1.7vh 1.7vh;
     position: relative;
     z-index: 0;
     cursor: pointer;
@@ -48,7 +29,7 @@ div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
     position: absolute;
     left: 0px;
     width: 100%;
-    height: 2px;
+    height: 0.35vh;
     background: #FFF;
     content: "";
     opacity: 0;
@@ -58,17 +39,17 @@ div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
 div.topBotomBordersIn a:before
 {
     top: 0px;
-    transform: translateY(-10px);
+    transform: translateY(-1vh);
 }
 
 div.topBotomBordersIn a:after
 {
     bottom: 0px;
-    transform: translateY(10px);
+    transform: translateY(1vh);
 }
 
 div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0vh);
 }
