@@ -34,9 +34,7 @@ header h1
     font-weight: bolder;
 }
 
-/*
-Buttons
-*/
+/* Normal Buttons */
 
 .button1 {
     margin-top: 0.4vh;
@@ -61,4 +59,18 @@ Buttons
 .button1:hover {
     background-color: #00B233;
     color: white;
+}
+
+/* Download Buttons */
+a{
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    line-height: 20vh;
+}
+
+
+i{
+    margin-right: 1vh;
 }
