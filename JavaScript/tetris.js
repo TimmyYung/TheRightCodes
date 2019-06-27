@@ -171,6 +171,14 @@ function playerDrop(){
     dropCounter = 0;
 }
 
+// WORK ON THIS
+function hardDrop(){
+    while(!collide(arena, player)){
+       if(!collide(arena, player)) {player.pos.y++;}
+    }
+    console.log(    player.pos.y    )    
+}
+
 // Creates collision on the left and right
 function playerMove(dir){
     player.pos.x += dir;
@@ -299,6 +307,11 @@ document.addEventListener('keydown', event =>{
     // Rotate clockwise when you press the up arrow key
     else if(event.keyCode === 38) {
         playerRotate(1);
+    }
+    
+    else if(event.keyCode == "32"){
+        console.log("Hi");
+        hardDrop();
     }
 });
 

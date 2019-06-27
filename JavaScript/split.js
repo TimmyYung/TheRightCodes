@@ -21,3 +21,7 @@ right.addEventListener("mouseenter", () => {
 right.addEventListener("mouseleave", () => {
     container.classList.remove("hover-right");
 });
+
+window.onload = function(){
+    document.getElementById('.split.left').className = 'blur';
+};
