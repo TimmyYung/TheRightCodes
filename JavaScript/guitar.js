@@ -3,7 +3,7 @@ const modelParams = {
     imageScaleFactor: 0.7,  // reduce input image size for gains in speed.
     maxNumBoxes: 1,        // maximum number of boxes to detect
     iouThreshold: 0.5,      // ioU threshold for non-max suppression
-    scoreThreshold: 0.89,    // confidence threshold for predictions.
+    scoreThreshold: 0.69,    // confidence threshold for predictions.
   }
 
 //   Get the webcam and useable on all browsers
