@@ -24,7 +24,6 @@ body{
     border: none;
     color: #5fa8d3;
     padding: 0;
-    border: none;
     outline: none;
     background: transparent;
 }
@@ -42,7 +41,6 @@ body{
 .form label::after{
     content: "";
     position: absolute;
-    left: 0px;
     bottom: -1px;
     height: 100%;
     width: 100%;
@@ -55,7 +53,6 @@ body{
     color: red;
     position: absolute;
     bottom: 5px;
-    left: 0px;
     transition: all 0.3s ease;
 }
 
