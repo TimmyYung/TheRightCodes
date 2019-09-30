@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow: hidden
+}
+
 .app {
   height: 76vh;
   display: flex;
@@ -70,7 +74,6 @@ header p {
 
 @keyframes jump {
   0% {
-    bottom: 0%;
     left: 20%;
   }
   50% {
@@ -79,7 +82,6 @@ header p {
   }
 
   100% {
-    bottom: 00%;
     left: 80%;
   }
 }

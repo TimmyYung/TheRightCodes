@@ -177,7 +177,7 @@ Letter Capitalize
       chars[i] = chars[i].toUpperCase();
     }
     alert(chars.join(""));  
-};
+}
 
 /*
 Guess the Number

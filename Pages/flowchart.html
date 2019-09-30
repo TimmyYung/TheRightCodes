@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../CSS/main.css" type="text/css" rel= Stylesheet>
+    <link href="../CSS/navbar.css" type="text/css" rel= Stylesheet>
+
+    <!-- Files for Flowchart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://flowchart.js.org/flowchart-latest.js"></script>
+
+    <!-- File for SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+
+<script>
+window.onload = function () {
+    var btn = document.getElementById("run"),
+        cd = document.getElementById("code"),
+        chart;
+    (btn.onclick = function () {
+        var code = cd.value;
+        if (chart) {
+            chart.clean();
+        }
+        chart = flowchart.parse(code);
+        chart.drawSVG('canvas', {
+            // 'x': 30,
+            // 'y': 50,
+            'line-width': 3,
+            'maxWidth': 3,//ensures the flowcharts fits within a certian width
+            'line-length': 50,
+            'text-margin': 10,
+            'font-size': 14,
+            'font': 'normal',
+            'font-family': 'Verdana',
+            'font-weight': 'normal',
+            'font-color': 'black',
+            'line-color': 'white',
+            'element-color': 'black',
+            'fill': 'white',
+            'yes-text': 'yes',
+            'no-text': 'no',
+            'arrow-end': 'block',
+            'scale': 1,
+            'symbols': {
+            'start': {
+                'font-color': 'red',
+                'element-color': 'green',
+                'fill': 'yellow'
+            },
+            'end':{
+                'class': 'end-element'
+            }
+            },
+            'flowstate' : {
+            'past' : { 'fill' : '#CCCCCC', 'font-size' : 12},
+            'current' : {'fill' : 'yellow', 'font-color' : 'red', 'font-weight' : 'bold'},
+            'future' : { 'fill' : '#FFFF99'},
+            'request' : { 'fill' : 'blue'},
+            'invalid': {'fill' : '#444444'},
+            'approved' : { 'fill' : '#58C4A3', 'font-size' : 12, 'yes-text' : 'APPROVED', 'no-text' : 'n/a' },
+            'rejected' : { 'fill' : '#C45879', 'font-size' : 12, 'yes-text' : 'n/a', 'no-text' : 'REJECTED' }
+            }
+        });
+        $('[id^=sub1]').click(function(){
+            alert('info here');
+        });
+    })();
+};
+</script>
+
+<style>
+ #swal2-content{
+    color:black;
+ }
+
+ button{
+     color:black;
+ }
+</style>
+
+<title> Timmy Yung </title>
+</head>
+
+<header>
+  <center> <h1>Timmy's Beginner HTML Site</h1> </center>
+</header>
+
+<div class="container purple topBotomBordersIn">
+    <a href="../Pages/home.html">HOME</a>
+    <a href="../Pages/about.html">ABOUT ME</a>
+    <a href="../Pages/todo.html">TO-DO LIST</a>
+    <a href="../Pages/techprojects.html">TECH PROJECTS</a>
+    <a href="https://www.theglobeandmail.com/" target="_blank">NEWS</a>
+  </div>
+<body>
+<p>Built using: flowchart.js, and SweetAlert2</p>
+<p>Click on the Gray box in the flowchart!</p>
+<center>
+<button onclick="problems()">Why this can't be made</button>
+<br>
+<br>
+    <div id="canvas" style="background-color:lightblue"></div>
+<br>
+
+<div>
+    <textarea id="code" style="width: 90%; color:black;" rows="11">
+        st=>start: START
+        e=>end: END
+        op1=>operation: DAY 1
+        op2=>operation: Go to friend's house|past:$firstBox
+        cond=>condition: Should I help my friend?
+        op3=>operation: Help friend.
+        op4=>operation: Leave friend.
+        
+        st->op1->op2->cond
+        cond(Help, right)->op3
+        cond(Leave)->op4
+    </textarea>
+</div>
+<div><button id="run" type="button" style="color:black;">Run</button></div>
+
+<script>
+function firstBox(){
+    Swal.fire({
+  title: 'Knock on the Door',
+  text: "You go to your friend's house to hang out. The door seems to be already unlocked. You go in to see your friend crying.",
+})}
+
+function problems(){
+Swal.mixin({
+  confirmButtonText: 'Next &rarr;',
+  showCancelButton: true,
+  progressSteps: ['1', '2', '3', '4']
+}).queue([
+  {
+    title: 'Information',
+    text: 'This flowchart is mainly a proof of concept. It is not possible to code the entire \
+    flowchart for the assignment as there are way too many problems'
+  },
+  {
+    title: 'Problem 1: Popup Code',
+    text: 'When you click the gray box in the flowchart, a popup appears. That works properly \
+    but the problem is that I would have to create a different function each time for each popup \
+    box. For each rectangle box there would a box that explains the situation in more info but it \
+    would be alot of effort to do.'
+  },
+  {
+    title: 'Problem 2: Conditions Not Working',
+    text: 'The condition statements where the path is suppose to branch out does not work. You can \
+    look at the code at the bottom of the page and try to edit it but for some reason, the paths will \
+    not branch out. Again, I would have to read more documentation about the library to fully understand. \
+    The link to the documentation is here: https://github.com/adrai/flowchart.js'
+  },
+  {
+  title: 'Problem 3: Customizable',
+    text: 'The boxes are at a fixed width. Whenever text is added, it only elongates the box and will not \
+    go wider. This is because in the library, it creates the shape using fixed points. To fix this, I would \
+    have to go into the library and manually change the size of all of the different shapes. The person who \
+    made the library did not have it so that the flowchart could be customizable.'
+  },
+])
+}
+</script>
+
+</center>
+</body>
