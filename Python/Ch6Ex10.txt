@@ -1,0 +1,20 @@
+test(3 % 4 == 0)
+	Fails
+	3/4 has a remainder and does not equal 0
+test(3 % 4 == 3)
+	Pass
+test(3 / 4 == 0)
+	Fails
+	3/4 does not equal 0
+test(3 // 4 == 0)
+	Pass
+test(3+4  *  2 == 14)
+	Fails
+	The equation equals to 11 because of order of operations
+test(4-2+2 == 0)
+	Fails
+	The equation equals to 4
+test(len("hello, world!") == 13)
+	Pass
+	
+	
