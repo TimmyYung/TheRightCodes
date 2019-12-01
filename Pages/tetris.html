@@ -9,23 +9,27 @@
 
 
 <body>
-        <h5>Left arrow moves left<br>
-          Right arrow moves right<br>
-            Up arrow rotates clockwise<br>
-            Down arrow soft drops<br>
-            Q key rotates counter-clockwise
+  <h5>Left arrow moves left<br>
+    Right arrow moves right<br>
+      Up arrow rotates clockwise<br>
+      Down arrow soft drops<br>
+      Q key rotates counter-clockwise
 <br>
 <br>
 <br>
-            HIGH SCORE:<br>
-              TimmySux69: 3390</h5>
-          </h5>
-    <center>
-      <br>
-      <div id="score"></div>
-    <canvas id="tetris" width="240" height="400"></canvas>
+  </h5>
+  <center>
+    <br>
+
+  <div class="player">    
+      <div class="score"></div>
+      <canvas class="tetris" width="240" height="400"></canvas>
+  </div>
 </center>
-    <script src="../JavaScript/tetris.js"></script>
+  <script src="../JavaScript/tetrisGame/arena.js"></script>
+  <script src="../JavaScript/tetrisGame/player.js"></script>
+  <script src="../JavaScript/tetrisGame/tetris.js"></script>
+  <script src="../JavaScript/tetrisGame/main.js"></script>
 </body>
 
 </html>
