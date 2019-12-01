@@ -1,11 +1,14 @@
 class Player{
     constructor(tetris)
     {
+        this.DROP_SLOW = 1000;
+        this.DROP_FAST = 50;
+
         this.tetris = tetris;
         this.arena = tetris.arena;
         this.dropCounter = 0;
         // Every second, drop the piece one step
-        this.dropInterval = 1000;
+        this.dropInterval = this.DROP_SLOW;
 
         this.pos = {x: 0, y:0};
         this.matrix = null;
@@ -16,7 +19,7 @@ class Player{
 
     // Makes the piece move down
     drop(){
-        this.pos.y++
+        this.pos.y++;
         // When you collide with both the arena and player
         if (this.arena.collide(this)){
             // Moves the player back up
@@ -24,8 +27,8 @@ class Player{
             this.arena.merge(this);
             // Sets the player at the top
             this.reset();
-            this.arena.sweep();
-            updateScore();
+            this.score += this.arena.sweep();
+            this.tetris.updateScore(this.score);
         }
         // Delayes the next key press by a second
         this.dropCounter = 0;
@@ -51,7 +54,7 @@ class Player{
         if(this.arena.collide(this)){
             this.arena.clear();
             this.score = 0;
-            updateScore();
+            this.tetris.updateScore(0);
         }
     }
 
@@ -65,7 +68,7 @@ class Player{
             this.pos.x += offset;
             offset = -(offset + (offset > 0 ? 1: -1));
             if (offset > this.matrix[0].length){
-                rotate(this.matrix, -dir);
+                this._rotateMatrix(this.matrix, -dir);
                 this.pos.x = pos;
                 return;
             }
@@ -95,7 +98,8 @@ class Player{
     }
 
 
-    update(deltaTime){
+    update(deltaTime)
+    {
         this.dropCounter += deltaTime;
         if (this.dropCounter > this.dropInterval){
             this.drop();

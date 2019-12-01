@@ -9,23 +9,17 @@
 
 
 <body>
-  <h5>Left arrow moves left<br>
-    Right arrow moves right<br>
-      Up arrow rotates clockwise<br>
-      Down arrow soft drops<br>
-      Q key rotates counter-clockwise
-<br>
-<br>
-<br>
-  </h5>
-  <center>
-    <br>
+
+  <div class="player" style="margin-left: 15vw;">    
+      <div class="score"></div>
+      <canvas class="tetris" width="240" height="400"></canvas>
+  </div>
 
   <div class="player">    
       <div class="score"></div>
       <canvas class="tetris" width="240" height="400"></canvas>
   </div>
-</center>
+
   <script src="../JavaScript/tetrisGame/arena.js"></script>
   <script src="../JavaScript/tetrisGame/player.js"></script>
   <script src="../JavaScript/tetrisGame/tetris.js"></script>

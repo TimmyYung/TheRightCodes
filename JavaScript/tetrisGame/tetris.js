@@ -1,10 +1,12 @@
 class Tetris
 {
-    constructor(canvas)
+    constructor(element)
     {
-        this.canvas = canvas;
+        this.element = element;
+        // Get the canvas from player div from the HTML page
+        this.canvas = element.querySelector('canvas');
         // Allows to draw on the canvas
-        this.context = canvas.getContext("2d");
+        this.context = this.canvas.getContext("2d");
 
         // Changes the size of the piece to be bigger
         this.context.scale(20, 20);
@@ -36,6 +38,8 @@ class Tetris
             requestAnimationFrame(update);
         };
         update();
+
+        this.updateScore(0);
     }
 
     draw()
@@ -65,5 +69,9 @@ class Tetris
                 }
             });
         });
+    }
+    updateScore(score) 
+    {
+        this.element.querySelector(".score").innerText = score;
     }
 }

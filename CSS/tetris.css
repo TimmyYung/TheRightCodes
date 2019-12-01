@@ -2,14 +2,11 @@ body, html{
     overflow:hidden;
 }
 
-canvas{
-    border: solid .6vh #fff;
-    height: 90vh;
-    padding: 0;
-    margin-right: 58vh;
+body{
+    display:flex;
 }
 
-#score{
+.score{
     background-color: whitesmoke;
     width: 55.2vh;
     color: black;
@@ -18,12 +15,14 @@ canvas{
     margin:0;
     padding:0;
     font-size: 3vh;
+    text-align: center;
 }
 
-h5{
-    float:left;
-    position: relative;
-    font-weight: lighter;
-    margin-left: 18vh;
-    font-size: 3.1vh;
+.player{
+    flex: 1 1 auto;
+}
+
+canvas{
+    border: solid .6vh #fff;
+    height: 90vh;
 }

@@ -41,8 +41,10 @@ class Arena{
     }
 
     // Clear the line when it is full
-    sweep(){
+    sweep()
+    {
         let rowCount = 1;
+        let score = 0;
         // If you set a label, then you can make continue outer
         outer: for(let y = this.matrix.length - 1; y > 0; --y){
             for(let x = 0; x < this.matrix[y].length; ++x){
@@ -58,8 +60,9 @@ class Arena{
             this.matrix.unshift(row);
             ++y
 
-            player.score += rowCount * 10;
+            score += rowCount * 10;
             rowCount *= 2;
         }
+        return score;
     }
 }
