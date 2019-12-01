@@ -1,5 +1,5 @@
-/* Same thing as the HTML element but specificity is higher */
 :root{
+/* Same thing as the HTML element but specificity is higher */
     --container-bg-color: #333;
     --left-bg-color: rgba(223, 39, 39, 0.7);
     --left-button-hover-color: rgba(161, 11, 11, 0.3);
